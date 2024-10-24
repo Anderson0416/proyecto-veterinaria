@@ -317,10 +317,10 @@
         <!--#ENDREGION-->
         
         <!--REGION DATATEMPLADE CONSULTAR-->
-        <DataTemplate x:Name="Consultar"
-                    DataType="{x:Type viewmodels:Consultar}">
-            <viewmodels:Consultar DataContext="{Binding}"/>
-        </DataTemplate>
+        <!--<DataTemplate x:Name="Consultar"
+                    DataType="{x:Type viewmodels:Consultar_Recepcionista}">
+            <viewmodels:Consultar_Recepcionista DataContext="{Binding}"/>
+        </DataTemplate>-->
 
         <!--ENDREGION-->
      
@@ -678,6 +678,52 @@
                    HorizontalAlignment="Center"/>
 
                                 </Grid>
+                                <!-- ContextMenu para el submenú -->
+                                <Button.ContextMenu>
+                                    <ContextMenu>
+                                        <ContextMenu.ItemContainerStyle>
+                                            <Style TargetType="MenuItem">
+                                                <Setter Property="Background" Value="#b7e4c7"/>
+                                                <Setter Property="Foreground" Value="Transparent"/>
+                                                <Setter Property="Padding" Value="10,5"/>
+                                                <Setter Property="FontSize" Value="14"/>
+                                                <Setter Property="Template">
+                                                    <Setter.Value>
+                                                        <ControlTemplate TargetType="MenuItem">
+                                                            <Border Background="{TemplateBinding Background}" 
+                                                                BorderBrush="White" BorderThickness="1" 
+                                                                CornerRadius="8" Padding="5">
+                                                                <StackPanel Orientation="Horizontal">
+                                                                    <!-- Texto del menú -->
+                                                                    <TextBlock Text="{TemplateBinding Header}" 
+                                                                        VerticalAlignment="Center" 
+                                                                        Foreground="Black"/>
+                                                                        <!-- Flecha indicando submenú -->
+                                                                        <TextBlock Text=">"
+                                                                            Margin="10,0,0,0" 
+                                                                               Foreground="Black"
+                                                                                Visibility="{Binding Path=HasItems, Converter={StaticResource BoolToVisibilityConverter}}"/>
+                                                                </StackPanel>
+                                                            </Border>
+                                                            <ControlTemplate.Triggers>
+                                                                <!-- Hover cambia el fondo a verde menta -->
+                                                                <Trigger Property="IsMouseOver" Value="True">
+                                                                    <Setter Property="Background" Value="#FFBFF6C3"/>
+                                                                    <Setter Property="Foreground" Value="#2E2E2E"/>
+                                                                </Trigger>
+                                                            </ControlTemplate.Triggers>
+                                                        </ControlTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </Style>
+                                        </ContextMenu.ItemContainerStyle>
+
+                                        <!-- Definición del submenú -->
+                                        <MenuItem Header="Consultar Recepcionista" Click="Consultar_Recepcionista_Click">
+                                        </MenuItem>
+                                        <MenuItem Header="Consultar Veterinario" Click="Consultar_Veterinario_Click"/>
+                                    </ContextMenu>
+                                </Button.ContextMenu>
                             </Button>
 
                         </ListViewItem>

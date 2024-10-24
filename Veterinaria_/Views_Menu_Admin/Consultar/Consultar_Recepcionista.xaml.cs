@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Veterinaria_.Views_Menu_Admin
 {
     /// <summary>
-    /// Lógica de interacción para Consultar.xaml
+    /// Lógica de interacción para Consultar_Recepcionista.xaml
     /// </summary>
-    public partial class Consultar : UserControl
+    public partial class Consultar_Recepcionista : UserControl
     {
-        public Consultar()
+        public Consultar_Recepcionista()
         {
             InitializeComponent();
         }

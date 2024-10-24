@@ -27,38 +27,25 @@ namespace Veterinaria_
             InitializeComponent();
         }
 
-        private void btn_Inicio_Click(object sender, RoutedEventArgs e)
+        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            Servicio_Login servicio_login = new Servicio_Login();
-            string respuesta = servicio_login.control_Login(txt_Usuario.Text, txt_Contraseña.Text);
-            if (respuesta.Length > 0)
-            {
-                MessageBox.Show(respuesta);
-            }
-            else
-            {
-                Inicio_Seccion();
-            }
-
-            
-            
+            DragMove();
         }
-        private void Inicio_Seccion()
+
+        private void btnExit_Click(object sender, RoutedEventArgs e)
         {
+            Application.Current.Shutdown();
+        }
+
+        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+            Menu_Recepcion menu_Recepcion = new Menu_Recepcion();
+            menu_Recepcion.Show();
+            
             Menu_Admin menu_Admin = new Menu_Admin();
-            int tipo_Usuario = Seccion.Tipo_usuario;
-
-            if (tipo_Usuario == 1)
-            {
-                menu_Admin.Show();
-                this.Close();
-            }
-
+            menu_Admin.Show();
+            this.Close();
+            // FALTA definir roles de usuario de inicio de sesion unitario
         }
-
-
-    
-
-
     }
 }

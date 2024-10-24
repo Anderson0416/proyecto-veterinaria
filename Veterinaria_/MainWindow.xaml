@@ -7,15 +7,77 @@
  xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0*"/>
-            <ColumnDefinition Width="23*"/>
-            <ColumnDefinition Width="57*"/>
-        </Grid.ColumnDefinitions>
-        <Button x:Name="btn_Inicio" Content="Inicio" HorizontalAlignment="Left" Margin="111,295,0,0" VerticalAlignment="Top" Height="52" Width="106" Click="btn_Inicio_Click" Grid.Column="2"/>
-        <TextBox x:Name="txt_Usuario" HorizontalAlignment="Left" Margin="84,114,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Height="36" Grid.Column="2"/>
-        <TextBox x:Name="txt_Contraseña" HorizontalAlignment="Left" Margin="90,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="160" Height="36" Grid.Column="2"/>
+    <Grid MouseDown="Border_MouseDown">
+        <Grid.Background>
+            <LinearGradientBrush StartPoint="0.1,0" EndPoint="0.9,1">
+                <GradientStop Color="#73C897" Offset="1" />
+                <GradientStop Color="#012416" Offset="0" />
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Border Height="390" VerticalAlignment="Top" CornerRadius="0 0 180 0" Background="White" MouseDown="Border_MouseDown">
+        </Border>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Width="350">
+                <Image Source="/SCS/Pictures/LOGO.png" Width="318" Height="333" Margin="30" Stretch="Fill" />
+            </StackPanel>
+            <StackPanel Width="350">
+                <StackPanel Margin="20 40">
+                    <TextBlock Text= "Bienvenido" Margin="20" TextAlignment="Center" FontSize="38" FontFamily="Cooper Black">
+                        <TextBlock.Foreground>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black" Offset="0.047"/>
+                                <GradientStop Color="#FF73C897" Offset="0.847"/>
+                            </LinearGradientBrush>
+                        </TextBlock.Foreground></TextBlock>
+                    <StackPanel Orientation="Horizontal" Margin="10">
+                        <materialDesign:PackIcon Kind="User" Width="25" Height="25" Foreground="#012416"/>
+                        <TextBox x:Name="txt_Usuario" Margin="10 0" materialDesign:HintAssist.Hint="Enter Username / Email" Foreground="black" Width="250" CaretBrush="#1D3E2F" SelectionBrush="#16462B" BorderBrush="#73C897" Text="" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" Margin="10">
+                        <materialDesign:PackIcon Kind="Lock" Width="25" Height="25" Foreground="#012416"/>
+                        <PasswordBox x:Name="txt_Contraseña" Margin="10 0" materialDesign:HintAssist.Hint="********" Foreground="Black" Width="250" BorderBrush="#73C897" CaretBrush="#1D3E2F" SelectionBrush="#16462B" />
+                    </StackPanel>
+                    <StackPanel Margin="10" HorizontalAlignment="Center">
+                        <Button Width="100" Height="40"
+                            materialDesign:ButtonAssist.CornerRadius="10" BorderThickness="2" BorderBrush="#1D3E2F" Foreground="White" ToolTip="Iniciar" x:Name="btnLogin" Click="btnLogin_Click" Content="INGRESAR" FontFamily="Rockwell Extra Bold">
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                    <GradientStop Color="Black"/>
+                                    <GradientStop Color="#FFF1F5F2" Offset="0"/>
+                                    <GradientStop Color="#FF69D07D" Offset="0"/>
+                                    <GradientStop Offset="0" Color="#FF252525"/>
+                                    <GradientStop Color="#FF1D3E2F" Offset="0.993"/>
+                                    <GradientStop Color="#FF69D07D" Offset="0.067"/>
+                                </LinearGradientBrush>
+                            </Button.Background>
+                        </Button>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Width="100">
+                <Button Margin="10 20"
+                ToolTip="Close" x:Name="btnExit" Click="btnExit_Click" Width="53">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF7ACC9D"/>
+                            <GradientStop Color="#FF7ACC9D" Offset="0.847"/>
+                            <GradientStop Color="#FF7ACC9D"/>
+                            <GradientStop Color="Black" Offset="0.07"/>
+                            <GradientStop Color="#FF7ACC9D" Offset="0.737"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                    <materialDesign:PackIcon Kind="Close" Foreground="White" Width="30" Height="30" />
+                </Button>
+            </StackPanel>
+        </StackPanel>
+        <!--<Grid.ColumnDefinitions>
+        <ColumnDefinition Width="0*"/>
+        <ColumnDefinition Width="23*"/>
+        <ColumnDefinition Width="57*"/>
+    </Grid.ColumnDefinitions>
+    <Button x:Name="btn_Inicio" Content="Inicio" HorizontalAlignment="Left" Margin="111,295,0,0" VerticalAlignment="Top" Height="52" Width="106" Click="btn_Inicio_Click" Grid.Column="2"/>
+    <TextBox x:Name="txt_Usuario" HorizontalAlignment="Left" Margin="84,114,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="160" Height="36" Grid.Column="2"/>
+    <TextBox x:Name="txt_Contraseña" HorizontalAlignment="Left" Margin="90,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="160" Height="36" Grid.Column="2"/>-->
 
     </Grid>
 </Window>

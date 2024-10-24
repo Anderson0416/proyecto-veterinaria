@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using Veterinaria_.Views;
 using Veterinaria_.Views_Menu_Admin;
 
+
 namespace Veterinaria_
 {
     /// <summary>
@@ -74,9 +75,23 @@ namespace Veterinaria_
 
         private void Consultar_Click(object sender, RoutedEventArgs e)
         {
-            DataContext = new Consultar();
+            Button button = sender as Button;
+
+            if (button != null && button.ContextMenu != null)
+            {
+                button.ContextMenu.PlacementTarget = button;
+                button.ContextMenu.IsOpen = true;
+            }
         }
 
-    
+        private void Consultar_Recepcionista_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new Consultar_Recepcionista();
+        }
+
+        private void Consultar_Veterinario_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new Consultar_Veterinario() ;
+        }
     }
 }
