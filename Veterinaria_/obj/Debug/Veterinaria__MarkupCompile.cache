@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterinaria_\obj\Debug\
+C:\Users\RYZEN\Desktop\c#\vete\proyecto-veterinaria\Veterinaria_\obj\Debug\
 Veterinaria_
 none
 false
 DEBUG;TRACE
-C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterinaria_\App.xaml
-18-725202647
+C:\Users\RYZEN\Desktop\c#\vete\proyecto-veterinaria\Veterinaria_\App.xaml
+19-1721196173
 
-22-196972183
-181680262306
-MainWindow.xaml;Menu_Admin.xaml;Menu_Recepcion.xaml;Registrar_Usuarios.xaml;Views_Menu_Admin\Consultar\Consultar_Recepcionista.xaml;Views_Menu_Admin\Consultar\Consultar_Veterinario.xaml;Views_Menu_Admin\Registrar_Recepcionista.xaml;Views_Menu_Admin\Registrar_Veterinario.xaml;Views_Menu_Recepcion\Actualizar_Cita.xaml;Views_Menu_Recepcion\Consultar_Informacion\Consulta_Cita.xaml;Views_Menu_Recepcion\Consultar_Informacion\Consulta_Mascota.xaml;Views_Menu_Recepcion\Consultar_Informacion\Consulta_Clientes.xaml;Views_Menu_Recepcion\Historial_Clinico.xaml;Views_Menu_Recepcion\Incorporar_Paciente.xaml;Views_Menu_Recepcion\Programar_Consulta.xaml;Views_Menu_Recepcion\Prueba.xaml;Views_Menu_Recepcion\Recordatorio_Cita.xaml;Views_Menu_Recepcion\Registrar_Propietario.xaml;
+23-297881641
+18-1785446980
+MainWindow.xaml;Menu_Admin.xaml;Menu_Recepcion.xaml;Menu_Veterinario.xaml;Registrar_Usuarios.xaml;Views_Menu_Admin\Consultar\Consultar_Recepcionista.xaml;Views_Menu_Admin\Consultar\Consultar_Veterinario.xaml;Views_Menu_Admin\Registrar_Recepcionista.xaml;Views_Menu_Admin\Registrar_Veterinario.xaml;Views_Menu_Recepcion\Actualizar_Cita.xaml;Views_Menu_Recepcion\Consultar_Informacion\Consulta_Cita.xaml;Views_Menu_Recepcion\Consultar_Informacion\Consulta_Mascota.xaml;Views_Menu_Recepcion\Consultar_Informacion\Consulta_Clientes.xaml;Views_Menu_Recepcion\Historial_Clinico.xaml;Views_Menu_Recepcion\Incorporar_Paciente.xaml;Views_Menu_Recepcion\Programar_Consulta.xaml;Views_Menu_Recepcion\Prueba.xaml;Views_Menu_Recepcion\Recordatorio_Cita.xaml;Views_Menu_Recepcion\Registrar_Propietario.xaml;
 
 False
 

@@ -47,7 +47,7 @@ namespace Veterinaria_
             try
             {
                 Servicio_Usuarios servicio_usuarios = new Servicio_Usuarios();
-                string respuesta = servicio_usuarios.Validacion_Usuario(usuario);
+                string respuesta = servicio_usuarios.Guardar_Usuario(usuario);
                 if (respuesta.Length > 0)
                 {
                     MessageBox.Show(respuesta, "Aviso");

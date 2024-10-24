@@ -11,7 +11,7 @@ namespace BLL
 {
     public class Servicio_Usuarios
     {
-        public string Validacion_Usuario(Usuarios usuario)
+        public string Guardar_Usuario(Usuarios usuario)
         {
             Usuario_Repositorio usuario_repositorio = new Usuario_Repositorio();
             string respuesta = "";

@@ -12,20 +12,20 @@ namespace BLL
 {
     public class Servicio_Login
     {
-        public string control_Login(string usuario, string password)
+        public string control_Login(Usuarios usuario)
         {
             Usuario_Repositorio usuario_repositorio = new Usuario_Repositorio();
 
             string respuesta = "";
             Usuarios Datousuario = new Usuarios();
 
-            if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(password))
+            if (string.IsNullOrEmpty(usuario.Nombre) || string.IsNullOrEmpty(usuario.Contraseña))
             {
                 respuesta = "DEBE LLENAR TODOS LOS DATOS";
             }
             else
             {
-                Datousuario = usuario_repositorio.ConsultaUsuario(usuario);
+                Datousuario = usuario_repositorio.ConsultaUsuario(usuario.Nombre);
 
                 if (Datousuario == null)
                 {
@@ -33,7 +33,7 @@ namespace BLL
                 }
                 else
                 {
-                    if (Datousuario.Contraseña != generarSHA1(password))
+                    if (Datousuario.Contraseña != generarSHA1(usuario.Contraseña))
                     {
                         respuesta = "EL USUARIO O LA CONTRASEÑA NO COINCIDEN";
                     }
@@ -41,8 +41,9 @@ namespace BLL
                     {
 
                         Seccion.id = Datousuario.id;
-                        Seccion.Nombre = usuario;
+                        Seccion.Nombre = Datousuario.Nombre;
                         Seccion.Tipo_usuario = Datousuario.Tipo_usuario;
+                        consultar_Veterinario(usuario);
                     }
                 }
             }
@@ -69,6 +70,17 @@ namespace BLL
                 sb.Append(result[i].ToString("x"));
             }
             return sb.ToString();
+        }
+
+        private void consultar_Veterinario(Usuarios usuario)
+        {
+            Servicio_Veterinario servicio_veterinario =  new Servicio_Veterinario();
+            List<Veterinario> veterinarios = servicio_veterinario.Lista_Todos_Veterinario();
+            Veterinario veterinario = veterinarios.FirstOrDefault(v => v.usuario != null && v.usuario.Nombre == usuario.Nombre);
+            if (veterinario != null)
+            {
+                Seccion.AsignarVeterinario(veterinario);
+            }
         }
     }
 }

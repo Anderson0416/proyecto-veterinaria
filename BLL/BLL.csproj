@@ -61,6 +61,7 @@
     <Compile Include="Servicio_Propietario.cs" />
     <Compile Include="Servicio_Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicio_Veterinario.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

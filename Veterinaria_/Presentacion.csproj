@@ -69,6 +69,9 @@
     <Compile Include="Menu_Recepcion.xaml.cs">
       <DependentUpon>Menu_Recepcion.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Menu_Veterinario.xaml.cs">
+      <DependentUpon>Menu_Veterinario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Registrar_Usuarios.xaml.cs">
       <DependentUpon>Registrar_Usuarios.xaml</DependentUpon>
     </Compile>
@@ -131,6 +134,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Menu_Recepcion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu_Veterinario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
