@@ -81,14 +81,23 @@
     <Compile Include="Views_Menu_Admin\Consultar\Consultar_Veterinario.xaml.cs">
       <DependentUpon>Consultar_Veterinario.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views_Menu_Admin\Registrar_Producto.xaml.cs">
+      <DependentUpon>Registrar_Producto.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views_Menu_Admin\Registrar_Recepcionista.xaml.cs">
       <DependentUpon>Registrar_Recepcionista.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views_Menu_Admin\Registrar_Tipo_Consulta.xaml.cs">
+      <DependentUpon>Registrar_Tipo_Consulta.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views_Menu_Admin\Registrar_Veterinario.xaml.cs">
       <DependentUpon>Registrar_Veterinario.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views_Menu_Recepcion\Actualizar_Cita.xaml.cs">
       <DependentUpon>Actualizar_Cita.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views_Menu_Recepcion\Compra.xaml.cs">
+      <DependentUpon>Compra.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views_Menu_Recepcion\Consultar_Informacion\Consulta_Cita.xaml.cs">
       <DependentUpon>Consulta_Cita.xaml</DependentUpon>
@@ -153,7 +162,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views_Menu_Admin\Registrar_Producto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views_Menu_Admin\Registrar_Recepcionista.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views_Menu_Admin\Registrar_Tipo_Consulta.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -162,6 +179,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views_Menu_Recepcion\Actualizar_Cita.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views_Menu_Recepcion\Compra.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -280,7 +301,11 @@
     <Resource Include="SCS\Pictures\file-circle-question-solid.png" />
     <Resource Include="SCS\Pictures\Register - Veterian.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="SCS\Pictures\register-product.png" />
+    <Resource Include="SCS\Pictures\register-type-consult.png" />
+    <Resource Include="SCS\Pictures\shop.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
