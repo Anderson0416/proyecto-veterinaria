@@ -1,0 +1,16 @@
+﻿<Window x:Class="Veterinaria_.Registrar_admin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Veterinaria_"
+        mc:Ignorable="d"
+        Title="Registrar_admin" Height="450" Width="800">
+    <Grid>
+        <TextBox Name="txt_Usuario" HorizontalAlignment="Left" Margin="260,109,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="txt_contraseña" HorizontalAlignment="Left" Margin="260,149,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button Name="btn_Guardar" Content="Guardar" HorizontalAlignment="Left" Margin="297,270,0,0" VerticalAlignment="Top" Click="btn_Guardar_Click"/>
+        <TextBox Name="txt_Confimar_Contra" HorizontalAlignment="Left" Margin="260,194,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>

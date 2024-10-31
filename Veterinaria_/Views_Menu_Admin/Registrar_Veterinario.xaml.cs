@@ -28,8 +28,8 @@ namespace Veterinaria_.Views_Menu_Admin
 
         private void btn_Guardar_Click(object sender, RoutedEventArgs e)
         {
-            Guardar_Veterinario();
             Guardar_Usuario();
+            Guardar_Veterinario();
         }
         public void Guardar_Veterinario()
         {

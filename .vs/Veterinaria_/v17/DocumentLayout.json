@@ -1,30 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\",
+  "WorkspaceRootPath": "C:\\Users\\damit\\OneDrive\\Escritorio\\ProyVeterinaria\\proyecto-veterinaria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|c:\\users\\ryzen\\desktop\\c#\\vete\\proyecto-veterinaria\\veterinaria_\\views_menu_recepcion\\programar_consulta.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|solutionrelative:veterinaria_\\views_menu_recepcion\\programar_consulta.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|c:\\users\\damit\\onedrive\\escritorio\\proyveterinaria\\proyecto-veterinaria\\veterinaria_\\views_menu_admin\\registrar_veterinario.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|solutionrelative:veterinaria_\\views_menu_admin\\registrar_veterinario.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|c:\\users\\ryzen\\desktop\\c#\\vete\\proyecto-veterinaria\\veterinaria_\\views_menu_recepcion\\registrar_propietario.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|solutionrelative:veterinaria_\\views_menu_recepcion\\registrar_propietario.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|c:\\users\\damit\\onedrive\\escritorio\\proyveterinaria\\proyecto-veterinaria\\veterinaria_\\views_menu_admin\\registrar_veterinario.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|solutionrelative:veterinaria_\\views_menu_admin\\registrar_veterinario.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|c:\\users\\ryzen\\desktop\\c#\\vete\\proyecto-veterinaria\\veterinaria_\\menu_veterinario.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|solutionrelative:veterinaria_\\menu_veterinario.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+      "AbsoluteMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|c:\\users\\damit\\onedrive\\escritorio\\proyveterinaria\\proyecto-veterinaria\\veterinaria_\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|solutionrelative:veterinaria_\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{851014BD-1353-4430-98AE-F4E6057FAFF2}|BLL\\BLL.csproj|c:\\users\\ryzen\\desktop\\c#\\vete\\proyecto-veterinaria\\bll\\servicio_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{851014BD-1353-4430-98AE-F4E6057FAFF2}|BLL\\BLL.csproj|solutionrelative:bll\\servicio_login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|c:\\users\\damit\\onedrive\\escritorio\\proyveterinaria\\proyecto-veterinaria\\veterinaria_\\registrar_admin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|solutionrelative:veterinaria_\\registrar_admin.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|c:\\users\\ryzen\\desktop\\c#\\vete\\proyecto-veterinaria\\veterinaria_\\mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|solutionrelative:veterinaria_\\mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCE9477E-4C39-4F96-82FC-4039D009E409}|Entity\\Entity.csproj|c:\\users\\ryzen\\desktop\\c#\\vete\\proyecto-veterinaria\\entity\\seccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCE9477E-4C39-4F96-82FC-4039D009E409}|Entity\\Entity.csproj|solutionrelative:entity\\seccion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|c:\\users\\damit\\onedrive\\escritorio\\proyveterinaria\\proyecto-veterinaria\\veterinaria_\\registrar_admin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|solutionrelative:veterinaria_\\registrar_admin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,90 +30,120 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 15,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Registrar_Propietario.xaml",
-              "DocumentMoniker": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\Veterinaria_\\Views_Menu_Recepcion\\Registrar_Propietario.xaml",
-              "RelativeDocumentMoniker": "Veterinaria_\\Views_Menu_Recepcion\\Registrar_Propietario.xaml",
-              "ToolTip": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\Veterinaria_\\Views_Menu_Recepcion\\Registrar_Propietario.xaml",
-              "RelativeToolTip": "Veterinaria_\\Views_Menu_Recepcion\\Registrar_Propietario.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-24T20:30:01.158Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Programar_Consulta.xaml",
-              "DocumentMoniker": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\Veterinaria_\\Views_Menu_Recepcion\\Programar_Consulta.xaml",
-              "RelativeDocumentMoniker": "Veterinaria_\\Views_Menu_Recepcion\\Programar_Consulta.xaml",
-              "ToolTip": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\Veterinaria_\\Views_Menu_Recepcion\\Programar_Consulta.xaml",
-              "RelativeToolTip": "Veterinaria_\\Views_Menu_Recepcion\\Programar_Consulta.xaml",
+              "DocumentIndex": 2,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\damit\\OneDrive\\Escritorio\\ProyVeterinaria\\proyecto-veterinaria\\Veterinaria_\\App.xaml",
+              "RelativeDocumentMoniker": "Veterinaria_\\App.xaml",
+              "ToolTip": "C:\\Users\\damit\\OneDrive\\Escritorio\\ProyVeterinaria\\proyecto-veterinaria\\Veterinaria_\\App.xaml",
+              "RelativeToolTip": "Veterinaria_\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-10-24T20:16:36.88Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\Veterinaria_\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "Veterinaria_\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\Veterinaria_\\MainWindow.xaml.cs",
-              "RelativeToolTip": "Veterinaria_\\MainWindow.xaml.cs",
-              "ViewState": "AQIAACwAAAAAAAAAAAAAACwAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T18:20:37.347Z",
+              "WhenOpened": "2024-10-31T21:47:52.184Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Servicio_Login.cs",
-              "DocumentMoniker": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\BLL\\Servicio_Login.cs",
-              "RelativeDocumentMoniker": "BLL\\Servicio_Login.cs",
-              "ToolTip": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\BLL\\Servicio_Login.cs",
-              "RelativeToolTip": "BLL\\Servicio_Login.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAgwCAAAAARAAAA",
+              "Title": "Registrar_admin.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\damit\\OneDrive\\Escritorio\\ProyVeterinaria\\proyecto-veterinaria\\Veterinaria_\\Registrar_admin.xaml.cs",
+              "RelativeDocumentMoniker": "Veterinaria_\\Registrar_admin.xaml.cs",
+              "ToolTip": "C:\\Users\\damit\\OneDrive\\Escritorio\\ProyVeterinaria\\proyecto-veterinaria\\Veterinaria_\\Registrar_admin.xaml.cs",
+              "RelativeToolTip": "Veterinaria_\\Registrar_admin.xaml.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAowB4AAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T18:16:17.407Z",
+              "WhenOpened": "2024-10-31T21:43:03.95Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Menu_Veterinario.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\Veterinaria_\\Menu_Veterinario.xaml.cs",
-              "RelativeDocumentMoniker": "Veterinaria_\\Menu_Veterinario.xaml.cs",
-              "ToolTip": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\Veterinaria_\\Menu_Veterinario.xaml.cs",
-              "RelativeToolTip": "Veterinaria_\\Menu_Veterinario.xaml.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAIwB4AAAAxAAAA",
+              "DocumentIndex": 0,
+              "Title": "Views_Menu_Admin\\Registrar_Veterinario.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\damit\\OneDrive\\Escritorio\\ProyVeterinaria\\proyecto-veterinaria\\Veterinaria_\\Views_Menu_Admin\\Registrar_Veterinario.xaml.cs",
+              "RelativeDocumentMoniker": "Veterinaria_\\Views_Menu_Admin\\Registrar_Veterinario.xaml.cs",
+              "ToolTip": "C:\\Users\\damit\\OneDrive\\Escritorio\\ProyVeterinaria\\proyecto-veterinaria\\Veterinaria_\\Views_Menu_Admin\\Registrar_Veterinario.xaml.cs",
+              "RelativeToolTip": "Veterinaria_\\Views_Menu_Admin\\Registrar_Veterinario.xaml.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAwwB8AAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T17:54:07.099Z",
+              "WhenOpened": "2024-10-31T21:42:36.66Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Seccion.cs",
-              "DocumentMoniker": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\Entity\\Seccion.cs",
-              "RelativeDocumentMoniker": "Entity\\Seccion.cs",
-              "ToolTip": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\Entity\\Seccion.cs",
-              "RelativeToolTip": "Entity\\Seccion.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T18:15:47.517Z",
+              "DocumentIndex": 1,
+              "Title": "Registrar_Veterinario.xaml",
+              "DocumentMoniker": "C:\\Users\\damit\\OneDrive\\Escritorio\\ProyVeterinaria\\proyecto-veterinaria\\Veterinaria_\\Views_Menu_Admin\\Registrar_Veterinario.xaml",
+              "RelativeDocumentMoniker": "Veterinaria_\\Views_Menu_Admin\\Registrar_Veterinario.xaml",
+              "ToolTip": "C:\\Users\\damit\\OneDrive\\Escritorio\\ProyVeterinaria\\proyecto-veterinaria\\Veterinaria_\\Views_Menu_Admin\\Registrar_Veterinario.xaml",
+              "RelativeToolTip": "Veterinaria_\\Views_Menu_Admin\\Registrar_Veterinario.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-30T23:54:12.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Registrar_admin.xaml",
+              "DocumentMoniker": "C:\\Users\\damit\\OneDrive\\Escritorio\\ProyVeterinaria\\proyecto-veterinaria\\Veterinaria_\\Registrar_admin.xaml",
+              "RelativeDocumentMoniker": "Veterinaria_\\Registrar_admin.xaml",
+              "ToolTip": "C:\\Users\\damit\\OneDrive\\Escritorio\\ProyVeterinaria\\proyecto-veterinaria\\Veterinaria_\\Registrar_admin.xaml",
+              "RelativeToolTip": "Veterinaria_\\Registrar_admin.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-31T21:38:07.089Z",
               "EditorCaption": ""
             }
           ]
