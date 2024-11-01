@@ -16,6 +16,9 @@ using Veterinaria_.Views;
 using Veterinaria_.Views_Menu_Recepcion;
 using Veterinaria_.Views_Menu_Recepcion.Consultar_Informacion;
 
+
+
+
 namespace Veterinaria_
 {
     /// <summary>
@@ -117,7 +120,10 @@ namespace Veterinaria_
             DataContext = new Historial_Clinico();
         }
 
-
+       private void Compra_Click(object sender, RoutedEventArgs e) 
+       {
+            DataContext = new Compra();
+       }
         
     }
 }

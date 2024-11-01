@@ -323,7 +323,24 @@
         </DataTemplate>-->
 
         <!--ENDREGION-->
-     
+
+        <!--REGION DATATEMPLADE REGISTRAR_PRODUCTO-->
+        <DataTemplate x:Name="RegistrarProducto"
+             DataType="{x:Type viewmodels:Registrar_Producto}">
+            <viewmodels:Registrar_Producto DataContext="{Binding}"/>
+        </DataTemplate>
+
+        <!--#ENDREGION-->
+
+        <!--REGION DATATEMPLADE REGISTRAR_TIPO_CONSULTA-->
+        <DataTemplate x:Name="RegistrarTipoConsulta"
+                 DataType="{x:Type viewmodels:Registrar_Tipo_Consulta}">
+            <viewmodels:Registrar_Tipo_Consulta DataContext="{Binding}"/>
+        </DataTemplate>
+
+        <!--#ENDREGION-->
+
+
     </Window.Resources>
 
     <!--#REGION PROYECTO_DE_AULA-->
@@ -495,7 +512,8 @@
                   VerticalAlignment="Center"
                   HorizontalAlignment="Left"
                   FontSize="45" Margin="305,0,0,0" Grid.Column="1"/>
-                <ContentControl Content="{Binding}" Cursor="Hand" Grid.ColumnSpan="4"/>
+                <ContentControl Content="{Binding}" 
+Cursor="Hand" Grid.ColumnSpan="4"/>
 
             </Grid>
             <!--#ENDREGION-->
@@ -729,7 +747,80 @@
                         </ListViewItem>
                         <!--#ENDREGION-->
 
-                       
+                        <!--#REGION REGISTRAR_PRODUCTO-->
+                        <ListViewItem Style="{DynamicResource ListViewStyle}"
+                   Height="70">
+                            <Button Style="{DynamicResource BtnListaStyle}"
+                    x:Name="BtnRegistrarProducto"
+                    Height="70"
+Width="200"
+HorizontalAlignment="Left"
+Cursor="Hand"
+Background="Transparent"
+BorderBrush="Transparent"
+                                    Click="Registrar_Producto_Click">
+
+
+                                <Grid Width="200">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="60" />
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Width="47"
+       Grid.Column="0"
+       HorizontalAlignment="Left"
+       Source="/SCS/Pictures/register-product.png" 
+                             Margin="10,0,0,0"/>
+                                    <TextBlock Grid.Column="1"
+           Text="Registrar Producto"
+           FontWeight="SemiBold"
+           FontSize="12"
+           VerticalAlignment="Center"
+           HorizontalAlignment="Center"/>
+
+                                </Grid>
+                            </Button>
+
+                        </ListViewItem>
+                        <!--#ENDREGION-->
+
+
+                        <!--#REGION REGISTRAR_TIPO_CONSULTA-->
+                        <ListViewItem Style="{DynamicResource ListViewStyle}"
+                   Height="70">
+                            <Button Style="{DynamicResource BtnListaStyle}"
+                    x:Name="BtnRegistrarTipoConsulta"
+                    Height="70"
+Width="200"
+HorizontalAlignment="Left"
+Cursor="Hand"
+Background="Transparent"
+BorderBrush="Transparent" Click="Registrar_Tipo_Consulta_Click">
+
+
+
+                                <Grid Width="200">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="60" />
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Width="40"
+       Grid.Column="0"
+       HorizontalAlignment="Left"
+       Source="/SCS/Pictures/register-type-consult.png" 
+                             Margin="10,0,0,0"/>
+                                    <TextBlock Grid.Column="1"
+           Text="Registrar Tipo Consulta"
+           FontWeight="SemiBold"
+           FontSize="12"
+           VerticalAlignment="Center"
+           HorizontalAlignment="Center"/>
+
+                                </Grid>
+                            </Button>
+
+                        </ListViewItem>
+                        <!--#ENDREGION-->
 
                     </ListView>
                     <!--#ENDREGION-->

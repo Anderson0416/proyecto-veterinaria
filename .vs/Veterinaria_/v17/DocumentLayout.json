@@ -1,5 +1,6 @@
 {
   "Version": 1,
+<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Users\\damit\\OneDrive\\Escritorio\\ProyVeterinaria\\proyecto-veterinaria\\",
   "Documents": [
     {
@@ -21,6 +22,21 @@
     {
       "AbsoluteMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|c:\\users\\damit\\onedrive\\escritorio\\proyveterinaria\\proyecto-veterinaria\\veterinaria_\\registrar_admin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|solutionrelative:veterinaria_\\registrar_admin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+=======
+  "WorkspaceRootPath": "C:\\Users\\HOME\\OneDrive\\Escritorio\\Veterinaria_\\Veterinaria_\\proyecto-veterinaria\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|C:\\Users\\HOME\\OneDrive\\Escritorio\\Veterinaria_\\Veterinaria_\\proyecto-veterinaria\\veterinaria_\\menu_recepcion.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|solutionrelative:veterinaria_\\menu_recepcion.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|C:\\Users\\HOME\\OneDrive\\Escritorio\\Veterinaria_\\Veterinaria_\\proyecto-veterinaria\\veterinaria_\\menu_admin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|solutionrelative:veterinaria_\\menu_admin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|c:\\users\\home\\onedrive\\escritorio\\veterinaria_\\veterinaria_\\proyecto-veterinaria\\veterinaria_\\views_menu_recepcion\\compra.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|solutionrelative:veterinaria_\\views_menu_recepcion\\compra.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+>>>>>>> 45942fc4079af3b17b0db55fd454de79e11b1a06
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +46,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 15,
+=======
+          "SelectedChildIndex": 4,
+>>>>>>> 45942fc4079af3b17b0db55fd454de79e11b1a06
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,6 +74,7 @@
             },
             {
               "$type": "Bookmark",
+<<<<<<< HEAD
               "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
@@ -120,11 +141,38 @@
               "ViewState": "AQIAACYAAAAAAAAAAAAwwB8AAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-31T21:42:36.66Z",
+=======
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Compra.xaml",
+              "DocumentMoniker": "C:\\Users\\HOME\\OneDrive\\Escritorio\\Veterinaria_\\Veterinaria_\\proyecto-veterinaria\\Veterinaria_\\Views_Menu_Recepcion\\Compra.xaml",
+              "RelativeDocumentMoniker": "Veterinaria_\\Views_Menu_Recepcion\\Compra.xaml",
+              "ToolTip": "C:\\Users\\HOME\\OneDrive\\Escritorio\\Veterinaria_\\Veterinaria_\\proyecto-veterinaria\\Veterinaria_\\Views_Menu_Recepcion\\Compra.xaml",
+              "RelativeToolTip": "Veterinaria_\\Views_Menu_Recepcion\\Compra.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-31T01:37:38.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Menu_Recepcion.xaml",
+              "DocumentMoniker": "C:\\Users\\HOME\\OneDrive\\Escritorio\\Veterinaria_\\Veterinaria_\\proyecto-veterinaria\\Veterinaria_\\Menu_Recepcion.xaml",
+              "RelativeDocumentMoniker": "Veterinaria_\\Menu_Recepcion.xaml",
+              "ToolTip": "C:\\Users\\HOME\\OneDrive\\Escritorio\\Veterinaria_\\Veterinaria_\\proyecto-veterinaria\\Veterinaria_\\Menu_Recepcion.xaml",
+              "RelativeToolTip": "Veterinaria_\\Menu_Recepcion.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-31T01:37:27.637Z",
+>>>>>>> 45942fc4079af3b17b0db55fd454de79e11b1a06
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+<<<<<<< HEAD
               "Title": "Registrar_Veterinario.xaml",
               "DocumentMoniker": "C:\\Users\\damit\\OneDrive\\Escritorio\\ProyVeterinaria\\proyecto-veterinaria\\Veterinaria_\\Views_Menu_Admin\\Registrar_Veterinario.xaml",
               "RelativeDocumentMoniker": "Veterinaria_\\Views_Menu_Admin\\Registrar_Veterinario.xaml",
@@ -144,6 +192,15 @@
               "RelativeToolTip": "Veterinaria_\\Registrar_admin.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-10-31T21:38:07.089Z",
+=======
+              "Title": "Menu_Admin.xaml",
+              "DocumentMoniker": "C:\\Users\\HOME\\OneDrive\\Escritorio\\Veterinaria_\\Veterinaria_\\proyecto-veterinaria\\Veterinaria_\\Menu_Admin.xaml",
+              "RelativeDocumentMoniker": "Veterinaria_\\Menu_Admin.xaml",
+              "ToolTip": "C:\\Users\\HOME\\OneDrive\\Escritorio\\Veterinaria_\\Veterinaria_\\proyecto-veterinaria\\Veterinaria_\\Menu_Admin.xaml",
+              "RelativeToolTip": "Veterinaria_\\Menu_Admin.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-10-31T01:37:25.077Z",
+>>>>>>> 45942fc4079af3b17b0db55fd454de79e11b1a06
               "EditorCaption": ""
             }
           ]

@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Veterinaria_"
         xmlns:viewmodels="clr-namespace:Veterinaria_.Views"
+     
         mc:Ignorable="d"
         Title="Menu_Recepcion" 
         Height="600"
@@ -313,11 +314,16 @@
             <viewmodels:Consulta_Clientes DataContext="{Binding}"/>
         </DataTemplate>
         <!--#ENDREGION-->
-
-        <!--#REGION DATATEMPLATE Recordatorio_Cita-->
-
+       
+        <!--#REGION DATATEMPLATE COMPRA-->
+        <DataTemplate x:Name="Compra"
+                      DataType="{x:Type viewmodels:Compra}">
+            <viewmodels:Compra DataContext="{Binding}"/>
+        </DataTemplate>
         <!--#ENDREGION-->
-        
+
+       
+     
 
     </Window.Resources>
     
@@ -478,7 +484,7 @@
                            VerticalAlignment="Center"
                            HorizontalAlignment="Center"
                            FontSize="45"/>
-                <ContentControl Content="{Binding}" Cursor="Hand"/>
+                <ContentControl Content="{Binding}"/>
 
             </Grid>
             <!--#ENDREGION-->
@@ -748,7 +754,7 @@
 
                         <!--#REGION RECORDATORIO_CITA-->
                         <ListViewItem Style="{DynamicResource ListViewStyle}"
-              Height="70">
+              Height="70" Cursor="Hand">
                             <Button Style="{DynamicResource BtnListaStyle}"
             x:Name="BtnRecordatorioCita"
             Height="70"
@@ -774,6 +780,41 @@
                        FontSize="12"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"/>
+
+                                </Grid>
+                            </Button>
+
+                        </ListViewItem>
+                        <!--#ENDREGION-->
+
+                        <!--#REGION COMPRA-->
+                        <ListViewItem Style="{DynamicResource ListViewStyle}"
+  Height="70">
+                            <Button Style="{DynamicResource BtnListaStyle}"
+x:Name="BtnCompra"
+Height="70"
+Width="200"
+HorizontalAlignment="Left"
+Cursor="Hand"
+Background="Transparent"
+BorderBrush="Transparent" 
+                        Click="Compra_Click">
+
+                                <Grid Width="200">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="60" />
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Width="45"
+       Grid.Column="0"
+       HorizontalAlignment="Center"
+       Source="/SCS/Pictures/shop.png"/>
+                                    <TextBlock Grid.Column="1"
+           Text="Compra"
+           FontWeight="SemiBold"
+           FontSize="12"
+           VerticalAlignment="Center"
+           HorizontalAlignment="Center"/>
 
                                 </Grid>
                             </Button>

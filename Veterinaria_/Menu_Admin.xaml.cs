@@ -93,5 +93,16 @@ namespace Veterinaria_
         {
             DataContext = new Consultar_Veterinario() ;
         }
+
+        private void Registrar_Producto_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new Registrar_Producto();
+        }
+
+  
+        private void Registrar_Tipo_Consulta_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new Registrar_Tipo_Consulta();
+        }
     }
 }
