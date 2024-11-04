@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4D61C557-82CB-45EE-979F-3B3D179566C4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Veterinaria_</RootNamespace>
+    <AssemblyName>Veterinaria_</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialDesignColors, Version=3.1.0.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.3.1.0\lib\net462\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=5.1.0.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.5.1.0\lib\net462\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Xaml.Behaviors, Version=1.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Xaml.Behaviors.Wpf.1.1.39\lib\net45\Microsoft.Xaml.Behaviors.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Menu_Recepcion.xaml.cs">
+      <DependentUpon>Menu_Recepcion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Veterinario.xaml.cs">
+      <DependentUpon>Menu_Veterinario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar_admin.xaml.cs">
+      <DependentUpon>Registrar_admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Registrar_Usuarios.xaml.cs">
+      <DependentUpon>Registrar_Usuarios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views_Menu_Admin\Consultar\Consultar_Recepcionista.xaml.cs">
+      <DependentUpon>Consultar_Recepcionista.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views_Menu_Admin\Consultar\Consultar_Veterinario.xaml.cs">
+      <DependentUpon>Consultar_Veterinario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views_Menu_Admin\Registrar_Producto.xaml.cs">
+      <DependentUpon>Registrar_Producto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views_Menu_Admin\Registrar_Recepcionista.xaml.cs">
+      <DependentUpon>Registrar_Recepcionista.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views_Menu_Admin\Registrar_Tipo_Consulta.xaml.cs">
+      <DependentUpon>Registrar_Tipo_Consulta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views_Menu_Admin\Registrar_Veterinario.xaml.cs">
+      <DependentUpon>Registrar_Veterinario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views_Menu_Recepcion\Actualizar_Cita.xaml.cs">
+      <DependentUpon>Actualizar_Cita.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views_Menu_Recepcion\Compra.xaml.cs">
+      <DependentUpon>Compra.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views_Menu_Recepcion\Consultar_Informacion\Consulta_Cita.xaml.cs">
+      <DependentUpon>Consulta_Cita.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views_Menu_Recepcion\Consultar_Informacion\Consulta_Mascota.xaml.cs">
+      <DependentUpon>Consulta_Mascota.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views_Menu_Recepcion\Consultar_Informacion\Consulta_Clientes.xaml.cs">
+      <DependentUpon>Consulta_Clientes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views_Menu_Recepcion\Historial_Clinico.xaml.cs">
+      <DependentUpon>Historial_Clinico.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views_Menu_Recepcion\Incorporar_Paciente.xaml.cs">
+      <DependentUpon>Incorporar_Paciente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views_Menu_Recepcion\Programar_Consulta.xaml.cs">
+      <DependentUpon>Programar_Consulta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views_Menu_Recepcion\Prueba.xaml.cs">
+      <DependentUpon>Prueba.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views_Menu_Recepcion\Recordatorio_Cita.xaml.cs">
+      <DependentUpon>Recordatorio_Cita.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views_Menu_Recepcion\Registrar_Propietario.xaml.cs">
+      <DependentUpon>Registrar_Propietario.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Menu_Admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu_Recepcion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Menu_Veterinario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Registrar_admin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Registrar_Usuarios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views_Menu_Admin\Consultar\Consultar_Recepcionista.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views_Menu_Admin\Consultar\Consultar_Veterinario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views_Menu_Admin\Registrar_Producto.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views_Menu_Admin\Registrar_Recepcionista.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views_Menu_Admin\Registrar_Tipo_Consulta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views_Menu_Admin\Registrar_Veterinario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views_Menu_Recepcion\Actualizar_Cita.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views_Menu_Recepcion\Compra.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views_Menu_Recepcion\Consultar_Informacion\Consulta_Cita.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views_Menu_Recepcion\Consultar_Informacion\Consulta_Mascota.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views_Menu_Recepcion\Consultar_Informacion\Consulta_Clientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views_Menu_Recepcion\Historial_Clinico.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views_Menu_Recepcion\Incorporar_Paciente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views_Menu_Recepcion\Programar_Consulta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views_Menu_Recepcion\Prueba.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views_Menu_Recepcion\Recordatorio_Cita.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views_Menu_Recepcion\Registrar_Propietario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Menu_Admin.xaml.cs">
+      <DependentUpon>Menu_Admin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{851014bd-1353-4430-98ae-f4e6057faff2}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entity\Entity.csproj">
+      <Project>{dce9477e-4c39-4f96-82fc-4039d009e409}</Project>
+      <Name>Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SCS\Pictures\add-cita.png" />
+    <Resource Include="SCS\Pictures\update.png" />
+    <Resource Include="SCS\Pictures\gear.png" />
+    <Resource Include="SCS\Pictures\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SCS\Pictures\question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SCS\Pictures\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SCS\Pictures\clinical-historial.png" />
+    <Resource Include="SCS\Pictures\Consult.png" />
+    <Resource Include="SCS\Pictures\magnifying-glass-plus-solid.png" />
+    <Resource Include="SCS\Pictures\add-client.png" />
+    <Resource Include="SCS\Pictures\add-pet.png" />
+    <Resource Include="SCS\Pictures\user-plus-solid.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SCS\Pictures\Mini.png" />
+    <Resource Include="SCS\Pictures\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SCS\Pictures\Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SCS\Pictures\reminder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SCS\Pictures\LOGO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SCS\Pictures\Register - recepcionist.png" />
+    <Resource Include="SCS\Pictures\file-circle-question-solid.png" />
+    <Resource Include="SCS\Pictures\Register - Veterian.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SCS\Pictures\register-product.png" />
+    <Resource Include="SCS\Pictures\register-type-consult.png" />
+    <Resource Include="SCS\Pictures\shop.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.5.1.0\build\MaterialDesignThemes.targets'))" />
+  </Target>
+</Project>
