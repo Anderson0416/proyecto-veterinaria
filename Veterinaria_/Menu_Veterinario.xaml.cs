@@ -1,5 +1,4 @@
-﻿using Entity;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,12 +22,35 @@ namespace Veterinaria_
         public Menu_Veterinario()
         {
             InitializeComponent();
-            
         }
-        public void Datos_Veterinario()
+
+
+        private void TBShow(object sender, RoutedEventArgs e)
         {
-            Veterinario veterinario = Seccion.veterinario;
-            txt_nombre.Text = veterinario.nombre;
+            GridContent.Opacity = 0.5;
+        }
+
+        private void TBHide(object sender, RoutedEventArgs e)
+        {
+
+            GridContent.Opacity = 1;
+
+        }
+
+        private void PreviewMouseLeftBottonDownBG(object sender, MouseButtonEventArgs e)
+        {
+
+            BtnShowHide.IsChecked = false;
+        }
+
+        private void Minimizar(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+
+        private void Cerrar(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

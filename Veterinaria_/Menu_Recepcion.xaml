@@ -9,11 +9,12 @@
         mc:Ignorable="d"
         Title="Menu_Recepcion" 
         Height="600"
-        Width="1000"
+       Width="1000"
         WindowStartupLocation="CenterScreen"
         WindowStyle="None"
         AllowsTransparency="True"
-        Background="Transparent" Cursor="Hand">
+      
+ Background="Transparent" Cursor="Hand">
     <Window.Resources>
         
         <!--#REGION FOCUSVISUAL-->
@@ -323,8 +324,6 @@
         <!--#ENDREGION-->
 
        
-     
-
     </Window.Resources>
     
         <!--#REGION PROYECTO_DE_AULA-->
