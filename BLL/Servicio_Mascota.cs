@@ -67,5 +67,20 @@ namespace BLL
             mascota_repositorio.Actualizar_Mascota(mascota);
             return "MASCOTA ACTUALIZADA EXITOSAMENTE";
         }
+        public List<Mascota> Mascotas_Propietario(string documento)
+        {
+            List<Mascota> todasLasMascotas = Lista_Todos_Mascota();
+            List<Mascota> mascotas_filtradas = todasLasMascotas
+                .Where(m => m.propietario.documento == documento)
+                .ToList();
+            return mascotas_filtradas;
+        }
+        public Mascota Consultar_Mascota_Id(int id)
+        {
+            List<Mascota> todasLasMascotas = Lista_Todos_Mascota();
+            Mascota mascota = todasLasMascotas
+                .FirstOrDefault(m => m.id == id);
+            return mascota;
+        }
     }
 }

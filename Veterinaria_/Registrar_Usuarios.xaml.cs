@@ -65,5 +65,10 @@ namespace Veterinaria_
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void cmb_Cargo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

@@ -14,13 +14,38 @@ Background="#FFBFF6C3">
         <Grid x:Name="GridRegistrarTipoConsulta">
             <!--#REGION TITULO-->
             <TextBlock Grid.Row="0"
-           Grid.ColumnSpan="6"
            Text="Registrar_Tipo_Consulta"
            Foreground="Black"
            FontSize="30"
-           HorizontalAlignment="Center">
+           HorizontalAlignment="Center" Margin="0,0,0,511"/>
+            <Label Content="Nombre" HorizontalAlignment="Left" Margin="87,168,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Nombre" HorizontalAlignment="Left" Margin="167,172,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Descripcion" HorizontalAlignment="Left" Margin="305,168,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Descripcion" HorizontalAlignment="Left" Margin="391,172,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Precio" HorizontalAlignment="Left" Margin="546,168,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Precio" HorizontalAlignment="Left" Margin="620,168,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Codigo del producto : " HorizontalAlignment="Left" Margin="95,105,0,0" VerticalAlignment="Top"/>
+            <Label Name="lb_Id" Content="" HorizontalAlignment="Left" Margin="249,105,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_buscar" HorizontalAlignment="Left" Margin="620,234,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="txt_buscar_TextChanged"/>
+            <DataGrid Margin="10,305,10,10"
+                     Name="dtg_Tabla_Tipo_Consulta"
+                     AutoGenerateColumns="False"
+                     IsReadOnly="True" 
+                     SelectionMode="Single"
+                     SelectionUnit="FullRow"
+                     SelectionChanged="dtg_Tabla_propietarios_SelectionChanged"
+                     >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding id}" Width="50" />
+                    <DataGridTextColumn Header="Nombre" Binding="{Binding nombre}" Width="250"/>
+                    <DataGridTextColumn Header="Descripcion" Binding="{Binding descripcion}" Width="453"/>
+                    <DataGridTextColumn Header="precio" Binding="{Binding precio}" Width="150"/>
 
-            </TextBlock>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button x:Name="btn_Guardar" Content="Guardar" HorizontalAlignment="Left" Margin="204,258,0,0" VerticalAlignment="Top" Click="btn_Guardar_Click"/>
+            <Button x:Name="btn_Eliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="284,258,0,0" VerticalAlignment="Top" Click="btn_Eliminar_Click"/>
+            <Button x:Name="btn_Actualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="376,258,0,0" VerticalAlignment="Top" Click="btn_Actualizar_Click"/>
             <!--#ENDREGION-->
         </Grid>
     </Border>

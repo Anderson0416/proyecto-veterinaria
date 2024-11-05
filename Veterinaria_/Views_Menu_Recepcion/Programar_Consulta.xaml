@@ -18,28 +18,47 @@
                        Foreground="Black"
                        FontSize="30"
                        HorizontalAlignment="Center" Margin="0,0,0,509"/>
-            <Label Content="Documento propietario" HorizontalAlignment="Left" Margin="72,91,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Documento_propietario" HorizontalAlignment="Left" Margin="240,95,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Label Content="Nombre Del Propietario" HorizontalAlignment="Left" Margin="71,138,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Nombre_Propietario" HorizontalAlignment="Left" Margin="240,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Label Content="Mascota" HorizontalAlignment="Left" Margin="82,214,0,0" VerticalAlignment="Top"/>
-            <ComboBox Name="cmb_Nombre_Mascota" HorizontalAlignment="Left" Margin="149,216,0,0" VerticalAlignment="Top" Width="120"/>
-            <Label Content="Especie" HorizontalAlignment="Left" Margin="82,0,0,0" VerticalAlignment="Center"/>
-            <TextBox x:Name="txt_Especie" HorizontalAlignment="Left" Margin="139,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120"/>
-            <Label Content="Raza" HorizontalAlignment="Left" Margin="283,0,0,0" VerticalAlignment="Center"/>
-            <TextBox x:Name="txt_Raza" HorizontalAlignment="Left" Margin="329,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120"/>
-            <Label Content="Sexo" HorizontalAlignment="Left" Margin="483,0,0,0" VerticalAlignment="Center"/>
-            <TextBox x:Name="txt_Sexo" HorizontalAlignment="Left" Margin="523,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120"/>
-            <Label Content="Edad" HorizontalAlignment="Left" Margin="91,319,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Edad" HorizontalAlignment="Left" Margin="139,323,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Label Content="Fecha de la consulta" HorizontalAlignment="Left" Margin="82,373,0,0" VerticalAlignment="Top"/>
-            <DatePicker Name="dtp_Fecha_Consulta" HorizontalAlignment="Left" Margin="82,404,0,0" VerticalAlignment="Top"/>
-            <Label Content="nombre del veterinario" HorizontalAlignment="Left" Margin="258,373,0,0" VerticalAlignment="Top"/>
-            <ComboBox Name="cmb_Nombre_Veterinario" HorizontalAlignment="Left" Margin="263,406,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Documento propietario" HorizontalAlignment="Left" Margin="39,91,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Documento_propietario" HorizontalAlignment="Left" Margin="180,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Nombre Del Propietario" HorizontalAlignment="Left" Margin="37,138,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Nombre_Propietario" HorizontalAlignment="Left" Margin="180,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Mascota" HorizontalAlignment="Left" Margin="51,209,0,0" VerticalAlignment="Top"/>
+            <ComboBox Name="cmb_Nombre_Mascota" HorizontalAlignment="Left" Margin="120,213,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmb_Nombre_Mascota_SelectionChanged"/>
+            <Label Content="Especie" HorizontalAlignment="Left" Margin="51,257,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Especie" HorizontalAlignment="Left" Margin="120,261,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Raza" HorizontalAlignment="Left" Margin="265,253,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Raza" HorizontalAlignment="Left" Margin="323,261,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Sexo" HorizontalAlignment="Left" Margin="462,256,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Sexo" HorizontalAlignment="Left" Margin="502,261,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Edad" HorizontalAlignment="Left" Margin="51,288,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Edad" HorizontalAlignment="Left" Margin="120,296,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Fecha de la consulta" HorizontalAlignment="Left" Margin="51,340,0,0" VerticalAlignment="Top"/>
+            <DatePicker Name="dtp_Fecha_Consulta" HorizontalAlignment="Left" Margin="51,371,0,0" VerticalAlignment="Top"/>
+            <Label Content="nombre del veterinario" HorizontalAlignment="Left" Margin="219,340,0,0" VerticalAlignment="Top"/>
+            <ComboBox Name="cmb_Nombre_Veterinario" HorizontalAlignment="Left" Margin="222,373,0,0" VerticalAlignment="Top" Width="120"/>
             <TextBox x:Name="txt_Descripcion_Consulta" HorizontalAlignment="Left" Margin="583,78,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="244" Height="174"/>
-            <Button x:Name="btn_Consultar_Propietario" Content="Consultar" HorizontalAlignment="Left" Margin="416,104,0,0" VerticalAlignment="Top"/>
-            <Button x:Name="btn_Programar_Consulta" Content="Programas consulta" HorizontalAlignment="Left" Margin="583,406,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="btn_Consultar_Propietario" Content="Consultar" HorizontalAlignment="Left" Margin="323,113,0,0" VerticalAlignment="Top" Click="btn_Consultar_Propietario_Click"/>
+            <Button x:Name="btn_Programar_Consulta" Content="Programas consulta" HorizontalAlignment="Left" Margin="756,525,0,0" VerticalAlignment="Top" Click="btn_Programar_Consulta_Click"/>
+            <DataGrid Margin="37,457,0,10"
+            Name="dtg_Tabla_Tipo_Consulta"
+            AutoGenerateColumns="False"
+            IsReadOnly="True" 
+            SelectionMode="Single"
+            SelectionUnit="FullRow"
+            SelectionChanged="dtg_Tabla_Mascota_SelectionChanged" HorizontalAlignment="Left" Width="367"
+            >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding id}" Width="50" />
+                    <DataGridTextColumn Header="Nombre" Binding="{Binding nombre}" Width="200"/>
+                    <DataGridTextColumn Header="Precio" Binding="{Binding precio}" Width="100"/>
 
+                </DataGrid.Columns>
+            </DataGrid>
+            <ComboBox Name="cmb_Tipo_Consulta" HorizontalAlignment="Left" Margin="151,417,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmb_Tipo_Consulta_SelectionChanged"/>
+            <Label Name="lb_Total" Content="" HorizontalAlignment="Left" Margin="420,514,0,0" VerticalAlignment="Top"/>
+            <Label Content="Tipó de consulta" HorizontalAlignment="Left" Margin="39,410,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="btn_Borrar" Content="Borrar seleccion" HorizontalAlignment="Left" Margin="420,474,0,0" VerticalAlignment="Top" Click="btn_Borrar_Click"/>
+            <Label Name="lb_valor" Content="" HorizontalAlignment="Left" Margin="240,69,0,0" VerticalAlignment="Top"/>
             <!--#ENDREGION-->
         </Grid>
     </Border>

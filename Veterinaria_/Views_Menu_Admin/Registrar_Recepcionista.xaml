@@ -14,13 +14,41 @@
         <Grid x:Name="GridRegistrarRecepcionista">
             <!--#REGION TITULO-->
             <TextBlock Grid.Row="0"
-               Grid.ColumnSpan="6"
                Text="Registrar_Recepcionista"
                Foreground="Black"
                FontSize="30"
-               HorizontalAlignment="Center">
-
-            </TextBlock>
+               HorizontalAlignment="Center" Margin="0,0,0,506"/>
+            <Label Content="Nombre" HorizontalAlignment="Left" Margin="49,106,0,0" VerticalAlignment="Top" Height="26" Width="60"/>
+            <TextBox x:Name="txt_Nombre" HorizontalAlignment="Left" Margin="114,110,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="186" Height="22"/>
+            <Label Content="Apellido" HorizontalAlignment="Left" Margin="52,158,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.526,0.039"/>
+            <TextBox x:Name="txt_Apellido" HorizontalAlignment="Left" Margin="114,162,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="186" Height="22"/>
+            <Label Content="Telefono" HorizontalAlignment="Left" Margin="407,108,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Telefono" HorizontalAlignment="Left" Margin="480,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="186" Height="22"/>
+            <Label Content="Sexo" HorizontalAlignment="Left" Margin="417,160,0,0" VerticalAlignment="Top"/>
+            <ComboBox Name="cmb_Sexo" HorizontalAlignment="Left" Margin="480,164,0,0" VerticalAlignment="Top" Width="120">
+                <ComboBoxItem>Masculino</ComboBoxItem>
+                <ComboBoxItem>Femenino</ComboBoxItem>
+                <ComboBoxItem>Otros</ComboBoxItem>
+            </ComboBox>
+            <Label Content="Fecha de nacimiento" HorizontalAlignment="Left" Margin="52,232,0,0" VerticalAlignment="Top"/>
+            <Label Content="Tipo de documento" HorizontalAlignment="Left" Margin="83,316,0,0" VerticalAlignment="Top"/>
+            <ComboBox Name="cmb_Tipo_documento" HorizontalAlignment="Left" Margin="257,318,0,0" VerticalAlignment="Top" Width="120">
+                <ComboBoxItem>Cedula</ComboBoxItem>
+                <ComboBoxItem>Targeta de indentidad</ComboBoxItem>
+                <ComboBoxItem>Otros</ComboBoxItem>
+            </ComboBox>
+            <Label Content="Numero de documento" HorizontalAlignment="Left" Margin="83,358,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Numero_documento" HorizontalAlignment="Left" Margin="257,362,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="186" Height="22"/>
+            <DatePicker Name="dtp_Fecha" HorizontalAlignment="Left" Margin="52,263,0,0" VerticalAlignment="Top"/>
+            <Label Content="Fecha de contrato" HorizontalAlignment="Left" Margin="264,232,0,0" VerticalAlignment="Top"/>
+            <DatePicker Name="dtp_Fecha_contrato" HorizontalAlignment="Left" Margin="264,263,0,0" VerticalAlignment="Top" Width="171"/>
+            <Label Content="Usuario" HorizontalAlignment="Left" Margin="561,257,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Usuario" HorizontalAlignment="Left" Margin="739,263,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Contraseña" HorizontalAlignment="Left" Margin="569,316,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Contraseña" HorizontalAlignment="Left" Margin="739,311,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Confimar contraseña" HorizontalAlignment="Left" Margin="569,384,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Confirmar_contraseña" HorizontalAlignment="Left" Margin="739,384,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Button x:Name="btn_Guardar" Content="Guardar" HorizontalAlignment="Left" Margin="435,479,0,0" VerticalAlignment="Top" Width="91" Click="btn_Guardar_Click"/>
             <!--#ENDREGION-->
         </Grid>
     </Border>

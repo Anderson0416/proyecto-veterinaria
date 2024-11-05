@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Entity
 {
-    internal class Class1
+    public class Recepcionista : Persona
     {
-
+        public DateTime fecha_contrato { get; set; }
+        public Usuarios usuario { get; set; }
     }
 }
-
-

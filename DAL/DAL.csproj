@@ -108,10 +108,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cita_Repositorio.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Mascota_Repositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Propietario_Repositorio.cs" />
+    <Compile Include="Recepcionista_Repositorio.cs" />
+    <Compile Include="Tipo_Consulta_Repositorio.cs" />
     <Compile Include="Usuario_Repositorio.cs" />
     <Compile Include="Veterinario_Repositorio.cs" />
   </ItemGroup>
