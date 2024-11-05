@@ -856,3 +856,9 @@ C:\Users\RYZEN\Desktop\c#\vete\proyecto-veterinaria\Veterinaria_\obj\Debug\Regis
 C:\Users\RYZEN\Desktop\c#\vete\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Admin\Registrar_Producto.baml
 C:\Users\RYZEN\Desktop\c#\vete\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Admin\Registrar_Tipo_Consulta.baml
 C:\Users\RYZEN\Desktop\c#\vete\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Recepcion\Compra.baml
+C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Admin\Registrar_Producto.g.cs
+C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Admin\Registrar_Tipo_Consulta.g.cs
+C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Recepcion\Compra.g.cs
+C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Admin\Registrar_Producto.baml
+C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Admin\Registrar_Tipo_Consulta.baml
+C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Recepcion\Compra.baml
