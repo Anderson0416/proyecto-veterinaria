@@ -109,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cita_Repositorio.cs" />
+    <Compile Include="Cita_Tipo_Consulta_Repositorio.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Mascota_Repositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Citas.cs" />
+    <Compile Include="Cita_Tipo_Consulta.cs" />
     <Compile Include="Mascota.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Propietario.cs" />

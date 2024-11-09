@@ -121,20 +121,43 @@ namespace DAL
             }
             return veterinario;
         }
-        public void Eliminar_Veterinario(string documento)
+        public string Eliminar_Veterinario(string documento)
         {
             MySqlConnection conectar = conexion.crearConexion();
-            conectar.Open();
+            string respuesta;
 
-            string sql = "DELETE FROM veterinarios WHERE (Documento) = @Documento";
+            try
+            {
+                conectar.Open();
 
-            MySqlCommand comando = new MySqlCommand(sql, conectar);
+                string sql = "DELETE FROM veterinarios WHERE Documento = @Documento";
+                MySqlCommand comando = new MySqlCommand(sql, conectar);
+                comando.Parameters.AddWithValue("@Documento", documento);
 
+                int resultado = comando.ExecuteNonQuery();
 
-            comando.Parameters.AddWithValue("@Documento", documento);
-
-            int resultado = comando.ExecuteNonQuery();
-
+                if (resultado > 0)
+                {
+                    respuesta = "El veterinario ha sido eliminado exitosamente.";
+                }
+                else
+                {
+                    respuesta = "No se encontró un veterinario con el documento especificado.";
+                }
+            }
+            catch (MySqlException ex) when (ex.Number == 1451)
+            {
+                respuesta = "El veterinario no se puede eliminar porque tiene citas programadas.";
+            }
+            catch (Exception ex)
+            {
+                respuesta = $"Ocurrió un error al intentar eliminar el veterinario: {ex.Message}";
+            }
+            finally
+            {
+                conectar.Close();
+            }
+            return respuesta;
         }
         public void Actualizar_Veterinario(Veterinario veterinario)
         {

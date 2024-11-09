@@ -52,5 +52,19 @@ namespace BLL
             veterinarios = veterinario_repositorio.ObtenerVeterinarios();
             return veterinarios;
         }
+        public string Eliminar_Veterinario(Veterinario veterinario)
+        {
+            return veterinario_repositorio.Eliminar_Veterinario(veterinario.documento);
+        }
+        public string Actualizar_Veterinario(Veterinario veterinario)
+        {
+            string respuesta = Validar_Campos(veterinario);
+            if (respuesta != null)
+            {
+                return respuesta;
+            }
+            veterinario_repositorio.Actualizar_Veterinario(veterinario);
+            return "PROPIETARIO ACTUALIZADO EXITOSAMENTE";
+        }
     }
 }

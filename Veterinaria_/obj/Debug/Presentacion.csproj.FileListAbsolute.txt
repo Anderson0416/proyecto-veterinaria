@@ -862,3 +862,5 @@ C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterina
 C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Admin\Registrar_Producto.baml
 C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Admin\Registrar_Tipo_Consulta.baml
 C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Recepcion\Compra.baml
+C:\Users\RYZEN\Desktop\c#\vete\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Recepcion\Pagar_Consulta.g.cs
+C:\Users\RYZEN\Desktop\c#\vete\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Recepcion\Pagar_Consulta.baml

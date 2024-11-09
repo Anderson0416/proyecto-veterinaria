@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Servicio_Cita.cs" />
+    <Compile Include="Servicio_Cita_Tipo_Consulta.cs" />
     <Compile Include="Servicio_Login.cs" />
     <Compile Include="Servicio_Mascota.cs" />
     <Compile Include="Servicio_Propietario.cs" />

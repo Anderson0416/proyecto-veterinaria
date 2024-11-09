@@ -134,6 +134,7 @@ namespace Veterinaria_.Views
         private void btn_Actualizar_Click(object sender, RoutedEventArgs e)
         {
             Actualizar();
+            Borrar_Datos();
             LlenarDataGrid();
         }
 
@@ -156,11 +157,23 @@ namespace Veterinaria_.Views
                 {
                     return propietario.nombre.ToLower().Contains(filtro) ||
                            propietario.apellido.ToLower().Contains(filtro) ||
+                           FiltrarPorFecha(propietario.Fecha_nacimiento, filtro) ||
                            propietario.documento.ToLower().Contains(filtro);
                 }
                 return false;
             };
             filtrar_datagrid.Refresh();
+        }
+        private bool FiltrarPorFecha(DateTime fechaCita, string filtro)
+        {
+            if (int.TryParse(filtro, out int numero))
+            {
+                bool esDia = (numero >= 1 && numero <= 31 && fechaCita.Day == numero);
+                bool esMes = (numero >= 1 && numero <= 12 && fechaCita.Month == numero);
+
+                return esDia || esMes;
+            }
+            return false;
         }
     }
 }

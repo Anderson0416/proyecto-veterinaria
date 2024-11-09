@@ -167,5 +167,17 @@ namespace DAL
             conectar.Close();
             return resultado;
         }
+        public int Ultima_Cita_Registrada ()
+        {
+            MySqlConnection conectar = conexion.crearConexion();
+            conectar.Open();
+            string sql = "SELECT MAX(Id) FROM Citas";
+
+            MySqlCommand comando = new MySqlCommand(sql, conectar);
+
+            int cita_id = Convert.ToInt32(comando.ExecuteScalar());
+
+            return cita_id;
+        }
     }
 }

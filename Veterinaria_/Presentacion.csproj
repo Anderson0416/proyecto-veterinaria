@@ -117,6 +117,9 @@
     <Compile Include="Views_Menu_Recepcion\Incorporar_Paciente.xaml.cs">
       <DependentUpon>Incorporar_Paciente.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views_Menu_Recepcion\Pagar_Consulta.xaml.cs">
+      <DependentUpon>Pagar_Consulta.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views_Menu_Recepcion\Programar_Consulta.xaml.cs">
       <DependentUpon>Programar_Consulta.xaml</DependentUpon>
     </Compile>
@@ -210,6 +213,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views_Menu_Recepcion\Incorporar_Paciente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views_Menu_Recepcion\Pagar_Consulta.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -30,26 +30,32 @@ namespace BLL
             }
             return null;
         }
-        public List<Citas> Lista_Todos_Mascota()
+        public List<Citas> Lista_Todos_Citas()
         {
             List<Citas> lista_citas = new List<Citas>();
             lista_citas = cita_repositorio.Consultar_Todas_Citas();
             return lista_citas;
         }
-        public string Eliminar_Mascota(Citas citas)
+        public string Eliminar_Citas(Citas citas)
         {
             cita_repositorio.Eliminar_Cita(citas.id);
             return "LA CITA FUE ELIMINADA EXITOSAMENTE";
         }
-        public string Actualizar_Mascota(Citas citas)
+        public string Actualizar_Citas(Citas citas)
         {
-            string respuesta = Validar_Campos(citas);
-            if (respuesta != null)
-            {
-                return respuesta;
-            }
             cita_repositorio.Actualizar_Cita(citas);
-            return "MASCOTA ACTUALIZADA EXITOSAMENTE";
+            return "LA CITA FUE ACTUALIZADA EXITOSAMENTE";
+        }
+        public int Ultima_Cita_Registrada()
+        {
+            int cita_id = cita_repositorio.Ultima_Cita_Registrada();
+            return cita_id;
+        }
+        public Citas Cita_Id(int id)
+        {
+            List<Citas> listaCitas = cita_repositorio.Consultar_Todas_Citas();
+            Citas cita_Filtrada = listaCitas.FirstOrDefault(c => c.id == id);
+            return cita_Filtrada;
         }
     }
 }

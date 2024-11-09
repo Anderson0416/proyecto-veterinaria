@@ -142,12 +142,10 @@ namespace Veterinaria_.Views
         {
            
         }
-
         private void cmb_Nombre_Mascota_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Llenar_Datos_Mascota();
         }
-
         private void btn_Borrar_Click(object sender, RoutedEventArgs e)
         {
             borrar_Tabla();
@@ -174,7 +172,6 @@ namespace Veterinaria_.Views
 
             lb_Total.Content = $"Total a pagar por la cita es : {total:C}";
         }
-
         private void cmb_Tipo_Consulta_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Llenar_Tabla();
@@ -192,16 +189,29 @@ namespace Veterinaria_.Views
             citas.veterinario.id = (int)cmb_Nombre_Veterinario.SelectedValue;
             citas.fecha_cita = dtp_Fecha_Consulta.SelectedDate.Value;
             citas.estado = "No Pago";
-            citas.total_pagar = decimal.Parse(lb_Total.Content.ToString());
+            string totalContent = lb_Total.Content.ToString();
+            string totalNumeric = totalContent.Replace("Total a pagar por la cita es : ", "").Replace("$", "").Trim();
+            try
+            {
+                citas.total_pagar = decimal.Parse(totalNumeric, System.Globalization.NumberStyles.Any);
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("El formato del total no es válido.");
+            }
             citas.nota = txt_Descripcion_Consulta.Text;
-            
             var respuesta = servicio_Cita.Registrar_Cita(citas);
             MessageBox.Show(respuesta);
         }
-
+        private void Tomar_Datos_Tipo_Consulta()
+        {
+            Servicio_Cita_Tipo_Consulta servicio_Cita_Tipo_Consulta = new Servicio_Cita_Tipo_Consulta();
+            servicio_Cita_Tipo_Consulta.Guardar_Cita_Consultas(consultas_Seleccionadas);
+        }
         private void btn_Programar_Consulta_Click(object sender, RoutedEventArgs e)
         {
             Tomar_Datos_Cita();
+            Tomar_Datos_Tipo_Consulta();
         }
     }
 }

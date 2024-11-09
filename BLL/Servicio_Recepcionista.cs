@@ -46,5 +46,26 @@ namespace BLL
             }
             return null;
         }
+        public List<Recepcionista> Lista_Todos_Recepcionistas()
+        {
+            List<Recepcionista> recepcionistas = new List<Recepcionista>();
+            recepcionistas = recepcionista_repositorio.Obtener_Recepcionista();
+            return recepcionistas;
+        }
+        public string Eliminar_Recepcionista(Recepcionista recepcionista)
+        {
+            recepcionista_repositorio.Eliminar_Recepcionista(recepcionista.documento);
+            return "El RECEPCIONISTA FUE ELIMINADO EXITOSAMENTE";
+        }
+        public string Actualizar_Recepcionista(Recepcionista recepcionista)
+        {
+            string respuesta = Validar_Campos(recepcionista);
+            if (respuesta != null)
+            {
+                return respuesta;
+            }
+            recepcionista_repositorio.Actualizar_Recepcionista(recepcionista);
+            return "RECEPCIONISTA ACTUALIZADO EXITOSAMENTE";
+        }
     }
 }

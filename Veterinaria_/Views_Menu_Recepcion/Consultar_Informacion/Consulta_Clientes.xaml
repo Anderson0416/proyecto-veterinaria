@@ -57,7 +57,7 @@
                     <DataGridTextColumn Header="Documento" Binding="{Binding documento}" Width="120"/>
                     <DataGridTextColumn Header="Tipo Documento" Binding="{Binding tipo_documento}" Width="110"/>
                     <DataGridTextColumn Header="Sexo" Binding="{Binding sexo}" Width="70"/>
-                    <DataGridTextColumn Header="Fecha Nacimiento" Binding="{Binding fecha_nacimiento, StringFormat='{}{0:dd/MM/yyyy}'}" Width="125" />
+                    <DataGridTextColumn Header="Fecha Nacimiento" Binding="{Binding Fecha_nacimiento, StringFormat='{}{0:dd/MM/yyyy}'}" Width="125" />
                     <DataGridTextColumn Header="Teléfono" Binding="{Binding telefono}" Width="130" />
                 </DataGrid.Columns>
             </DataGrid>

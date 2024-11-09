@@ -66,7 +66,7 @@ namespace Veterinaria_.Views_Menu_Admin
             usuario.Nombre = txt_Nombre.Text;
             usuario.Contraseña = txt_Contraseña.Text;
             usuario.Confirmar_Contraseña = txt_Confirmar_contraseña.Text;
-            usuario.Tipo_usuario = 3;
+            usuario.Tipo_usuario = 2;
 
             try
             {
