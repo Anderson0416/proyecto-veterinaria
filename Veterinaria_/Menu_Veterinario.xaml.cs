@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Veterinaria_.Views_Menu_Recepcion;
+using Veterinaria_.Views_Menu_Veterinario;
 
 namespace Veterinaria_
 {
@@ -51,6 +53,21 @@ namespace Veterinaria_
         private void Cerrar(object sender, RoutedEventArgs e)
         {
             Close();
+        }
+
+        private void Mis_Citas_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new Mis_Citas ();
+        }
+
+        private void Todas_Citas_Click(object sender, RoutedEventArgs e)
+        {
+           DataContext = new  Todas_las_Citas();
+        }
+
+        private void Historial_Clinico_Click(object sender, RoutedEventArgs e)
+        {
+            DataContext = new Historial_Clinico();
         }
     }
 }

@@ -4,9 +4,40 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Veterinaria_.Views_Menu_Recepcion"
-        mc:Ignorable="d"
-        Title="Pagar_Consulta" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        mc:Ignorable="d" 
+        d:DesignHeight="565" 
+        d:DesignWidth="925"
+        Background="Transparent">
+    
+    <!--#REGION CONTENIDO-->
+    <Border CornerRadius="10"
+    Background="#FFD2E0FB">
+        <Grid x:Name="GridPagarConsulta">
+            <!--#REGION TITULO-->
+            <TextBlock Grid.Row="0"
+               Grid.ColumnSpan="6"
+               Text="Pagar_Consulta"
+               Foreground="Black"
+               FontSize="30"
+               HorizontalAlignment="Center"  Margin="0,0,0,509">
+            </TextBlock>
+            <Label Content="Id De la Cita" HorizontalAlignment="Left" Margin="60,80,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Id_Cita" HorizontalAlignment="Left" Margin="180,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Nombre Del Propietario" HorizontalAlignment="Left" Margin="37,138,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Nombre_Propietario" HorizontalAlignment="Left" Margin="180,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Mascota" HorizontalAlignment="Left" Margin="51,209,0,0" VerticalAlignment="Top"/>
+            <ComboBox Name="cmb_Nombre_Mascota" HorizontalAlignment="Left" Margin="120,213,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmb_Nombre_Mascota_SelectionChanged"/>
+            <Label Content="Fecha de la consulta" HorizontalAlignment="Left" Margin="51,340,0,0" VerticalAlignment="Top"/>
+            <DatePicker Name="dtp_Fecha_Consulta" HorizontalAlignment="Left" Margin="51,371,0,0" VerticalAlignment="Top"/>
+            <Label Content="nombre del veterinario" HorizontalAlignment="Left" Margin="219,340,0,0" VerticalAlignment="Top"/>
+            <ComboBox Name="cmb_Nombre_Veterinario" HorizontalAlignment="Left" Margin="222,373,0,0" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="txt_Descripcion_Consulta" HorizontalAlignment="Left" Margin="583,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="244" Height="174"/>
+
+            <Label Content="Tipó de consulta" HorizontalAlignment="Left" Margin="39,410,0,0" VerticalAlignment="Top"/>
+            <ComboBox Name="cmb_Tipo_Consulta" HorizontalAlignment="Left" Margin="151,417,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmb_Tipo_Consulta_SelectionChanged"/>
+            <Button x:Name="btn_Pagar_Consulta" Content="Pagar Consulta" HorizontalAlignment="Left" Margin="420,480,0,0" VerticalAlignment="Top" Click="btn_Pagar_Consulta_Click"/>
+            <!--#ENDREGION-->
+        </Grid>
+    </Border>
+    <!--#ENDREGION-->
 </Window>

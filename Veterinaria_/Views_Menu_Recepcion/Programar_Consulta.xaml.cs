@@ -213,5 +213,10 @@ namespace Veterinaria_.Views
             Tomar_Datos_Cita();
             Tomar_Datos_Tipo_Consulta();
         }
+
+        private void btn_Pagar_Consulta_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

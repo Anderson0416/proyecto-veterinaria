@@ -58,6 +58,7 @@
             <Label Name="lb_Total" Content="" HorizontalAlignment="Left" Margin="420,514,0,0" VerticalAlignment="Top"/>
             <Label Content="Tipó de consulta" HorizontalAlignment="Left" Margin="39,410,0,0" VerticalAlignment="Top"/>
             <Button x:Name="btn_Borrar" Content="Borrar seleccion" HorizontalAlignment="Left" Margin="420,474,0,0" VerticalAlignment="Top" Click="btn_Borrar_Click"/>
+            <Button x:Name="btn_Pagar_Consulta" Content="Pagar Consulta" HorizontalAlignment="Left" Margin="420,515,0,0" VerticalAlignment="Top" Click="btn_Pagar_Consulta_Click"/>
             <Label Name="lb_valor" Content="" HorizontalAlignment="Left" Margin="240,69,0,0" VerticalAlignment="Top"/>
             <!--#ENDREGION-->
         </Grid>

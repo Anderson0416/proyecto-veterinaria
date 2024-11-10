@@ -4,6 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Veterinaria_"
+         xmlns:viewmodels="clr-namespace:Veterinaria_.Views_Menu_Veterinario"
+     
         mc:Ignorable="d"
         Title="Menu_Veterinario"
         Height="600"
@@ -300,7 +302,28 @@
         </Style>
         <!--#ENDREGION-->
 
-    
+        <!--#REGION DATATEMPLATE MIS_CITAS-->
+        <DataTemplate x:Name="MisCitas"
+                 DataType="{x:Type viewmodels:Mis_Citas}">
+            <viewmodels:Mis_Citas  DataContext="{Binding}"/>
+        </DataTemplate>
+        <!--#ENDREGION-->
+
+        <!--#REGION DATATEMPLATE TODAS_LAS_CITAS-->
+        <DataTemplate x:Name="TodaslasCitas"
+            DataType="{x:Type viewmodels:Todas_las_Citas}">
+            <viewmodels:Todas_las_Citas DataContext="{Binding}"/>
+        </DataTemplate>
+        <!--#ENDREGION-->
+        
+        <!--#REGION DATATEMPLATE HISTORIAL_CLINICO-->
+        <DataTemplate x:Name="HistorialClinico"
+            DataType="{x:Type viewmodels:Historial_Clinico}">
+            <viewmodels:Historial_Clinico  DataContext="{Binding}"/>
+        </DataTemplate>
+        <!--#ENDREGION-->
+
+
 
     </Window.Resources>
 
@@ -492,7 +515,7 @@ Cursor="Hand" Grid.ColumnSpan="4"/>
                 </Grid.RowDefinitions>
 
                 <Border Background="#b7e4c7"
-                    CornerRadius="0,0,0,10" Grid.RowSpan="2"/>
+                    CornerRadius="0,0,0,10" Grid.RowSpan="2" Cursor="Hand"/>
 
                 <!--#REGION MENU-->
 
@@ -557,30 +580,29 @@ Cursor="Hand" Grid.ColumnSpan="4"/>
                           Margin="0,30,0,0"
                           ScrollViewer.HorizontalScrollBarVisibility="Disabled" Cursor="Hand">
 
-                        <!--#REGION REGISTRAR_VETERINARIO-->
-                        <!--<ListViewItem Style="{DynamicResource ListViewStyle}"
+                        <!--#REGION MIS_CITAS-->
+                        <ListViewItem Style="{DynamicResource ListViewStyle}"
            Height="70" Cursor="Hand">
                             <Button Style="{DynamicResource BtnListaStyle}"
-         x:Name="BtnRegistrarVeterinario"
+         x:Name="BtnMisCitas"
          Height="70"
          Width="200"
          HorizontalAlignment="Left"
          Cursor="Hand"
          Background="Transparent"
-         BorderBrush="Transparent"
-         Click="Registrar_Veterinario_Click">
+         BorderBrush="Transparent" Click="Mis_Citas_Click">
 
                                 <Grid Width="200">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="60" />
                                         <ColumnDefinition/>
                                     </Grid.ColumnDefinitions>
-                                    <Image Width="40"
+                                    <Image Width="38"
                 Grid.Column="0"
                 HorizontalAlignment="Center"
-                Source="/SCS/Pictures/Register - Veterian.png"/>
+                Source="/SCS/Pictures/my-appointments.png"/>
                                     <TextBlock Grid.Column="1"
-                    Text="Registrar Veterinario"
+                    Text="Mis Citas"
                     FontWeight="SemiBold"
                     FontSize="12"
                     VerticalAlignment="Center"
@@ -589,10 +611,82 @@ Cursor="Hand" Grid.ColumnSpan="4"/>
                                 </Grid>
                             </Button>
 
-                        </ListViewItem>-->
+                        </ListViewItem>
+                        <!--#ENDREGION-->
+                        
+                        <!--#REGION TODAS_LAS_CITAS-->
+                        <ListViewItem Style="{DynamicResource ListViewStyle}"
+  Height="70" Cursor="Hand">
+                            <Button Style="{DynamicResource BtnListaStyle}"
+x:Name="BtnTodasCitas"
+Height="70"
+Width="200"
+HorizontalAlignment="Left"
+Cursor="Hand"
+Background="Transparent"
+BorderBrush="Transparent" Click="Todas_Citas_Click">
+
+                                <Grid Width="200">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="60" />
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Width="40"
+       Grid.Column="0"
+       HorizontalAlignment="Center"
+       Source="/SCS/Pictures/all-quotes.png"/>
+                                    <TextBlock Grid.Column="1"
+           Text="Todas las Citas"
+           FontWeight="SemiBold"
+           FontSize="12"
+           VerticalAlignment="Center"
+           HorizontalAlignment="Center"/>
+
+                                </Grid>
+                            </Button>
+
+                        </ListViewItem>
+                        <!--#ENDREGION-->
+                        
+                        <!--#REGION HISTORIAL_CLINICO-->
+                        <ListViewItem Style="{DynamicResource ListViewStyle}"
+  Height="70" Cursor="Hand">
+                            <Button Style="{DynamicResource BtnListaStyle}"
+x:Name="BtnHistorialClinico"
+Height="70"
+Width="200"
+HorizontalAlignment="Left"
+Cursor="Hand"
+Background="Transparent"
+BorderBrush="Transparent" Click="Historial_Clinico_Click">
+
+                                <Grid Width="200">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="60" />
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Width="40"
+       Grid.Column="0"
+       HorizontalAlignment="Center"
+       Source="/SCS/Pictures/clinical-historial.png"/>
+                                    <TextBlock Grid.Column="1"
+           Text="Historial Clinico"
+           FontWeight="SemiBold"
+           FontSize="12"
+           VerticalAlignment="Center"
+           HorizontalAlignment="Center"/>
+
+                                </Grid>
+                            </Button>
+
+                        </ListViewItem>
                         <!--#ENDREGION-->
 
-                   
+
+
+
+
+
                     </ListView>
                     <!--#ENDREGION-->
                     

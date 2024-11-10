@@ -40,8 +40,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <!--#ENDREGION-->
-        
+        <!--#ENDREGION-->   
         <!--#REGION BTNHEADER-->
         <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
         <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
@@ -806,10 +805,10 @@ BorderBrush="Transparent" Click="Registrar_Tipo_Consulta_Click">
                                         <ColumnDefinition Width="60" />
                                         <ColumnDefinition/>
                                     </Grid.ColumnDefinitions>
-                                    <Image Width="40"
+                                    <Image Width="38"
        Grid.Column="0"
        HorizontalAlignment="Left"
-       Source="/SCS/Pictures/register-type-consult.png" 
+       Source="/SCS/Pictures/register-type-consult.png"
                              Margin="10,0,0,0"/>
                                     <TextBlock Grid.Column="1"
            Text="Registrar Tipo Consulta"

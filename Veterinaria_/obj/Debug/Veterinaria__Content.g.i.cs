@@ -8,8 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scs/pictures/cart-plus-solid.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scs/pictures/file-contract-solid.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scs/pictures/shop-solid.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scs/pictures/clipboard-solid.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scs/pictures/window-restore-solid.png")]
 
 
