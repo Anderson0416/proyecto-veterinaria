@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:Veterinaria_"
               xmlns:md="pack://application:,,,/MaterialDesignThemes.Wpf;component"
               xmlns:mdc="pack://application:,,,/MaterialDesignColors;component"
-             StartupUri="Menu_Veterinario.xaml">
+             StartupUri="Consultorio.xaml">
     
     <Application.Resources>
         

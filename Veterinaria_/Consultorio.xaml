@@ -1,88 +1,91 @@
 ﻿<Window
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Veterinaria_"
-              xmlns:Consultar_Informacion="clr-namespace:Veterinaria_.Views_Menu_Recepcion.Consultar_Informacion" x:Class="Veterinaria_.Consultorio"
-              mc:Ignorable="d"
-Background="Transparent" Height="2390" Width="1758">
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:Veterinaria_"
+    xmlns:Consultar_Informacion="clr-namespace:Veterinaria_.Views_Menu_Recepcion.Consultar_Informacion"
+    x:Class="Veterinaria_.Consultorio"
+    mc:Ignorable="d"
+    Background="Transparent"
+    Width="800"
+    Height="600">
+
+
     <!--#REGION CONTENIDO-->
-    <Border CornerRadius="10"
-Background="#FFBFF6C3">
+    <Border CornerRadius="10" Background="#FFBFF6C3" Margin="10">
         <Grid x:Name="GridConsulta">
             <!--#REGION TITULO-->
-            <TextBlock Grid.Row="0"
-           Grid.ColumnSpan="6"
-           Text="Consulta"
-           Foreground="Black"
-           FontSize="30"
-           HorizontalAlignment="Center"/>
+            <TextBlock 
+                Grid.Row="0"
+                Grid.ColumnSpan="6"
+                Text="Consulta"
+                Foreground="Black"
+                FontSize="30"
+                HorizontalAlignment="Center"
+                Margin="0,10,0,20" />
 
-            <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled" Width="1758" Height="2390" Margin="-10,10,10,0" VerticalAlignment="Top">
-                <StackPanel Width="1758" Height="2390">
-                    <GroupBox HorizontalAlignment="Left" Height="261" Header="GroupBox" Margin="10,63,0,0" VerticalAlignment="Top" Width="355" Background="#f9f3f2">
-                        <StackPanel HorizontalAlignment="Left" Height="232" Margin="-6,0,0,0" VerticalAlignment="Top" Width="327">
-                            <Label Content="ID Mascota" Width="70" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,2,0,0"/>
-                            <TextBox x:Name="txt_Id_Mascota" Width="130" Height="20" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,0,0"/>
-                            <Label Content="Codigo de la Cita" Width="105" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,2,0,0"/>
-                            <TextBox x:Name="txt_Codigo_Cita" Width="130" Height="20" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,6,0,0"/>
-                            <Label Content="Nombre Mascota" Width="105" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,2,0,0"/>
-                            <TextBox x:Name="txt_Nombre_Mascota" Width="130" Height="20" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,6,0,0"/>
-                            <Label Content="Descripcion" Width="80" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,2,0,0"/>
-                            <TextBox x:Name="txt_Descripcion" Width="130" Height="20" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,6,0,0"/>
+            <!-- ScrollViewer sin altura fija para permitir desplazamiento -->
+            <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled">
+                <StackPanel>
+                    <!-- Grupo de Información Básica -->
+                    <GroupBox Header="Información de Mascota" Margin="10,5" Background="#f9f3f2">
+                        <StackPanel>
+                            <Label Content="ID Mascota" />
+                            <TextBox x:Name="txt_Id_Mascota" Width="130" HorizontalAlignment="Right" />
+                            <Label Content="Código de la Cita" />
+                            <TextBox x:Name="txt_Codigo_Cita" Width="130" HorizontalAlignment="Right" />
+                            <Label Content="Nombre Mascota" />
+                            <TextBox x:Name="txt_Nombre_Mascota" Width="130" HorizontalAlignment="Right" />
+                            <Label Content="Descripción" />
+                            <TextBox x:Name="txt_Descripcion" Width="130" HorizontalAlignment="Right" />
                         </StackPanel>
                     </GroupBox>
 
-                    <Label Content="Vacunas previas" Width="92" Height="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,1,0,0"/>
-                    <ComboBox x:Name="cmb_Vacunas_Previas" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Width="120"/>
-                    <TextBox x:Name="txt_Vacunas_Previas" Width="244" Height="174" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,6,0,0"/>
+                    <!-- Otros Contenidos Agrupados en Secciones -->
+                    <Label Content="Vacunas Previas" HorizontalAlignment="Center" Margin="10,5" />
+                    <ComboBox x:Name="cmb_Vacunas_Previas" Width="120" HorizontalAlignment="Center" />
+                    <TextBox x:Name="txt_Vacunas_Previas" Width="244" Height="100" HorizontalAlignment="Center" Margin="10,5" TextWrapping="Wrap" />
 
-                    <Label Content="Vacunas_Previas_Desparasitacion" Width="190" Height="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,2,0,0"/>
-                    <ComboBox x:Name="cmb_Vacunas_Previas_Desparasitacion" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Width="120"/>
-                    <TextBox x:Name="txt_Vacunas_Previas_Desparasitacion" Width="244" Height="174" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,6,0,0"/>
+                    <Label Content="Vacunas Previas y Desparasitación" HorizontalAlignment="Center" Margin="10,5" />
+                    <ComboBox x:Name="cmb_Vacunas_Previas_Desparasitacion" Width="120" HorizontalAlignment="Center" />
+                    <TextBox x:Name="txt_Vacunas_Previas_Desparasitacion" Width="244" Height="100" HorizontalAlignment="Center" Margin="10,5" TextWrapping="Wrap" />
 
-
-                    <GroupBox HorizontalAlignment="Left" Height="207" Header="GroupBox" Margin="10,64,0,0" VerticalAlignment="Top" Width="341" Background="#f9f3f2">
-                        <StackPanel HorizontalAlignment="Left" Height="210" Margin="-6,0,0,0" VerticalAlignment="Top" Width="327">
-                            <Label Content="Actividad Fisica" Width="92" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,2,0,0"/>
-                            <ComboBox x:Name="cmb_Actividad_Fisica" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="120"/>
-                            <Label Content="Estado Reproductivo" Width="120" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,2,0,0"/>
-                            <ComboBox x:Name="cmb_Estado_Reproductivo" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="120"/>
-                            <Label Content="Tipo de Vivienda" Width="100" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,2,0,0"/>
-                            <ComboBox x:Name="cmb_Tipo_Vivienda" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="120"/>
+                    <!-- Más Grupos de Datos -->
+                    <GroupBox Header="Información Adicional" Margin="10,5" Background="#f9f3f2">
+                        <StackPanel>
+                            <Label Content="Actividad Física" />
+                            <ComboBox x:Name="cmb_Actividad_Fisica" Width="120" HorizontalAlignment="Left" />
+                            <Label Content="Estado Reproductivo" />
+                            <ComboBox x:Name="cmb_Estado_Reproductivo" Width="120" HorizontalAlignment="Left" />
+                            <Label Content="Tipo de Vivienda" />
+                            <ComboBox x:Name="cmb_Tipo_Vivienda" Width="120" HorizontalAlignment="Left" />
                         </StackPanel>
                     </GroupBox>
 
-                    <GroupBox HorizontalAlignment="Left" Height="230" Header="GroupBox" Margin="10,65,0,0" VerticalAlignment="Top" Width="796"  Background="#f9f3f2">
-                        <StackPanel HorizontalAlignment="Left" Height="210" Margin="-6,0,0,0" VerticalAlignment="Top" Width="792">
-                            <Label Content="Fecha de Consulta" Width="110" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,2,0,0"/>
-                            <DatePicker x:Name="dtp_Fecha_Consulta" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top"/>
-                            <Label Content="Peso" Width="92" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,2,0,0"/>
-                            <TextBox x:Name="txt_Peso1" Width="130" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,6,0,0"/>
-                            <TextBox x:Name="txt_peso2" Width="130" Height="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,6,0,0"/>
+                    <GroupBox Header="Consulta" Margin="10,5" Background="#f9f3f2">
+                        <StackPanel>
+                            <Label Content="Fecha de Consulta" />
+                            <DatePicker x:Name="dtp_Fecha_Consulta" HorizontalAlignment="Left" />
+                            <Label Content="Peso" />
+                            <TextBox x:Name="txt_Peso1" Width="130" HorizontalAlignment="Left" />
+                            <TextBox x:Name="txt_Peso2" Width="130" HorizontalAlignment="Left" />
                         </StackPanel>
                     </GroupBox>
-                       
 
-                    <Label Content="Motivo De La consulta" Width="130" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,2,0,0"/>
-                    <TextBox x:Name="txt_Motivo_Consulta" Width="244" Height="174" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,6,0,0"/>
-                    <Label Content="Sintomas Que Presenta La Mascota" Width="200" Height="30" HorizontalAlignment="left" VerticalAlignment="Top" Margin="10,2,0,0"/>
-                    <TextBox x:Name="txt_Sintomas_Mascota" Width="244" Height="174" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,6,0,0"/>
-                    <Label Content="Observaciones Adicionales" Width="160" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,2,0,0"/>
-                    <TextBox x:Name="txt_Observaciones_Adicionales" Width="244" Height="174" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,6,0,0"/>
-                    <Label Content="Dieta y Alimentacion" Width="150" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,2,0,0"/>
-                    <TextBox x:Name="txt_Dieta_Alimentacion" Width="244" Height="174" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20,6,0,0"/>
+                    <Label Content="Motivo de la Consulta" HorizontalAlignment="Left" Margin="10,5" />
+                    <TextBox x:Name="txt_Motivo_Consulta" Width="244" Height="100" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="10,5" />
 
-                    <!--<Button x:Name="btn_Guardar" Content="Guardar" HorizontalAlignment="Left" Margin="20,5,0,0" VerticalAlignment="Top" Click="btn_Guardar"/>
-                    <Button x:Name="btn_Imprimir" Content="Imprimir" HorizontalAlignment="Left" Margin="20,5,0,0" VerticalAlignment="Top" Click="btn_Imprimir"/>-->
+                    <Label Content="Síntomas de la Mascota" HorizontalAlignment="Left" Margin="10,5" />
+                    <TextBox x:Name="txt_Sintomas_Mascota" Width="244" Height="100" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="10,5" />
 
+                    <Label Content="Observaciones Adicionales" HorizontalAlignment="Left" Margin="10,5" />
+                    <TextBox x:Name="txt_Observaciones_Adicionales" Width="244" Height="100" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="10,5" />
+
+                    <Label Content="Dieta y Alimentación" HorizontalAlignment="Left" Margin="10,5" />
+                    <TextBox x:Name="txt_Dieta_Alimentacion" Width="244" Height="100" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="10,5" />
                 </StackPanel>
             </ScrollViewer>
-
-
-
-
             <!--#ENDREGION-->
         </Grid>
     </Border>
