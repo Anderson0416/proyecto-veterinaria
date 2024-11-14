@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Veterinaria_.Views_Menu_Recepcion;
 
 namespace Veterinaria_.Views
 {
@@ -213,10 +214,18 @@ namespace Veterinaria_.Views
             Tomar_Datos_Cita();
             Tomar_Datos_Tipo_Consulta();
         }
-
         private void btn_Pagar_Consulta_Click(object sender, RoutedEventArgs e)
         {
-            
+            Tomar_Datos_Cita();
+            Tomar_Datos_Tipo_Consulta();
+            Pagar_Consulta pagar_Consulta = new Pagar_Consulta(this);
+            pagar_Consulta.Show();
         }
+        public int Id_Ultima_cita()
+        {
+            Servicio_Cita servicio_cita = new Servicio_Cita();
+            return servicio_cita.Ultima_Cita_Registrada();
+        }
+        
     }
 }

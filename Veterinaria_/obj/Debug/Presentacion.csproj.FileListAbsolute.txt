@@ -884,3 +884,11 @@ C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterina
 C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Veterinario\Historial_Clinico.baml
 C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Veterinario\Mis_Citas.baml
 C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Veterinario\Todas_las_Citas.baml
+C:\Users\RYZEN\Desktop\c#\vete\proyecto-veterinaria\Veterinaria_\obj\Debug\Consultorio.g.cs
+C:\Users\RYZEN\Desktop\c#\vete\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Veterinario\Historial_Clinico.g.cs
+C:\Users\RYZEN\Desktop\c#\vete\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Veterinario\Mis_Citas.g.cs
+C:\Users\RYZEN\Desktop\c#\vete\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Veterinario\Todas_las_Citas.g.cs
+C:\Users\RYZEN\Desktop\c#\vete\proyecto-veterinaria\Veterinaria_\obj\Debug\Consultorio.baml
+C:\Users\RYZEN\Desktop\c#\vete\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Veterinario\Historial_Clinico.baml
+C:\Users\RYZEN\Desktop\c#\vete\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Veterinario\Mis_Citas.baml
+C:\Users\RYZEN\Desktop\c#\vete\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Veterinario\Todas_las_Citas.baml

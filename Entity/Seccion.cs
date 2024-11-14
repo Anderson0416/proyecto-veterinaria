@@ -12,10 +12,5 @@ namespace Entity
         public static int Tipo_usuario { get; set; }
         public static int id { get; set; }
         public static Veterinario veterinario { get; set; }
-        public static void AsignarVeterinario(Veterinario veterinarios)
-        {
-            veterinario = veterinarios;
-
-        }
     }
 }

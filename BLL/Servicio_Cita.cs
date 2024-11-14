@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace BLL
 {
@@ -36,15 +37,33 @@ namespace BLL
             lista_citas = cita_repositorio.Consultar_Todas_Citas();
             return lista_citas;
         }
-        public string Eliminar_Citas(Citas citas)
+        public List<Citas> Lista_Citas_Veterinario(int id)
         {
-            cita_repositorio.Eliminar_Cita(citas.id);
-            return "LA CITA FUE ELIMINADA EXITOSAMENTE";
+            List<Citas> citas = cita_repositorio.Consultar_Todas_Citas();
+            var citas_Filtradas = citas.Where(c => c.veterinario.id == id).ToList();
+            return citas_Filtradas;
+        }
+        public string Eliminar_Citas(Citas citas)
+        {   
+            if (citas != null)
+            {
+                cita_repositorio.Eliminar_Cita(citas.id);
+                return "LA CITA FUE ELIMINADA EXITOSAMENTE";
+            }
+            else
+            {
+                return "No se ha seleccionado una cita para eliminar.";
+            }
         }
         public string Actualizar_Citas(Citas citas)
         {
             cita_repositorio.Actualizar_Cita(citas);
             return "LA CITA FUE ACTUALIZADA EXITOSAMENTE";
+        }
+        public string Actualizar_Estado_Cita(int id, string estado)
+        {
+            cita_repositorio.Actualizar_Estado_Cita(id, estado);
+            return "EL PAGO FUE EXITOSO";
         }
         public int Ultima_Cita_Registrada()
         {

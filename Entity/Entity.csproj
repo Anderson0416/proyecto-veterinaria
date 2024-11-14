@@ -56,8 +56,10 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Anamnesis.cs" />
     <Compile Include="Citas.cs" />
     <Compile Include="Cita_Tipo_Consulta.cs" />
+    <Compile Include="Historial.cs" />
     <Compile Include="Mascota.cs" />
     <Compile Include="Persona.cs" />
     <Compile Include="Propietario.cs" />

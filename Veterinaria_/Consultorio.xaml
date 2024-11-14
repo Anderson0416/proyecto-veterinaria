@@ -26,47 +26,75 @@
                 Margin="0,10,0,20" />
 
             <!-- ScrollViewer sin altura fija para permitir desplazamiento -->
-            <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled">
-                <StackPanel>
+            <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled" Margin="0,0,0,10">
+                <StackPanel Height="1589">
                     <!-- Grupo de Información Básica -->
                     <GroupBox Header="Información de Mascota" Margin="10,5" Background="#f9f3f2">
                         <StackPanel>
                             <Label Content="ID Mascota" />
                             <TextBox x:Name="txt_Id_Mascota" Width="130" HorizontalAlignment="Right" />
-                            <Label Content="Código de la Cita" />
+                            <Label Name="lb_Codigo_cita" Content="Código de la Cita" />
                             <TextBox x:Name="txt_Codigo_Cita" Width="130" HorizontalAlignment="Right" />
                             <Label Content="Nombre Mascota" />
                             <TextBox x:Name="txt_Nombre_Mascota" Width="130" HorizontalAlignment="Right" />
-                            <Label Content="Descripción" />
+                            <Label Name="lb_Descripcion" Content="Descripción" />
                             <TextBox x:Name="txt_Descripcion" Width="130" HorizontalAlignment="Right" />
                         </StackPanel>
                     </GroupBox>
 
                     <!-- Otros Contenidos Agrupados en Secciones -->
                     <Label Content="Vacunas Previas" HorizontalAlignment="Center" Margin="10,5" />
-                    <ComboBox x:Name="cmb_Vacunas_Previas" Width="120" HorizontalAlignment="Center" />
+                    <ComboBox x:Name="cmb_Vacunas_Previas" Width="120" HorizontalAlignment="Center" SelectionChanged="cmb_Vacunas_Previas_SelectionChanged" >
+                        <ComboBoxItem>*NO HAY*</ComboBoxItem>
+                        <ComboBoxItem>Distemper</ComboBoxItem>
+                        <ComboBoxItem>*Parvovirus*</ComboBoxItem>
+                        <ComboBoxItem>Adenovirus tipo 1</ComboBoxItem>
+                        <ComboBoxItem>Vanguard® -Plus 5</ComboBoxItem>
+                        <ComboBoxItem>Nobivac® - Canine Flu H3</ComboBoxItem>
+                        <ComboBoxItem>Vanguard® - CIV H3N2/H3N8</ComboBoxItem>
+                    </ComboBox>
                     <TextBox x:Name="txt_Vacunas_Previas" Width="244" Height="100" HorizontalAlignment="Center" Margin="10,5" TextWrapping="Wrap" />
 
                     <Label Content="Vacunas Previas y Desparasitación" HorizontalAlignment="Center" Margin="10,5" />
-                    <ComboBox x:Name="cmb_Vacunas_Previas_Desparasitacion" Width="120" HorizontalAlignment="Center" />
+                    <ComboBox x:Name="cmb_Vacunas_Previas_Desparasitacion" Width="120" HorizontalAlignment="Center" SelectionChanged="cmb_Vacunas_Previas_Desparasitacion_SelectionChanged" >
+                        <ComboBoxItem>*NO HAY*</ComboBoxItem>
+                        <ComboBoxItem>Nobivac - DHPPi/L</ComboBoxItem>
+                        <ComboBoxItem>Eurican -DAPPi-L</ComboBoxItem>
+                        <ComboBoxItem>Bronchicine - CAe</ComboBoxItem>
+                        <ComboBoxItem>Nobivac Tricat Trio</ComboBoxItem>
+                        <ComboBoxItem>Purevax - RCP</ComboBoxItem>
+                        <ComboBoxItem>Filavac - VHD K + V</ComboBoxItem>
+                        <ComboBoxItem>Equivac - T</ComboBoxItem>
+                    </ComboBox>
                     <TextBox x:Name="txt_Vacunas_Previas_Desparasitacion" Width="244" Height="100" HorizontalAlignment="Center" Margin="10,5" TextWrapping="Wrap" />
 
                     <!-- Más Grupos de Datos -->
                     <GroupBox Header="Información Adicional" Margin="10,5" Background="#f9f3f2">
                         <StackPanel>
                             <Label Content="Actividad Física" />
-                            <ComboBox x:Name="cmb_Actividad_Fisica" Width="120" HorizontalAlignment="Left" />
+                            <ComboBox x:Name="cmb_Actividad_Fisica" Width="120" HorizontalAlignment="Left" >
+                                <ComboBoxItem>Físicamente activo</ComboBoxItem>
+                                <ComboBoxItem>Físicamente inactivo</ComboBoxItem>
+                                <ComboBoxItem>Sedentario</ComboBoxItem>
+                            </ComboBox>
                             <Label Content="Estado Reproductivo" />
-                            <ComboBox x:Name="cmb_Estado_Reproductivo" Width="120" HorizontalAlignment="Left" />
+                            <ComboBox x:Name="cmb_Estado_Reproductivo" Width="120" HorizontalAlignment="Left" >
+                                <ComboBoxItem>Intacto</ComboBoxItem>
+                                <ComboBoxItem>Esterilizado</ComboBoxItem>
+                                <ComboBoxItem>Castrado</ComboBoxItem>                                
+                            </ComboBox>
                             <Label Content="Tipo de Vivienda" />
-                            <ComboBox x:Name="cmb_Tipo_Vivienda" Width="120" HorizontalAlignment="Left" />
+                            <ComboBox x:Name="cmb_Tipo_Vivienda" Width="120" HorizontalAlignment="Left" >
+                                <ComboBoxItem>Casa</ComboBoxItem>
+                                <ComboBoxItem>Departamento</ComboBoxItem>
+                                <ComboBoxItem>Callejero</ComboBoxItem>
+                                <ComboBoxItem>Finca</ComboBoxItem>
+                            </ComboBox>
                         </StackPanel>
                     </GroupBox>
 
                     <GroupBox Header="Consulta" Margin="10,5" Background="#f9f3f2">
                         <StackPanel>
-                            <Label Content="Fecha de Consulta" />
-                            <DatePicker x:Name="dtp_Fecha_Consulta" HorizontalAlignment="Left" />
                             <Label Content="Peso" />
                             <TextBox x:Name="txt_Peso1" Width="130" HorizontalAlignment="Left" />
                             <TextBox x:Name="txt_Peso2" Width="130" HorizontalAlignment="Left" />
@@ -84,6 +112,8 @@
 
                     <Label Content="Dieta y Alimentación" HorizontalAlignment="Left" Margin="10,5" />
                     <TextBox x:Name="txt_Dieta_Alimentacion" Width="244" Height="100" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="10,5" />
+                    <Button x:Name="btn_Guardar" Content="Guardar" Click="btn_Guardar_Click" Height="61" Width="354"/>
+                    <Button x:Name="btn_Imprimir" Content="Impirmir" Click="btn_Guardar_Click" Height="61" Width="354"/>
                 </StackPanel>
             </ScrollViewer>
             <!--#ENDREGION-->

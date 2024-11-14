@@ -79,7 +79,7 @@ namespace BLL
             Veterinario veterinario = veterinarios.FirstOrDefault(v => v.usuario != null && v.usuario.Nombre == usuario.Nombre);
             if (veterinario != null)
             {
-                Seccion.AsignarVeterinario(veterinario);
+                Seccion.veterinario = veterinario;
             }
         }
     }

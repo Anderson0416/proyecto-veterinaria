@@ -14,13 +14,27 @@ Background="#f9f3f2">
         <Grid x:Name="GridHistorialClinico">
             <!--#REGION TITULO-->
             <TextBlock Grid.Row="0"
-           Grid.ColumnSpan="6"
            Text="Historial_Clinico"
            Foreground="Black"
            FontSize="30"
-           HorizontalAlignment="Center">
-
-            </TextBlock>
+           HorizontalAlignment="Center" Margin="0,0,0,516"/>
+            <Label Content="Consutar" HorizontalAlignment="Left" Margin="234,159,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Buscar" HorizontalAlignment="Left" Margin="331,163,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="txt_Buscar_TextChanged"/>
+            <DataGrid Margin="10,305,26,10"
+          Name="dtg_Tabla_Historial"
+          AutoGenerateColumns="False"
+          IsReadOnly="True"
+          SelectionMode="Single"
+          SelectionUnit="FullRow"
+          SelectionChanged="dtg_Tabla_Historial_SelectionChanged">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID Historial" Binding="{Binding id}" Width="100" />
+                    <DataGridTextColumn Header="ID Anamnesis" Binding="{Binding anamnesis.id}" Width="100" />
+                    <DataGridTextColumn Header="Nombre Mascota" Binding="{Binding mascota.nombre}" Width="150" />
+                    <DataGridTextColumn Header="Fecha" Binding="{Binding fecha, StringFormat='{}{0:dd/MM/yyyy}'}" Width="120" />
+                    <DataGridTextColumn Header="Motivo de Consulta" Binding="{Binding anamnesis.motivo_consulta}" Width="200" />
+                </DataGrid.Columns>
+            </DataGrid>
             <!--#ENDREGION-->
         </Grid>
     </Border>

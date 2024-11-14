@@ -167,6 +167,22 @@ namespace DAL
             conectar.Close();
             return resultado;
         }
+        public int Actualizar_Estado_Cita(int id, string estado)
+        {
+            MySqlConnection conectar = conexion.crearConexion();
+            conectar.Open();
+
+            string sql = "UPDATE Citas SET  Estado_pago = @Estado_pago WHERE Id = @Id";
+            MySqlCommand comando = new MySqlCommand(sql, conectar);
+
+            comando.Parameters.AddWithValue("@Id", id);
+            comando.Parameters.AddWithValue("@Estado_pago", estado);
+
+            int resultado = comando.ExecuteNonQuery();
+
+            conectar.Close();
+            return resultado;
+        }
         public int Ultima_Cita_Registrada ()
         {
             MySqlConnection conectar = conexion.crearConexion();

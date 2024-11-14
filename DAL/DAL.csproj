@@ -108,9 +108,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Anamnesis_Repositorio.cs" />
     <Compile Include="Cita_Repositorio.cs" />
     <Compile Include="Cita_Tipo_Consulta_Repositorio.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="Historial_Repositorio.cs" />
     <Compile Include="Mascota_Repositorio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Propietario_Repositorio.cs" />

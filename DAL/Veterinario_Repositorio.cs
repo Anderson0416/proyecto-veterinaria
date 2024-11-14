@@ -66,7 +66,7 @@ namespace DAL
             MySqlDataReader reader;
 
             string sql = "SELECT Id, Nombre, Apellido, Tipo_Documento, Documento, Sexo, Telefono," +
-                " Fecha_Nacimiento, Fecha_Contrato FROM Veterinarios";
+                " Fecha_Nacimiento, Fecha_Contrato, nombre_usuario FROM Veterinarios";
             using (var comando = new MySqlCommand(sql, conectar))
             {
                 using (reader = comando.ExecuteReader())
@@ -74,6 +74,8 @@ namespace DAL
                     while (reader.Read())
                     {
                         Veterinario veterinario = new Veterinario();
+                        veterinario.usuario = new Usuarios();
+
                         veterinario.id = reader.GetInt32("Id");
                         veterinario.nombre = reader.GetString("Nombre");
                         veterinario.apellido = reader.GetString("Apellido");
@@ -83,6 +85,7 @@ namespace DAL
                         veterinario.telefono = reader.GetString("Telefono");
                         veterinario.Fecha_nacimiento = reader.GetDateTime("Fecha_Nacimiento");
                         veterinario.fecha_contrato = reader.GetDateTime("Fecha_Contrato");
+                        veterinario.usuario.Nombre = reader.GetString("nombre_usuario");
 
                         veterinarios.Add(veterinario);
                     }

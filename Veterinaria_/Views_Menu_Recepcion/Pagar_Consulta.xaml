@@ -8,7 +8,7 @@
         d:DesignHeight="565" 
         d:DesignWidth="925"
         Background="Transparent">
-    
+
     <!--#REGION CONTENIDO-->
     <Border CornerRadius="10"
     Background="#FFD2E0FB">
@@ -26,16 +26,33 @@
             <Label Content="Nombre Del Propietario" HorizontalAlignment="Left" Margin="37,138,0,0" VerticalAlignment="Top"/>
             <TextBox x:Name="txt_Nombre_Propietario" HorizontalAlignment="Left" Margin="180,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
             <Label Content="Mascota" HorizontalAlignment="Left" Margin="51,209,0,0" VerticalAlignment="Top"/>
-            <ComboBox Name="cmb_Nombre_Mascota" HorizontalAlignment="Left" Margin="120,213,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmb_Nombre_Mascota_SelectionChanged"/>
-            <Label Content="Fecha de la consulta" HorizontalAlignment="Left" Margin="51,340,0,0" VerticalAlignment="Top"/>
-            <DatePicker Name="dtp_Fecha_Consulta" HorizontalAlignment="Left" Margin="51,371,0,0" VerticalAlignment="Top"/>
-            <Label Content="nombre del veterinario" HorizontalAlignment="Left" Margin="219,340,0,0" VerticalAlignment="Top"/>
-            <ComboBox Name="cmb_Nombre_Veterinario" HorizontalAlignment="Left" Margin="222,373,0,0" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="txt_Descripcion_Consulta" HorizontalAlignment="Left" Margin="583,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="244" Height="174"/>
+            <Label Content="Fecha de la consulta" HorizontalAlignment="Left" Margin="37,275,0,0" VerticalAlignment="Top"/>
+            <DatePicker Name="dtp_Fecha_Consulta" HorizontalAlignment="Left" Margin="180,275,0,0" VerticalAlignment="Top"/>
+            <Label Content="nombre del veterinario" HorizontalAlignment="Left" Margin="40,325,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Descripcion_Consulta" HorizontalAlignment="Left" Margin="403,68,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="244" Height="174"/>
+            <Button x:Name="btn_Pagar_Consulta" Content="Pagar Consulta" HorizontalAlignment="Left" Margin="442,468,0,0" VerticalAlignment="Top" Click="btn_Pagar_Consulta_Click"/>
+            <TextBox Name="txt_Nombre_Mascota" HorizontalAlignment="Left" Margin="180,204,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="txt_Nombre_Veterinario" HorizontalAlignment="Left" Margin="190,338,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <DataGrid Margin="403,306,170,161"
+Name="dtg_Tabla_Tipo_Consulta"
+AutoGenerateColumns="False"
+IsReadOnly="True" 
+SelectionMode="Single"
+SelectionUnit="FullRow"
+>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding id}" Width="50" />
+                    <DataGridTextColumn Header="Nombre" Binding="{Binding tipo_consulta.nombre}" Width="200"/>
+                    <DataGridTextColumn Header="Precio" Binding="{Binding tipo_consulta.precio}" Width="100"/>
 
-            <Label Content="Tipó de consulta" HorizontalAlignment="Left" Margin="39,410,0,0" VerticalAlignment="Top"/>
-            <ComboBox Name="cmb_Tipo_Consulta" HorizontalAlignment="Left" Margin="151,417,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmb_Tipo_Consulta_SelectionChanged"/>
-            <Button x:Name="btn_Pagar_Consulta" Content="Pagar Consulta" HorizontalAlignment="Left" Margin="420,480,0,0" VerticalAlignment="Top" Click="btn_Pagar_Consulta_Click"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Label Content="Total a pagar" HorizontalAlignment="Left" Margin="60,388,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Total_Pagar" HorizontalAlignment="Left" Margin="190,388,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Recibo" HorizontalAlignment="Left" Margin="60,431,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Recibo" HorizontalAlignment="Left" Margin="190,431,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="txt_Recibo_TextChanged"/>
+            <Label Content="El cambio es" HorizontalAlignment="Left" Margin="78,462,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Cambio" HorizontalAlignment="Left" Margin="190,462,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
             <!--#ENDREGION-->
         </Grid>
     </Border>

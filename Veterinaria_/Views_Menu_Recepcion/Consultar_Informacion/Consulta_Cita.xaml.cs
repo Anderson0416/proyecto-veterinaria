@@ -225,7 +225,6 @@ namespace Veterinaria_.Views_Menu_Recepcion.Consultar_Informacion
             string total_numero = total.Replace("$", "").Trim();
             citas.total_pagar = decimal.Parse(total_numero, System.Globalization.NumberStyles.Any);
             return citas;
-
         }
         private void Limpiar()
         {            
@@ -278,7 +277,6 @@ namespace Veterinaria_.Views_Menu_Recepcion.Consultar_Informacion
             List<Tipo_Consulta> lista_consultas = ObtenerTiposDeConsulta();
             servicio_Cita_Tipo_Consulta.Guardar_Cita_Consultas(lista_consultas);
         }
-
         private void btn_Actualizar_Click(object sender, RoutedEventArgs e)
         {
             Actualizar();
@@ -287,6 +285,16 @@ namespace Veterinaria_.Views_Menu_Recepcion.Consultar_Informacion
             Eliminar_Cita_Tipo_Consulta();
             Tomar_Datos_Tipo_Consulta();
 
+        }
+
+        private void btn_Pagar_Click(object sender, RoutedEventArgs e)
+        {
+            Pagar_Consulta pagar_Consulta = new Pagar_Consulta(this);
+            pagar_Consulta.Show();
+        }
+        public int Id_cita()
+        {
+            return id_Cita;
         }
     }
 }

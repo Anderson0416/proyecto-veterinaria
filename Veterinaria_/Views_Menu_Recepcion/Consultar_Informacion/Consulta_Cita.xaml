@@ -73,6 +73,7 @@ Background="#FFD2E0FB">
             <Button x:Name="btn_borrar_Tipo_Consulta" Content="Borrar tipo de consulta" HorizontalAlignment="Left" Margin="760,79,0,0" VerticalAlignment="Top" Click="btn_borrar_Tipo_Consulta_Click"/>
             <Button x:Name="btn_Eliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="395,282,0,0" VerticalAlignment="Top" Click="btn_Eliminar_Click"/>
             <Button x:Name="btn_Actualizar" Content="Actializar" HorizontalAlignment="Left" Margin="481,280,0,0" VerticalAlignment="Top" Click="btn_Actualizar_Click"/>
+            <Button x:Name="btn_Pagar" Content="Pagar" HorizontalAlignment="Left" Margin="561,279,0,0" VerticalAlignment="Top" Click="btn_Pagar_Click"/>
             <!--#ENDREGION-->
         </Grid>
     </Border>

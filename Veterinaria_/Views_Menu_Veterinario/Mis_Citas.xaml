@@ -14,13 +14,30 @@ Background="#f9f3f2">
         <Grid x:Name="GridMisCitas">
             <!--#REGION TITULO-->
             <TextBlock Grid.Row="0"
-           Grid.ColumnSpan="6"
            Text="Mis_Citas"
            Foreground="Black"
            FontSize="30"
-           HorizontalAlignment="Center">
-
-            </TextBlock>
+           HorizontalAlignment="Center" Margin="0,0,0,530"/>
+            
+            <DataGrid Margin="10,305,10,10"
+     Name="dtg_Tabla_Citas"
+     AutoGenerateColumns="False"
+     IsReadOnly="True" 
+     SelectionMode="Single"
+     SelectionUnit="FullRow"
+     SelectionChanged="dtg_Tabla_Citas_SelectionChanged"
+     >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding id}" Width="50" />
+                    <DataGridTextColumn Header="Nombre del propietario" Binding="{Binding propietario.nombre}" Width="150"/>
+                    <DataGridTextColumn Header="Nombre de la mascota" Binding="{Binding mascota.nombre }" Width="150"/>
+                    <DataGridTextColumn Header="Nombre del veterinario" Binding="{Binding veterinario.nombre}" Width="120"/>
+                    <DataGridTextColumn Header="Fecha de la cita" Binding="{Binding fecha_cita, StringFormat='{}{0:dd/MM/yyyy}'}" Width="110"/>
+                    <DataGridTextColumn Header="Estado" Binding="{Binding estado}" Width="70"/>
+                    <DataGridTextColumn Header="Valor de la cita" Binding="{Binding total_pagar}" Width="125" />
+                    <DataGridTextColumn Header="Notas" Binding="{Binding nota}" Width="130" />
+                </DataGrid.Columns>
+            </DataGrid>
             <!--#ENDREGION-->
         </Grid>
     </Border>
