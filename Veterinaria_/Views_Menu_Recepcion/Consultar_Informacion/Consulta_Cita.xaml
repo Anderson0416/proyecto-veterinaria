@@ -69,11 +69,12 @@ Background="#FFD2E0FB">
                 </DataGrid.Columns>
             </DataGrid>
             <Label Name="lb_Total" Content="" HorizontalAlignment="Left" Margin="669,267,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Buscar" HorizontalAlignment="Left" Margin="646,280,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="txt_Buscar_TextChanged"/>
+            <TextBox x:Name="txt_Buscar" HorizontalAlignment="Left" Margin="765,279,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="txt_Buscar_TextChanged"/>
             <Button x:Name="btn_borrar_Tipo_Consulta" Content="Borrar tipo de consulta" HorizontalAlignment="Left" Margin="760,79,0,0" VerticalAlignment="Top" Click="btn_borrar_Tipo_Consulta_Click"/>
-            <Button x:Name="btn_Eliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="395,282,0,0" VerticalAlignment="Top" Click="btn_Eliminar_Click"/>
-            <Button x:Name="btn_Actualizar" Content="Actializar" HorizontalAlignment="Left" Margin="481,280,0,0" VerticalAlignment="Top" Click="btn_Actualizar_Click"/>
-            <Button x:Name="btn_Pagar" Content="Pagar" HorizontalAlignment="Left" Margin="561,279,0,0" VerticalAlignment="Top" Click="btn_Pagar_Click"/>
+            <Button x:Name="btn_Eliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="392,278,0,0" VerticalAlignment="Top" Click="btn_Eliminar_Click"/>
+            <Button x:Name="btn_Actualizar" Content="Actializar" HorizontalAlignment="Left" Margin="462,278,0,0" VerticalAlignment="Top" Click="btn_Actualizar_Click"/>
+            <Button x:Name="btn_Pagar" Content="Pagar" HorizontalAlignment="Left" Margin="547,279,0,0" VerticalAlignment="Top" Click="btn_Pagar_Click"/>
+            <Button x:Name="btn_Imprimir" Content="Imprimir Consulta" HorizontalAlignment="Left" Margin="607,277,0,0" VerticalAlignment="Top" Click="btn_Imprimir_Consulta_Click"/>
             <!--#ENDREGION-->
         </Grid>
     </Border>

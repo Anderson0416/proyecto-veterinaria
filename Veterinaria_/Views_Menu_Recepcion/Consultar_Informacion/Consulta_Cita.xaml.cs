@@ -1,10 +1,15 @@
 ﻿using BLL;
 using Entity;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
+using iTextSharp.tool.xml;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +22,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Net.WebRequestMethods;
 
 namespace Veterinaria_.Views_Menu_Recepcion.Consultar_Informacion
 {
@@ -295,6 +301,105 @@ namespace Veterinaria_.Views_Menu_Recepcion.Consultar_Informacion
         public int Id_cita()
         {
             return id_Cita;
+        }
+
+        private void btn_Imprimir_Consulta_Click(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog descargar = new SaveFileDialog();
+            descargar.FileName = DateTime.Now.ToString("ddMMyyyy") + ".pdf";
+            descargar.Filter = "PDF Files (*.pdf)|*.pdf";
+
+            string PaginaHTML_Texto = Properties.Resources.CONSCITA_plantilla.ToString();
+
+            //PaginaHTML_Texto = PaginaHTML_Texto.Replace("@ID", lb_Id);
+            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@NOMBRE_PROPIETARIO", txt_Nombre_Propietario.Text);
+            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@FECHA_CONSULTA", dtp_Fecha_Consulta.SelectedDate?.ToString("dd/MM/yyyy") ?? "");
+            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@ESTADO", txt_Estado.Text);
+            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@DESCRIPCION_CONSULTA", txt_Nota.Text);
+            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@TOTALCONSULTA", txt_Total_Pagar.Text);
+   
+
+
+            // Para obtener el nombre de la mascota
+            if (cmb_Nombre_Mascota.SelectedItem is Mascota mascota)
+            {
+                PaginaHTML_Texto = PaginaHTML_Texto.Replace("@NOMBRE_MASCOTA", mascota.nombre);
+            }
+            else
+            {
+                PaginaHTML_Texto = PaginaHTML_Texto.Replace("@NOMBRE_MASCOTA", "");
+            }
+
+            // Para obtener el nombre del veterinario
+            if (cmb_Nombre_Veterinario.SelectedItem is Veterinario veterinario)
+            {
+                PaginaHTML_Texto = PaginaHTML_Texto.Replace("@NOMBRE_VETERINARIO", veterinario.nombre);
+            }
+            else
+            {
+                PaginaHTML_Texto = PaginaHTML_Texto.Replace("@NOMBRE_VETERINARIO", "");
+            }
+
+
+            string filas = string.Empty;
+            string FILAS = string.Empty;
+
+            foreach(var items in dtg_Tabla_Tipo_Consulta.ItemsSource)
+{
+                if (items is Cita_Tipo_Consulta consulta)
+                {
+                    FILAS += "<tr>";
+                    FILAS += $"<td style='padding: 10px; border: 1px solid #ddd;'>{consulta.id}</td>";       // ID
+                    FILAS += $"<td style='padding: 10px; border: 1px solid #ddd;'>{consulta.tipo_consulta.nombre}</td>";   // Nombre
+                    FILAS += $"<td style='padding: 10px; border: 1px solid #ddd;'>{consulta.tipo_consulta.precio}</td>";   // Precio
+                    FILAS += "</tr>";
+                }
+            }
+
+            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@TABLA_CONSULTAS", FILAS);
+
+            foreach (var item in dtg_Tabla_Citas.Items)
+            {
+
+                var row = item as Consulta_Cita;
+
+                if (row != null)
+                {
+                    filas += "<tr>";
+                    filas += "<td>" + row.txt_Nombre_Propietario.ToString() + "</td>";
+                    filas += "<td>" + row.txt_Nota.ToString() + "</td>";
+                    filas += "<td>" + row.txt_Total_Pagar.ToString() + "</td>";
+                    filas += "<td>" + row.txt_Estado.ToString() + "</td>";
+                    filas += "</tr>";
+                }
+            }
+
+            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@FILAS", filas);
+
+
+            if (descargar.ShowDialog() == true)
+            {
+                using (FileStream stream = new FileStream(descargar.FileName, FileMode.Create))
+                {
+                    // Crear y configurar el documento PDF
+                    Document pdfDoc = new Document(PageSize.A4, 25, 25, 25, 25);
+                    PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
+                    pdfDoc.Open();
+                    pdfDoc.Add(new Phrase(""));
+
+                    using (StringReader sr = new StringReader(PaginaHTML_Texto))
+                    {
+                        XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
+                    }
+
+                    pdfDoc.Close();
+                    stream.Close();
+                }
+
+                MessageBox.Show("PDF guardado con éxito", "Guardado", MessageBoxButton.OK, MessageBoxImage.Information);
+
+
+            }
         }
     }
 }

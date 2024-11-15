@@ -113,7 +113,7 @@
                     <Label Content="Dieta y Alimentación" HorizontalAlignment="Left" Margin="10,5" />
                     <TextBox x:Name="txt_Dieta_Alimentacion" Width="244" Height="100" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="10,5" />
                     <Button x:Name="btn_Guardar" Content="Guardar" Click="btn_Guardar_Click" Height="61" Width="354"/>
-                    <Button x:Name="btn_Imprimir" Content="Impirmir" Click="btn_Guardar_Click" Height="61" Width="354"/>
+                    <Button x:Name="btn_Imprimir" Content="Imprimir" Click="btn_Imprimir_Click" Height="61" Width="354"/>
                 </StackPanel>
             </ScrollViewer>
             <!--#ENDREGION-->

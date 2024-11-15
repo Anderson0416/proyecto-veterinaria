@@ -892,3 +892,6 @@ C:\Users\RYZEN\Desktop\c#\vete\proyecto-veterinaria\Veterinaria_\obj\Debug\Consu
 C:\Users\RYZEN\Desktop\c#\vete\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Veterinario\Historial_Clinico.baml
 C:\Users\RYZEN\Desktop\c#\vete\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Veterinario\Mis_Citas.baml
 C:\Users\RYZEN\Desktop\c#\vete\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Veterinario\Todas_las_Citas.baml
+C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterinaria_\bin\Debug\itextsharp.dll
+C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterinaria_\bin\Debug\itextsharp.xmlworker.dll
+C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterinaria_\bin\Debug\itextsharp.xml

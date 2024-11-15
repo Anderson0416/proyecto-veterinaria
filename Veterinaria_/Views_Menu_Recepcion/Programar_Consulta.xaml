@@ -60,6 +60,7 @@
             <Button x:Name="btn_Borrar" Content="Borrar seleccion" HorizontalAlignment="Left" Margin="420,474,0,0" VerticalAlignment="Top" Click="btn_Borrar_Click"/>
             <Button x:Name="btn_Pagar_Consulta" Content="Pagar Consulta" HorizontalAlignment="Left" Margin="520,474,0,0" VerticalAlignment="Top" Click="btn_Pagar_Consulta_Click"/>
             <Label Name="lb_valor" Content="" HorizontalAlignment="Left" Margin="240,69,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="btn_Imprimir" Content="Imprimir Consulta" HorizontalAlignment="Left" Margin="622,474,0,0" VerticalAlignment="Top" Click="btn_Imprimir_Consulta_Click"/>
             <!--#ENDREGION-->
         </Grid>
     </Border>

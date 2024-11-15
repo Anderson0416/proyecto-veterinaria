@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+
+<body style="font-family: Arial, sans-serif; line-height: 1.6; background-color: #FFFFFF; color: #333; padding: 20px;">
+    <!-- Contenedor principal -->
+    <div style="background-color: #b8f0cf; padding: 20px; border-radius: 10px; max-width: 900px; margin: auto; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
+        <!-- Título -->
+        <h1 style="text-align: center; font-size: 28px; margin-bottom: 30px;">Programar Consulta</h1>
+
+        <!-- Información del Propietario -->
+        <h2 style="font-size: 22px; color: #31724b; border-bottom: 2px solid #31724b; padding-bottom: 5px; margin-bottom: 20px;">Datos del Propietario</h2>
+        <p><strong>Documento propietario:</strong> @DOCUMENTO_PROPIETARIO</p>
+        <p><strong>Nombre del propietario:</strong> @NOMBRE_PROPIETARIO</p>
+
+        <!-- Información de la Mascota -->
+        <h2 style="font-size: 22px; color: #31724b; border-bottom: 2px solid #31724b; padding-bottom: 5px; margin-bottom: 20px;">Datos de la Mascota</h2>
+        <p><strong>Mascota:</strong> @NOMBRE_MASCOTA</p>
+        <p><strong>Especie:</strong> @ESPECIE</p>
+        <p><strong>Raza:</strong> @RAZA</p>
+        <p><strong>Sexo:</strong> @SEXO</p>
+        <p><strong>Edad:</strong> @EDAD</p>
+
+        <!-- Información de la Consulta -->
+        <h2 style="font-size: 22px; color: #31724b; border-bottom: 2px solid #31724b; padding-bottom: 5px; margin-bottom: 20px;">Datos de la Consulta</h2>
+        <p><strong>Fecha de la consulta:</strong> @FECHA_CONSULTA</p>
+        <p><strong>Veterinario:</strong> @NOMBRE_VETERINARIO</p>
+        <p><strong>Descripción de la consulta:</strong></p>
+        <p style="border: 2px solid #31724b; padding: 10px;">@DESCRIPCION_CONSULTA</p>
+
+        <!-- Tipos de Consulta -->
+        <h2 style="font-size: 22px; color: #31724b; border-bottom: 2px solid #31724b; padding-bottom: 5px; margin-bottom: 20px;">Tipo de Consulta</h2>
+        <table style="width: 100%; border-collapse: collapse; margin-top: 15px; text-align: left;">
+            <thead>
+                <tr style="background-color: #f2f2f2;">
+                    <th style="padding: 10px; border: 1px solid #ddd;">ID</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">Nombre</th>
+                    <th style="padding: 10px; border: 1px solid #ddd;">Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Repetir fila por cada tipo de consulta -->
+                @TABLA_CONSULTAS
+            </tbody>
+        </table>
+
+        <!-- Total -->
+        <h2 style="font-size: 22px; color: #31724b; border-bottom: 2px solid #31724b; padding-bottom: 5px; margin-bottom: 20px;">Total</h2>
+        <p><strong>Total a pagar:</strong> @TOTALCONSULTA</p>
+
+        <!-- Pie de página -->
+        <div style="text-align: center; margin-top: 40px; font-size: 14px; color: #888;">
+            <p>&copy; 2024 Clínica Agenda Peluda - Todos los derechos reservados</p>
+        </div>
+    </div>
+</body>
+</html>

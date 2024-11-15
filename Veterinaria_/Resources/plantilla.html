@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<body style="font-family: Arial, sans-serif; line-height: 1.5; margin: 0; padding: 0;">
+    <div style="width: 100%; margin: 20px auto; max-width: 800px; border: 1px solid #ddd; padding: 20px; background-color: #f4f4f4; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <!-- Encabezado -->
+        <div style="text-align: center; margin-bottom: 30px;">
+            <h1 style="color: #4CAF50; font-size: 24px; margin-bottom: 5px;">Consulta Veterinaria</h1>
+            <p style="font-size: 14px; color: #555;">Detalles de la consulta y anamnesis</p>
+        </div>
+
+        <!-- Información de la Mascota -->
+        <div style="margin-bottom: 25px;">
+            <h2 style="font-size: 18px; color: #333; border-bottom: 2px solid #4CAF50; padding-bottom: 5px; margin-bottom: 15px;">Informacion de Mascota</h2>
+            <p><strong style="color: #333;">ID Mascota:</strong> @ID_MASCOTA</p>
+            <p><strong style="color: #333;">Nombre Mascota:</strong> @NOMBRE_MASCOTA</p>
+            <p><strong style="color: #333;">Vacunas Previas:</strong> @VACUNAS_PREVIAS</p>
+            <p><strong style="color: #333;">Vacunas y Desparasitacion:</strong> @VACUNAS_DESPARASITACION</p>
+        </div>
+
+        <!-- Información Adicional -->
+        <div style="margin-bottom: 25px;">
+            <h2 style="font-size: 18px; color: #333; border-bottom: 2px solid #4CAF50; padding-bottom: 5px; margin-bottom: 15px;">Informacion Adicional</h2>
+            <p><strong style="color: #333;">Actividad Fisica:</strong> @ACTIVIDAD_FISICA</p>
+            <p><strong style="color: #333;">Estado Reproductivo:</strong> @ESTADO_REPRODUCTIVO</p>
+            <p><strong style="color: #333;">Tipo de Vivienda:</strong> @TIPO_VIVIENDA</p>
+        </div>
+
+        <!-- Datos de la Consulta -->
+        <div style="margin-bottom: 25px;">
+            <h2 style="font-size: 18px; color: #333; border-bottom: 2px solid #4CAF50; padding-bottom: 5px; margin-bottom: 15px;">Datos de la Consulta</h2>
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
+                <thead>
+                    <tr style="background-color: #f2f2f2; text-align: left;">
+                        <th style="padding: 8px; border: 1px solid #ddd;">Peso 1</th>
+                        <th style="padding: 8px; border: 1px solid #ddd;">Motivo de Consulta</th>
+                        <th style="padding: 8px; border: 1px solid #ddd;">Síntomas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color: #fff;">
+                        <td style="padding: 8px; border: 1px solid #ddd;">@PESO1</td>
+                        <td style="padding: 8px; border: 1px solid #ddd;">@MOTIVO_CONSULTA</td>
+                        <td style="padding: 8px; border: 1px solid #ddd;">@SINTOMAS</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Observaciones -->
+        <div style="margin-bottom: 25px;">
+            <h2 style="font-size: 18px; color: #333; border-bottom: 2px solid #4CAF50; padding-bottom: 5px; margin-bottom: 15px;">Observaciones Adicionales</h2>
+            <p style="color: #333;">@OBSERVACIONES</p>
+        </div>
+
+        <!-- Dieta -->
+        <div style="margin-bottom: 25px;">
+            <h2 style="font-size: 18px; color: #333; border-bottom: 2px solid #4CAF50; padding-bottom: 5px; margin-bottom: 15px;">Dieta y Alimentacion</h2>
+            <p style="color: #333;">@DIETA</p>
+        </div>
+
+        <!-- Pie de página -->
+        <div style="text-align: center; margin-top: 40px; font-size: 12px; color: #888;">
+            <p>&copy; 2024 Clínica Veterinaria XYZ - Todos los derechos reservados</p>
+        </div>
+    </div>
+</body>
+</html>
