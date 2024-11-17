@@ -62,13 +62,16 @@ namespace Veterinaria_.Properties {
         
         /// <summary>
         ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
-        ///&lt;html&gt;
-        ///&lt;head&gt;
-        ///    &lt;title&gt;Title of the document&lt;/title&gt;
-        ///&lt;/head&gt;
-        ///&lt;body&gt;
-        ///&lt;/body&gt;
-        ///&lt;/html&gt;.
+        ///&lt;html lang=&quot;es&quot;&gt;
+        ///
+        ///
+        ///&lt;body style=&quot;font-family: Arial, sans-serif; line-height: 1.6; background-color: #FFFFFF; color: #333; padding: 20px;&quot;&gt;
+        ///    &lt;!-- Contenedor principal --&gt;
+        ///    &lt;div style=&quot;background-color: #b8f0cf; padding: 20px; border-radius: 10px; max-width: 900px; margin: auto; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);&quot;&gt;
+        ///        &lt;!-- Título --&gt;
+        ///        &lt;h1 style=&quot;text-align: center; font-size: 28px; margin-bottom: 30px;&quot;&gt;Programar Consulta&lt;/h1&gt;
+        ///
+        ///        &lt;!-- Información del P [resto de la cadena truncado]&quot;;.
         /// </summary>
         internal static string CONSCITA_plantilla {
             get {
@@ -77,14 +80,39 @@ namespace Veterinaria_.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap loguito {
+            get {
+                object obj = ResourceManager.GetObject("loguito", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
         ///&lt;html lang=&quot;es&quot;&gt;
-        ///&lt;body style=&quot;font-family: Arial, sans-serif; line-height: 1.5; margin: 0; padding: 0;&quot;&gt;
-        ///    &lt;div style=&quot;width: 100%; margin: 20px auto; max-width: 800px; border: 1px solid #ddd; padding: 20px; background-color: #f4f4f4; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);&quot;&gt;
-        ///        &lt;!-- Encabezado --&gt;
-        ///        &lt;div style=&quot;text-align: center; margin-bottom: 30px;&quot;&gt;
-        ///            &lt;h1 style=&quot;color: #4CAF50; font-size: 24px; margin-bottom: 5px;&quot;&gt;Consulta Veterinaria&lt;/h1&gt;
-        ///  [resto de la cadena truncado]&quot;;.
+        ///&lt;head&gt;
+        ///    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+        ///    &lt;style&gt;
+        ///        body {
+        ///            font-family: Arial, sans-serif;
+        ///            font-size: 14px; /* TamaÃ±o de letra mejorado */
+        ///            margin: 20px;
+        ///        }
+        ///
+        ///        h1 {
+        ///            font-size: 24px; /* TÃ­tulo mÃ¡s grande */
+        ///            color: #000;
+        ///            margin: 0;
+        ///        }
+        ///
+        ///        h2 {
+        ///            font-size: 18px;
+        ///            margin-bottom: 10px;
+        ///            text-decoration: underline;
+        ///        }
+        /// [resto de la cadena truncado]&quot;;.
         /// </summary>
         internal static string plantilla {
             get {

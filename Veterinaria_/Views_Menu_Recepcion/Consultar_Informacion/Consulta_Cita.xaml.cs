@@ -387,6 +387,14 @@ namespace Veterinaria_.Views_Menu_Recepcion.Consultar_Informacion
                     pdfDoc.Open();
                     pdfDoc.Add(new Phrase(""));
 
+                    iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Properties.Resources.loguito, System.Drawing.Imaging.ImageFormat.Png);
+                    img.ScaleToFit(60, 60);
+                    img.Alignment = iTextSharp.text.Image.UNDERLYING;
+
+                    //img.SetAbsolutePosition(10,100);
+                    img.SetAbsolutePosition(pdfDoc.RightMargin, pdfDoc.Top - 60);
+                    pdfDoc.Add(img);
+
                     using (StringReader sr = new StringReader(PaginaHTML_Texto))
                     {
                         XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);

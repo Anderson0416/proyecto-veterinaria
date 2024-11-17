@@ -1,67 +1,164 @@
 <!DOCTYPE html>
 <html lang="es">
-<body style="font-family: Arial, sans-serif; line-height: 1.5; margin: 0; padding: 0;">
-    <div style="width: 100%; margin: 20px auto; max-width: 800px; border: 1px solid #ddd; padding: 20px; background-color: #f4f4f4; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
-        <!-- Encabezado -->
-        <div style="text-align: center; margin-bottom: 30px;">
-            <h1 style="color: #4CAF50; font-size: 24px; margin-bottom: 5px;">Consulta Veterinaria</h1>
-            <p style="font-size: 14px; color: #555;">Detalles de la consulta y anamnesis</p>
-        </div>
+<head>
+    <meta charset="UTF-8" />
+    <!-- Link a Google Fonts para Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 12px;
+            margin: 20px;
+            padding: 0;
+        }
 
-        <!-- Información de la Mascota -->
-        <div style="margin-bottom: 25px;">
-            <h2 style="font-size: 18px; color: #333; border-bottom: 2px solid #4CAF50; padding-bottom: 5px; margin-bottom: 15px;">Informacion de Mascota</h2>
-            <p><strong style="color: #333;">ID Mascota:</strong> @ID_MASCOTA</p>
-            <p><strong style="color: #333;">Nombre Mascota:</strong> @NOMBRE_MASCOTA</p>
-            <p><strong style="color: #333;">Vacunas Previas:</strong> @VACUNAS_PREVIAS</p>
-            <p><strong style="color: #333;">Vacunas y Desparasitacion:</strong> @VACUNAS_DESPARASITACION</p>
-        </div>
+        h1, h2 {
+            text-align: center;
+            margin: 10px 0;
+        }
 
-        <!-- Información Adicional -->
-        <div style="margin-bottom: 25px;">
-            <h2 style="font-size: 18px; color: #333; border-bottom: 2px solid #4CAF50; padding-bottom: 5px; margin-bottom: 15px;">Informacion Adicional</h2>
-            <p><strong style="color: #333;">Actividad Fisica:</strong> @ACTIVIDAD_FISICA</p>
-            <p><strong style="color: #333;">Estado Reproductivo:</strong> @ESTADO_REPRODUCTIVO</p>
-            <p><strong style="color: #333;">Tipo de Vivienda:</strong> @TIPO_VIVIENDA</p>
-        </div>
+        h1 {
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: 600; /* Negrita para Montserrat */
+        }
 
-        <!-- Datos de la Consulta -->
-        <div style="margin-bottom: 25px;">
-            <h2 style="font-size: 18px; color: #333; border-bottom: 2px solid #4CAF50; padding-bottom: 5px; margin-bottom: 15px;">Datos de la Consulta</h2>
-            <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
-                <thead>
-                    <tr style="background-color: #f2f2f2; text-align: left;">
-                        <th style="padding: 8px; border: 1px solid #ddd;">Peso 1</th>
-                        <th style="padding: 8px; border: 1px solid #ddd;">Motivo de Consulta</th>
-                        <th style="padding: 8px; border: 1px solid #ddd;">Síntomas</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr style="background-color: #fff;">
-                        <td style="padding: 8px; border: 1px solid #ddd;">@PESO1</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">@MOTIVO_CONSULTA</td>
-                        <td style="padding: 8px; border: 1px solid #ddd;">@SINTOMAS</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+        h2 {
+            text-align: left;
+            font-size: 14px;
+            text-decoration: underline;
+            font-weight: 600;
+        }
 
-        <!-- Observaciones -->
-        <div style="margin-bottom: 25px;">
-            <h2 style="font-size: 18px; color: #333; border-bottom: 2px solid #4CAF50; padding-bottom: 5px; margin-bottom: 15px;">Observaciones Adicionales</h2>
-            <p style="color: #333;">@OBSERVACIONES</p>
-        </div>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
 
-        <!-- Dieta -->
-        <div style="margin-bottom: 25px;">
-            <h2 style="font-size: 18px; color: #333; border-bottom: 2px solid #4CAF50; padding-bottom: 5px; margin-bottom: 15px;">Dieta y Alimentacion</h2>
-            <p style="color: #333;">@DIETA</p>
-        </div>
+        th, td {
+            padding: 8px;
+            border: 1px solid #000;
+            text-align: left;
+        }
 
-        <!-- Pie de página -->
-        <div style="text-align: center; margin-top: 40px; font-size: 12px; color: #888;">
-            <p>&copy; 2024 Clínica Veterinaria XYZ - Todos los derechos reservados</p>
+        .section {
+            margin-top: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+        }
+
+        .header-info {
+            text-align: right;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 10px;
+            margin-top: 20px;
+            border-top: 1px solid #000;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabecera -->
+    <div class="header">
+        <h1>Consulta Veterinaria Agenda Peluda</h1>
+        <div class="header-info">
+            <p>Dirección: Av. las Águilas 123</p>
+            <p>Teléfono: 567-546-55</p>
         </div>
+    </div>
+
+    <!-- Información de la Mascota -->
+    <div class="section">
+        <h2>Informacion de la Mascota</h2>
+        <table>
+            <tr>
+                <td><strong>ID Mascota:</strong></td>
+                <td>@ID_MASCOTA</td>
+            </tr>
+            <tr>
+                <td><strong>Nombre Mascota:</strong></td>
+                <td>@NOMBRE_MASCOTA</td>
+            </tr>
+            <tr>
+                <td><strong>Vacunas Previas:</strong></td>
+                <td>@VACUNAS_PREVIAS</td>
+            </tr>
+            <tr>
+                <td><strong>Vacunas y Desparacitación:</strong></td>
+                <td>@VACUNAS_DESPARASITACION</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Información Adicional -->
+    <div class="section">
+        <h2>Informacion Adicional</h2>
+        <table>
+            <tr>
+                <td><strong>Actividad Fisica:</strong></td>
+                <td>@ACTIVIDAD_FISICA</td>
+            </tr>
+            <tr>
+                <td><strong>Estado Reproductivo:</strong></td>
+                <td>@ESTADO_REPRODUCTIVO</td>
+            </tr>
+            <tr>
+                <td><strong>Tipo de Vivienda:</strong></td>
+                <td>@TIPO_VIVIENDA</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Datos de la Consulta -->
+    <div class="section">
+        <h2>Datos de la Consulta</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Peso</th>
+                    <th>Motivo de Consulta</th>
+                    <th>Sintomas</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@PESO1</td>
+                    <td>@MOTIVO_CONSULTA</td>
+                    <td>@SINTOMAS</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Observaciones -->
+    <div class="section">
+        <h2>Observaciones Adicionales</h2>
+        <p>@OBSERVACIONES</p>
+    </div>
+
+    <!-- Dieta y Alimentación -->
+    <div class="section">
+        <h2>Dieta y Alimentacion</h2>
+        <p>@DIETA</p>
+    </div>
+
+    <!-- Pie de Página -->
+    <div class="footer">
+        <p>&copy; 2024 Clinica Veterinaria Agenda Peluda - Todos los derechos reservados</p>
     </div>
 </body>
 </html>

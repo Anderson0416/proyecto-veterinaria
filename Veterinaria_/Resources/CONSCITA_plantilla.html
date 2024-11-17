@@ -1,38 +1,160 @@
 <!DOCTYPE html>
 <html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <!-- Link a Google Fonts para Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 14px;
+            margin: 20px;
+            padding: 0;
+        }
 
+        h1, h2, h3 {
+            text-align: center;
+            margin: 10px 0;
+        }
 
-<body style="font-family: Arial, sans-serif; line-height: 1.6; background-color: #FFFFFF; color: #333; padding: 20px;">
-    <!-- Contenedor principal -->
-    <div style="background-color: #b8f0cf; padding: 20px; border-radius: 10px; max-width: 900px; margin: auto; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);">
-        <!-- Título -->
-        <h1 style="text-align: center; font-size: 28px; margin-bottom: 30px;">Programar Consulta</h1>
+        h1 {
+            text-align: center;
+            font-size: 18px;
+            text-transform: uppercase;
+            font-weight: 600; /* Negrita para Montserrat */
+        }
 
-        <!-- Información del Propietario -->
-        <h2 style="font-size: 22px; color: #31724b; border-bottom: 2px solid #31724b; padding-bottom: 5px; margin-bottom: 20px;">Datos del Propietario</h2>
-        <p><strong>Nombre del propietario:</strong> @NOMBRE_PROPIETARIO</p>
+        h2 {
+            font-size: 14px;
+            text-decoration: underline;
+            font-weight: 600;
+        }
 
-        <!-- Información de la Mascota -->
-        <h2 style="font-size: 22px; color: #31724b; border-bottom: 2px solid #31724b; padding-bottom: 5px; margin-bottom: 20px;">Datos de la Mascota</h2>
-        <p><strong>Mascota:</strong> @NOMBRE_MASCOTA</p>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
 
+        th, td {
+            padding: 8px;
+            border: 1px solid #000;
+            text-align: left;
+        }
 
-        <!-- Información de la Consulta -->
-        <h2 style="font-size: 22px; color: #31724b; border-bottom: 2px solid #31724b; padding-bottom: 5px; margin-bottom: 20px;">Datos de la Consulta</h2>
-        <p><strong>Fecha de la consulta:</strong> @FECHA_CONSULTA</p>
-        <p><strong>Veterinario:</strong> @NOMBRE_VETERINARIO</p>
-        <p><strong>Estado:</strong> @ESTADO</p>
-        <p><strong>Descripción de la consulta:</strong></p>
-        <p style="border: 2px solid #31724b; padding: 10px;">@DESCRIPCION_CONSULTA</p>
+        .section {
+            margin-top: 20px;
+        }
 
-        <!-- Tipos de Consulta -->
-        <h2 style="font-size: 22px; color: #31724b; border-bottom: 2px solid #31724b; padding-bottom: 5px; margin-bottom: 20px;">Tipo de Consulta</h2>
-        <table style="width: 100%; border-collapse: collapse; margin-top: 15px; text-align: left;">
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+        }
+
+        .header-info {
+            text-align: right;
+        }
+
+        .footer {
+            text-align: right;
+            font-size: 10px;
+            margin-top: 20px;
+            border-top: 1px solid #000;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabecera -->
+    <div class="header">
+        <h1>Clinica Veterinaria Agenda Peluda</h1>
+        <div class="header-info">
+            <p>Direccion: Av. las Aguilas 123</p>
+            <p>Telefono: 567-546-55</p>
+        </div>
+    </div>
+
+    <!-- Datos del Propietario -->
+    <div class="section">
+        <h2>Datos del Propietario</h2>
+        <table>
+            <tr>
+                <td><strong>Documento propietario:</strong></td>
+                <td>@DOCUMENTO_PROPIETARIO</td>
+            </tr>
+            <tr>
+                <td><strong>Nombre del propietario:</strong></td>
+                <td>@NOMBRE_PROPIETARIO</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Datos de la Mascota -->
+    <div class="section">
+        <h2>Datos de la Mascota</h2>
+        <table>
+            <tr>
+                <td><strong>ID de la Mascota:</strong></td>
+                <td>@ID_MASCOTA</td>
+            </tr>
+            <tr>
+                <td><strong>Nombre de la Mascota:</strong></td>
+                <td>@NOMBRE_MASCOTA</td>
+            </tr>
+            <tr>
+                <td><strong>Especie:</strong></td>
+                <td>@ESPECIE</td>
+            </tr>
+            <tr>
+                <td><strong>Raza:</strong></td>
+                <td>@RAZA</td>
+            </tr>
+            <tr>
+                <td><strong>Sexo:</strong></td>
+                <td>@SEXO</td>
+            </tr>
+            <tr>
+                <td><strong>Edad:</strong></td>
+                <td>@EDAD</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Datos de la Consulta -->
+    <div class="section">
+        <h2>Datos de la Consulta</h2>
+        <table>
+            <tr>
+                <td><strong>Fecha de la consulta:</strong></td>
+                <td>@FECHA_CONSULTA</td>
+            </tr>
+            <tr>
+                <td><strong>Veterinario:</strong></td>
+                <td>@NOMBRE_VETERINARIO</td>
+            </tr>
+            <tr>
+                <td><strong>Descripcion de la consulta:</strong></td>
+                <td>@DESCRIPCION_CONSULTA</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Tipo de Consulta -->
+    <div class="section">
+        <h2>Tipo de Consulta</h2>
+        <table>
             <thead>
-                <tr style="background-color: #f2f2f2;">
-                    <th style="padding: 10px; border: 1px solid #ddd;">ID</th>
-                    <th style="padding: 10px; border: 1px solid #ddd;">Nombre</th>
-                    <th style="padding: 10px; border: 1px solid #ddd;">Precio</th>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
                 </tr>
             </thead>
             <tbody>
@@ -40,15 +162,12 @@
                 @TABLA_CONSULTAS
             </tbody>
         </table>
+    </div>
 
-        <!-- Total -->
-        <h2 style="font-size: 22px; color: #31724b; border-bottom: 2px solid #31724b; padding-bottom: 5px; margin-bottom: 20px;">Total</h2>
+    <!-- Total -->
+    <div class="section">
+        <h2>Total</h2>
         <p><strong>Total a pagar:</strong> @TOTALCONSULTA</p>
-
-        <!-- Pie de página -->
-        <div style="text-align: center; margin-top: 40px; font-size: 14px; color: #888;">
-            <p>&copy; 2024 Clínica Agenda Peluda - Todos los derechos reservados</p>
-        </div>
     </div>
 </body>
 </html>
