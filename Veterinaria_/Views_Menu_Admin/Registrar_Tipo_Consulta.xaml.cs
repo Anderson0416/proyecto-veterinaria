@@ -147,5 +147,10 @@ namespace Veterinaria_.Views_Menu_Admin
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void txt_Precio_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

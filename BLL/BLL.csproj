@@ -62,6 +62,7 @@
     <Compile Include="Servicio_Historial.cs" />
     <Compile Include="Servicio_Login.cs" />
     <Compile Include="Servicio_Mascota.cs" />
+    <Compile Include="Servicio_Producto.cs" />
     <Compile Include="Servicio_Propietario.cs" />
     <Compile Include="Servicio_Recepcionista.cs" />
     <Compile Include="Servicio_Tipo_Consulta.cs" />

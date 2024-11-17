@@ -62,6 +62,7 @@
     <Compile Include="Historial.cs" />
     <Compile Include="Mascota.cs" />
     <Compile Include="Persona.cs" />
+    <Compile Include="Producto.cs" />
     <Compile Include="Propietario.cs" />
     <Compile Include="Recepcionista.cs" />
     <Compile Include="Seccion.cs" />
