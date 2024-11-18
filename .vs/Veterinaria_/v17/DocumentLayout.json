@@ -1,119 +1,23 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\damit\\OneDrive\\Escritorio\\ProyVeterinaria\\proyecto-veterinaria\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|c:\\users\\damit\\onedrive\\escritorio\\proyveterinaria\\proyecto-veterinaria\\veterinaria_\\resources\\conscita_plantilla.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|solutionrelative:veterinaria_\\resources\\conscita_plantilla.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|C:\\Users\\damit\\OneDrive\\Escritorio\\ProyVeterinaria\\proyecto-veterinaria\\veterinaria_\\resources\\plantilla.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|solutionrelative:veterinaria_\\resources\\plantilla.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|c:\\users\\damit\\onedrive\\escritorio\\proyveterinaria\\proyecto-veterinaria\\veterinaria_\\resources\\prgconsult_plantilla.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|solutionrelative:veterinaria_\\resources\\prgconsult_plantilla.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
-      "VerticalTabListWidth": 100,
+      "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:134:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:133:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PRGCONSULT_plantilla.html",
-              "DocumentMoniker": "C:\\Users\\damit\\OneDrive\\Escritorio\\ProyVeterinaria\\proyecto-veterinaria\\Veterinaria_\\Resources\\PRGCONSULT_plantilla.html",
-              "RelativeDocumentMoniker": "Veterinaria_\\Resources\\PRGCONSULT_plantilla.html",
-              "ToolTip": "C:\\Users\\damit\\OneDrive\\Escritorio\\ProyVeterinaria\\proyecto-veterinaria\\Veterinaria_\\Resources\\PRGCONSULT_plantilla.html",
-              "RelativeToolTip": "Veterinaria_\\Resources\\PRGCONSULT_plantilla.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAABwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-11-17T21:44:33.83Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "plantilla.html",
-              "DocumentMoniker": "C:\\Users\\damit\\OneDrive\\Escritorio\\ProyVeterinaria\\proyecto-veterinaria\\Veterinaria_\\Resources\\plantilla.html",
-              "RelativeDocumentMoniker": "Veterinaria_\\Resources\\plantilla.html",
-              "ToolTip": "C:\\Users\\damit\\OneDrive\\Escritorio\\ProyVeterinaria\\proyecto-veterinaria\\Veterinaria_\\Resources\\plantilla.html",
-              "RelativeToolTip": "Veterinaria_\\Resources\\plantilla.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAABwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-11-17T19:51:30.464Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CONSCITA_plantilla.html",
-              "DocumentMoniker": "C:\\Users\\damit\\OneDrive\\Escritorio\\ProyVeterinaria\\proyecto-veterinaria\\Veterinaria_\\Resources\\CONSCITA_plantilla.html",
-              "RelativeDocumentMoniker": "Veterinaria_\\Resources\\CONSCITA_plantilla.html",
-              "ToolTip": "C:\\Users\\damit\\OneDrive\\Escritorio\\ProyVeterinaria\\proyecto-veterinaria\\Veterinaria_\\Resources\\CONSCITA_plantilla.html",
-              "RelativeToolTip": "Veterinaria_\\Resources\\CONSCITA_plantilla.html",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAABwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-11-17T19:28:51.235Z",
-              "EditorCaption": ""
             }
           ]
         }
