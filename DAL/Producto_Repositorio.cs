@@ -96,33 +96,35 @@ namespace DAL
             int resultado = comando.ExecuteNonQuery();
         }
 
-
-
-
-
-        public void Actualizar_Cantidad_Resta_Producto(Producto producto)
+        public void Actualizar_Cantidad_Resta_Producto(Producto producto,int Cantidad)
         {
-            MySqlConnection conectar = conexion.crearConexion();
-            conectar.Open();
-            string sql = "UPDATE Productos SET Cantidad = Cantidad - @cantidadComprada WHERE Id = @id";
-            using (var comando = new MySqlCommand(sql, conectar))
+            using (var conectar = conexion.crearConexion())
             {
-                comando.Parameters.AddWithValue("@cantidadComprada", producto.stock);
-                comando.Parameters.AddWithValue("@id", producto.id);
-                comando.ExecuteNonQuery();
+                conectar.Open();
+                string sql = "UPDATE Productos SET Stock = Stock - @cantidadComprada WHERE Id = @id AND Stock >= @cantidadComprada";
+                using (var comando = new MySqlCommand(sql, conectar))
+                {
+                    comando.Parameters.AddWithValue("@cantidadComprada", Cantidad);
+                    comando.Parameters.AddWithValue("@id", producto.id);
+                    int filasAfectadas = comando.ExecuteNonQuery();
+
+                   
+                }
             }
 
         }
-        public void Actualizar_Cantidad_Suma_Producto(Producto producto)
+        public void Actualizar_Cantidad_Suma_Producto(Producto producto, int cantidad)
         {
-            MySqlConnection conectar = conexion.crearConexion();
-            conectar.Open();
-            string sql = "UPDATE Productos SET Cantidad = Cantidad + @cantidadComprada WHERE Id = @id";
-            using (var comando = new MySqlCommand(sql, conectar))
+            using (var conectar = conexion.crearConexion())
             {
-                comando.Parameters.AddWithValue("@cantidadComprada", producto.stock);
-                comando.Parameters.AddWithValue("@id", producto.id);
-                comando.ExecuteNonQuery();
+                conectar.Open();
+                string sql = "UPDATE Productos SET Stock = Stock + @cantidadRestaurada WHERE Id = @id";
+                using (var comando = new MySqlCommand(sql, conectar))
+                {
+                    comando.Parameters.AddWithValue("@cantidadRestaurada", cantidad);
+                    comando.Parameters.AddWithValue("@id", producto.id);
+                    comando.ExecuteNonQuery();
+                }
             }
 
         }

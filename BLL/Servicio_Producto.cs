@@ -55,6 +55,12 @@ namespace BLL
             List<Producto> lista_Productos = producto_repositorio.Consultar_Producto();
             return lista_Productos;
         }
+        public Producto Consultar_Producto(int id)
+        {
+            List<Producto> lista_Productos = Lista_Productos();
+            Producto producto = lista_Productos.FirstOrDefault(p => p.id == id);
+            return producto;
+        }
         public string Eliminar_Producto (int id)
         {
             Producto_Repositorio producto_repositorio = new Producto_Repositorio();
@@ -77,6 +83,16 @@ namespace BLL
             }
             producto_repositorio.Actualizar_Producto(producto);
             return "PRODUCTO ACTUALIZADO";
+        }
+        public void Restar_Stock(Producto producto, int cantidad)
+        {
+            Producto_Repositorio producto_Repositorio = new Producto_Repositorio();
+            producto_Repositorio.Actualizar_Cantidad_Resta_Producto(producto,cantidad);
+        }
+        public void Sumar_Stock(Producto producto, int cantidad)
+        {
+            Producto_Repositorio producto_Repositorio = new Producto_Repositorio();
+            producto_Repositorio.Actualizar_Cantidad_Suma_Producto(producto, cantidad);
         }
     }
 }

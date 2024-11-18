@@ -59,6 +59,8 @@
     <Compile Include="Anamnesis.cs" />
     <Compile Include="Citas.cs" />
     <Compile Include="Cita_Tipo_Consulta.cs" />
+    <Compile Include="Detalles_Factura.cs" />
+    <Compile Include="Factura.cs" />
     <Compile Include="Historial.cs" />
     <Compile Include="Mascota.cs" />
     <Compile Include="Persona.cs" />
