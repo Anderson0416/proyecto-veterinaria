@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|c:\\users\\ryzen\\desktop\\c#\\vete\\proyecto-veterinaria\\veterinaria_\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|solutionrelative:veterinaria_\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|c:\\users\\ryzen\\desktop\\c#\\vete\\proyecto-veterinaria\\veterinaria_\\views_menu_recepcion\\compra.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\veterinaria_\\views_menu_recepcion\\compra.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|solutionrelative:veterinaria_\\views_menu_recepcion\\compra.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|c:\\users\\ryzen\\desktop\\c#\\vete\\proyecto-veterinaria\\veterinaria_\\views_menu_recepcion\\compra.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{851014BD-1353-4430-98AE-F4E6057FAFF2}|BLL\\BLL.csproj|c:\\users\\ryzen\\desktop\\c#\\vete\\proyecto-veterinaria\\bll\\servicio_detalle_factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{851014BD-1353-4430-98AE-F4E6057FAFF2}|BLL\\BLL.csproj|solutionrelative:bll\\servicio_detalle_factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5569A7F9-6384-4A90-8C7F-7A35145DFCA4}|DAL\\DAL.csproj|C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\dal\\detalle_factura_repositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5569A7F9-6384-4A90-8C7F-7A35145DFCA4}|DAL\\DAL.csproj|solutionrelative:dal\\detalle_factura_repositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5569A7F9-6384-4A90-8C7F-7A35145DFCA4}|DAL\\DAL.csproj|C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\dal\\factura_repositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5569A7F9-6384-4A90-8C7F-7A35145DFCA4}|DAL\\DAL.csproj|solutionrelative:dal\\factura_repositorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{851014BD-1353-4430-98AE-F4E6057FAFF2}|BLL\\BLL.csproj|C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\bll\\servicio_factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{851014BD-1353-4430-98AE-F4E6057FAFF2}|BLL\\BLL.csproj|solutionrelative:bll\\servicio_factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\veterinaria_\\views_menu_recepcion\\compra.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|solutionrelative:veterinaria_\\views_menu_recepcion\\compra.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCE9477E-4C39-4F96-82FC-4039D009E409}|Entity\\Entity.csproj|c:\\users\\ryzen\\desktop\\c#\\vete\\proyecto-veterinaria\\entity\\detalles_factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCE9477E-4C39-4F96-82FC-4039D009E409}|Entity\\Entity.csproj|solutionrelative:entity\\detalles_factura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{851014BD-1353-4430-98AE-F4E6057FAFF2}|BLL\\BLL.csproj|c:\\users\\ryzen\\desktop\\c#\\vete\\proyecto-veterinaria\\bll\\servicio_producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{851014BD-1353-4430-98AE-F4E6057FAFF2}|BLL\\BLL.csproj|solutionrelative:bll\\servicio_producto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,58 +46,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\Veterinaria_\\App.xaml",
-              "RelativeDocumentMoniker": "Veterinaria_\\App.xaml",
-              "ToolTip": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\Veterinaria_\\App.xaml",
-              "RelativeToolTip": "Veterinaria_\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-18T12:52:49.514Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Detalles_Factura.cs",
-              "DocumentMoniker": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\Entity\\Detalles_Factura.cs",
-              "RelativeDocumentMoniker": "Entity\\Detalles_Factura.cs",
-              "ToolTip": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\Entity\\Detalles_Factura.cs",
-              "RelativeToolTip": "Entity\\Detalles_Factura.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAgAAAA",
+              "DocumentIndex": 1,
+              "Title": "Servicio_Detalle_Factura.cs",
+              "DocumentMoniker": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\BLL\\Servicio_Detalle_Factura.cs",
+              "RelativeDocumentMoniker": "BLL\\Servicio_Detalle_Factura.cs",
+              "ToolTip": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\BLL\\Servicio_Detalle_Factura.cs",
+              "RelativeToolTip": "BLL\\Servicio_Detalle_Factura.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T12:45:10.49Z",
+              "WhenOpened": "2024-11-19T03:11:00.761Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Servicio_Producto.cs",
-              "DocumentMoniker": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\BLL\\Servicio_Producto.cs",
-              "RelativeDocumentMoniker": "BLL\\Servicio_Producto.cs",
-              "ToolTip": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\BLL\\Servicio_Producto.cs",
-              "RelativeToolTip": "BLL\\Servicio_Producto.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAAF4AAABCAAAA",
+              "Title": "Servicio_Factura.cs",
+              "DocumentMoniker": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\BLL\\Servicio_Factura.cs",
+              "RelativeDocumentMoniker": "BLL\\Servicio_Factura.cs",
+              "ToolTip": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\BLL\\Servicio_Factura.cs",
+              "RelativeToolTip": "BLL\\Servicio_Factura.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAABAAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T12:00:51.919Z",
+              "WhenOpened": "2024-11-19T03:10:36.979Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Views_Menu_Recepcion\\Compra.xaml.cs",
+              "DocumentIndex": 2,
+              "Title": "Detalle_Factura_Repositorio.cs",
+              "DocumentMoniker": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\DAL\\Detalle_Factura_Repositorio.cs",
+              "RelativeDocumentMoniker": "DAL\\Detalle_Factura_Repositorio.cs",
+              "ToolTip": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\DAL\\Detalle_Factura_Repositorio.cs",
+              "RelativeToolTip": "DAL\\Detalle_Factura_Repositorio.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T02:51:30.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Factura_Repositorio.cs",
+              "DocumentMoniker": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\DAL\\Factura_Repositorio.cs",
+              "RelativeDocumentMoniker": "DAL\\Factura_Repositorio.cs",
+              "ToolTip": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\DAL\\Factura_Repositorio.cs",
+              "RelativeToolTip": "DAL\\Factura_Repositorio.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB0AAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-19T02:45:43.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Compra.xaml.cs",
               "DocumentMoniker": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\Veterinaria_\\Views_Menu_Recepcion\\Compra.xaml.cs",
               "RelativeDocumentMoniker": "Veterinaria_\\Views_Menu_Recepcion\\Compra.xaml.cs",
               "ToolTip": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\Veterinaria_\\Views_Menu_Recepcion\\Compra.xaml.cs",
               "RelativeToolTip": "Veterinaria_\\Views_Menu_Recepcion\\Compra.xaml.cs",
-              "ViewState": "AQIAAEgAAAAAAAAAAAA9wHwAAAAcAAAA",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAwwKYAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-18T11:52:50.324Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "Compra.xaml",
               "DocumentMoniker": "C:\\Users\\RYZEN\\Desktop\\c#\\vete\\proyecto-veterinaria\\Veterinaria_\\Views_Menu_Recepcion\\Compra.xaml",
               "RelativeDocumentMoniker": "Veterinaria_\\Views_Menu_Recepcion\\Compra.xaml",

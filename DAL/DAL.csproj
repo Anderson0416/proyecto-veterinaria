@@ -112,6 +112,8 @@
     <Compile Include="Cita_Repositorio.cs" />
     <Compile Include="Cita_Tipo_Consulta_Repositorio.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="Detalle_Factura_Repositorio.cs" />
+    <Compile Include="Factura_Repositorio.cs" />
     <Compile Include="Historial_Repositorio.cs" />
     <Compile Include="Mascota_Repositorio.cs" />
     <Compile Include="Producto_Repositorio.cs" />

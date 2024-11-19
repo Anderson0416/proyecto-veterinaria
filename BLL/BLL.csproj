@@ -59,6 +59,8 @@
     <Compile Include="Servicio_Anamnesis.cs" />
     <Compile Include="Servicio_Cita.cs" />
     <Compile Include="Servicio_Cita_Tipo_Consulta.cs" />
+    <Compile Include="Servicio_Detalle_Factura.cs" />
+    <Compile Include="Servicio_Factura.cs" />
     <Compile Include="Servicio_Historial.cs" />
     <Compile Include="Servicio_Login.cs" />
     <Compile Include="Servicio_Mascota.cs" />
