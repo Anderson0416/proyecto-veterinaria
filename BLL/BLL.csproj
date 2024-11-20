@@ -67,6 +67,7 @@
     <Compile Include="Servicio_Producto.cs" />
     <Compile Include="Servicio_Propietario.cs" />
     <Compile Include="Servicio_Recepcionista.cs" />
+    <Compile Include="Servicio_Recordatorio.cs" />
     <Compile Include="Servicio_Tipo_Consulta.cs" />
     <Compile Include="Servicio_Usuarios.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

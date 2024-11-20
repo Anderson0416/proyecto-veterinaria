@@ -46,6 +46,7 @@ namespace Veterinaria_.Views
             propietario.sexo = cmd_Sexo.Text;
             propietario.Fecha_nacimiento = dtp_Fecha.SelectedDate.Value;
             propietario.telefono = txt_Telefono.Text;
+            propietario.correo = txt_Correo.Text;
             return propietario;
         }
         private void Borrar_Datos()
@@ -58,6 +59,7 @@ namespace Veterinaria_.Views
             cmd_Sexo.SelectedIndex = -1; 
             dtp_Fecha.SelectedDate = null; 
             txt_Telefono.Clear(); 
+            txt_Correo.Clear();
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -88,6 +90,7 @@ namespace Veterinaria_.Views
                 txt_Nombre.Text = propietarioSeleccionado.nombre;
                 txt_Apellido.Text = propietarioSeleccionado.apellido;
                 txt_Numero_documento.Text = propietarioSeleccionado.documento;
+                txt_Correo.Text = propietarioSeleccionado.correo;
 
                 if (propietarioSeleccionado.Fecha_nacimiento != null)
                 {
@@ -158,7 +161,8 @@ namespace Veterinaria_.Views
                     return propietario.nombre.ToLower().Contains(filtro) ||
                            propietario.apellido.ToLower().Contains(filtro) ||
                            FiltrarPorFecha(propietario.Fecha_nacimiento, filtro) ||
-                           propietario.documento.ToLower().Contains(filtro);
+                           propietario.documento.ToLower().Contains(filtro) ||
+                           propietario.correo.ToLower().Contains(filtro);
                 }
                 return false;
             };

@@ -44,7 +44,7 @@ namespace Veterinaria_.Views
             propietario.sexo = cmb_Sexo.Text;
             propietario.Fecha_nacimiento = dtp_Fecha.SelectedDate.Value;
             propietario.telefono = txt_Telefono.Text;
-
+            propietario.correo = txt_Correo.Text;
 
             try
             {

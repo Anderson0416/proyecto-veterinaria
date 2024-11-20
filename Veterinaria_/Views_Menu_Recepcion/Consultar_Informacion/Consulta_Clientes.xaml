@@ -52,19 +52,22 @@
                 >
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ID" Binding="{Binding id}" Width="50" />
-                    <DataGridTextColumn Header="Nombre" Binding="{Binding nombre}" Width="150"/>
-                    <DataGridTextColumn Header="Apellido" Binding="{Binding apellido}" Width="150"/>
+                    <DataGridTextColumn Header="Nombre" Binding="{Binding nombre}" Width="100"/>
+                    <DataGridTextColumn Header="Apellido" Binding="{Binding apellido}" Width="100"/>
+                    <DataGridTextColumn Header="Correo" Binding="{Binding correo}" Width="130"/>
                     <DataGridTextColumn Header="Documento" Binding="{Binding documento}" Width="120"/>
                     <DataGridTextColumn Header="Tipo Documento" Binding="{Binding tipo_documento}" Width="110"/>
                     <DataGridTextColumn Header="Sexo" Binding="{Binding sexo}" Width="70"/>
                     <DataGridTextColumn Header="Fecha Nacimiento" Binding="{Binding Fecha_nacimiento, StringFormat='{}{0:dd/MM/yyyy}'}" Width="125" />
-                    <DataGridTextColumn Header="Teléfono" Binding="{Binding telefono}" Width="130" />
+                    <DataGridTextColumn Header="Teléfono" Binding="{Binding telefono}" Width="100" />
                 </DataGrid.Columns>
             </DataGrid>
             <Button x:Name="btn_Actualizar" Content="Actializar" HorizontalAlignment="Left" Margin="830,139,0,0" VerticalAlignment="Top" Click="btn_Actualizar_Click"/>
             <Button x:Name="btn_Eliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="833,172,0,0" VerticalAlignment="Top" Click="btn_Eliminar_Click"/>
             <Label Content="Buscar" HorizontalAlignment="Left" Margin="727,229,0,0" VerticalAlignment="Top"/>
             <TextBox x:Name="txt_Buscar" HorizontalAlignment="Left" Margin="777,233,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="105" TextChanged="txt_Buscar_TextChanged"/>
+            <Label Content="Correo electronico" HorizontalAlignment="Left" Margin="637,129,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Correo" HorizontalAlignment="Left" Margin="625,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="164"/>
             <!--#ENDREGION-->
         </Grid>
     </Border>

@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entity
+namespace BLL
 {
-    public class Propietario : Persona
+    public class Servicio_Recordatorio
     {
-        public string correo { get; set; }
     }
 }

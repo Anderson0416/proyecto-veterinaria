@@ -76,5 +76,14 @@ namespace BLL
             Citas cita_Filtrada = listaCitas.FirstOrDefault(c => c.id == id);
             return cita_Filtrada;
         }
+        public List<Citas> Citas_Fecha()
+        {
+            List<Citas> Lista_Citas = new List<Citas> ();
+            Lista_Citas = Lista_Todos_Citas();
+            DateTime fecha = DateTime.Now;
+            DateTime fecha_siguiente = fecha.AddDays(1);
+            var citas_filtro = Lista_Citas.Where(c => c.fecha_cita.Date == fecha_siguiente.Date).ToList();
+            return citas_filtro;
+        }
     }
 }

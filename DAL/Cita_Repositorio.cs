@@ -43,6 +43,7 @@ namespace DAL
                 c.Id AS CitaId, c.Fecha_cita, c.Estado_pago, c.Total_Pagar, c.Notas, c.created_at,
                 p.Id AS PropietarioId, p.Nombre AS PropietarioNombre, p.Apellido AS PropietarioApellido, p.Tipo_documento AS PropietarioTipoDocumento,
                 p.Documento AS PropietarioDocumento, p.Sexo AS PropietarioSexo, p.Telefono AS PropietarioTelefono, p.Fecha_Nacimiento AS PropietarioFechaNacimiento,
+                p.gmail As Propietariogmail,
                 m.Id AS MascotaId, m.Nombre AS MascotaNombre, m.Especie AS MascotaEspecie, m.Raza AS MascotaRaza, m.Sexo AS MascotaSexo, 
                 m.Edad AS MascotaEdad, m.Edad2 AS MascotaEdad2, m.Propietario_Documento AS MascotaPropietarioDocumento,
                 v.Id AS VeterinarioId, v.Nombre AS VeterinarioNombre, v.Apellido AS VeterinarioApellido, v.Tipo_documento AS VeterinarioTipoDocumento, 
@@ -98,7 +99,8 @@ namespace DAL
                 documento = reader.GetString("PropietarioDocumento"),
                 sexo = reader.GetString("PropietarioSexo"),
                 telefono = reader.GetString("PropietarioTelefono"),
-                Fecha_nacimiento = reader.GetDateTime("PropietarioFechaNacimiento")
+                Fecha_nacimiento = reader.GetDateTime("PropietarioFechaNacimiento"),
+                correo = reader.GetString("Propietariogmail")
             };
         }
         private Mascota MapearMascota(MySqlDataReader reader)

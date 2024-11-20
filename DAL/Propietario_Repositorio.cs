@@ -18,8 +18,8 @@ namespace DAL
             MySqlConnection conectar = conexion.crearConexion();
             conectar.Open();
 
-            string sql = "INSERT INTO Propietarios ( Nombre, Apellido, Tipo_Documento, Documento, Sexo, Fecha_Nacimiento, Telefono )" +
-                         "VALUES ( @Nombre, @Apellido, @Tipo_Documento, @Documento, @Sexo, @Fecha_Nacimiento, @Telefono)";
+            string sql = "INSERT INTO Propietarios ( Nombre, Apellido, Tipo_Documento, Documento, Sexo, Fecha_Nacimiento, Telefono, gmail )" +
+                         "VALUES ( @Nombre, @Apellido, @Tipo_Documento, @Documento, @Sexo, @Fecha_Nacimiento, @Telefono, @gmail)";
             MySqlCommand comando = new MySqlCommand(sql, conectar);
 
             comando.Parameters.AddWithValue("@Nombre", propietario.nombre);
@@ -29,6 +29,7 @@ namespace DAL
             comando.Parameters.AddWithValue("@Sexo", propietario.sexo);
             comando.Parameters.AddWithValue("@Fecha_Nacimiento", propietario.Fecha_nacimiento);
             comando.Parameters.AddWithValue("@Telefono", propietario.telefono);
+            comando.Parameters.AddWithValue("@gmail", propietario.correo);
 
             int resultado = comando.ExecuteNonQuery();
 
@@ -68,7 +69,7 @@ namespace DAL
             MySqlDataReader reader;
 
             string sql = "SELECT Id, Nombre, Apellido, Tipo_Documento, Documento, Sexo, Fecha_Nacimiento," +
-                " Telefono FROM Propietarios";
+                " Telefono, gmail FROM Propietarios";
 
             using (var comando = new MySqlCommand(sql, conectar))
             {
@@ -85,6 +86,7 @@ namespace DAL
                         propietario.sexo = reader.GetString("Sexo");
                         propietario.Fecha_nacimiento = reader.GetDateTime("Fecha_Nacimiento");
                         propietario.telefono = reader.GetString("Telefono");
+                        propietario.correo = reader.GetString("gmail");
                         propietarios.Add(propietario);
                     }
 
@@ -115,7 +117,7 @@ namespace DAL
             conectar.Open();
 
             string sql = "UPDATE Propietarios SET Nombre = @Nombre, Apellido = @Apellido, Tipo_Documento = @Tipo_Documento, " +
-                 "Documento = @Documento, Sexo = @Sexo, Fecha_Nacimiento = @Fecha_Nacimiento, Telefono = @Telefono " +
+                 "Documento = @Documento, Sexo = @Sexo, Fecha_Nacimiento = @Fecha_Nacimiento, Telefono = @Telefono, gmail = @gmail " +
                  "WHERE Id = @Id";
 
             MySqlCommand comando = new MySqlCommand(sql, conectar);
@@ -128,7 +130,7 @@ namespace DAL
             comando.Parameters.AddWithValue("@Sexo", propietario.sexo);
             comando.Parameters.AddWithValue("@Fecha_Nacimiento", propietario.Fecha_nacimiento);
             comando.Parameters.AddWithValue("@Telefono", propietario.telefono);
-
+            comando.Parameters.AddWithValue("@gmail", propietario.correo);
             int resultado = comando.ExecuteNonQuery();
         }
 
