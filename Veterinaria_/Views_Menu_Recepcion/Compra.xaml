@@ -56,11 +56,12 @@ SelectionChanged="dtg_Tabla_Compra_SelectionChanged" HorizontalAlignment="Left" 
             </DataGrid>
             <Label Content="Total a pagar" HorizontalAlignment="Left" Margin="243,492,0,0" VerticalAlignment="Top"/>
             <TextBox x:Name="txt_Total" HorizontalAlignment="Left" Margin="341,496,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="txt_Total_TextChanged"/>
-            <Button x:Name="btn_Pagar" Content="Pagat" HorizontalAlignment="Left" Margin="560,413,0,0" VerticalAlignment="Top" Width="162" Click="btn_Pagar_Click"/>
+            <Button x:Name="btn_Pagar" Content="Pagar" HorizontalAlignment="Left" Margin="560,413,0,0" VerticalAlignment="Top" Width="162" Click="btn_Pagar_Click"/>
             <TextBox x:Name="txt_Buscar_Producto" HorizontalAlignment="Left" Margin="124,103,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="txt_Buscar_Producto_TextChanged"/>
             <TextBox x:Name="txt_Buscar_Compra" HorizontalAlignment="Left" Margin="124,356,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="txt_Buscar_Compra_TextChanged"/>
             <Label Content="Compra" HorizontalAlignment="Left" Margin="55,346,0,0" VerticalAlignment="Top"/>
             <Button x:Name="txt_Borrar" Content="Borrar" HorizontalAlignment="Left" Margin="301,357,0,0" VerticalAlignment="Top" Click="txt_Borrar_Click"/>
+            <Button x:Name="btn_Imprimir_Factura" Content="Imprimir Factura" HorizontalAlignment="Left" Margin="560,448,0,0" VerticalAlignment="Top" Width="162" Click="btn_Imprimir_Factura_Click"/>
             <!--#ENDREGION-->
         </Grid>
     </Border>

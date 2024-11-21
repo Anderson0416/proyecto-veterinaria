@@ -63,19 +63,42 @@ namespace Veterinaria_.Properties {
         /// <summary>
         ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
         ///&lt;html lang=&quot;es&quot;&gt;
+        ///&lt;head&gt;
+        ///    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+        ///    &lt;!-- Link a Google Fonts para Montserrat --&gt;
+        ///    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&amp;display=swap&quot; rel=&quot;stylesheet&quot;/&gt;
+        ///    &lt;style&gt;
+        ///        body {
+        ///            font-family: &apos;Montserrat&apos;, Arial, sans-serif;
+        ///            font-size: 14px;
+        ///            margin: 20px;
+        ///            padding: 0;
+        ///        }
         ///
-        ///
-        ///&lt;body style=&quot;font-family: Arial, sans-serif; line-height: 1.6; background-color: #FFFFFF; color: #333; padding: 20px;&quot;&gt;
-        ///    &lt;!-- Contenedor principal --&gt;
-        ///    &lt;div style=&quot;background-color: #b8f0cf; padding: 20px; border-radius: 10px; max-width: 900px; margin: auto; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);&quot;&gt;
-        ///        &lt;!-- Título --&gt;
-        ///        &lt;h1 style=&quot;text-align: center; font-size: 28px; margin-bottom: 30px;&quot;&gt;Programar Consulta&lt;/h1&gt;
-        ///
-        ///        &lt;!-- Información del P [resto de la cadena truncado]&quot;;.
+        ///        h1, h2, h3 {
+        ///            text-align: center;
+        ///            margin: 10px 0;
+        ///        [resto de la cadena truncado]&quot;;.
         /// </summary>
         internal static string CONSCITA_plantilla {
             get {
                 return ResourceManager.GetString("CONSCITA_plantilla", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
+        ///&lt;html&gt;
+        ///&lt;head&gt;
+        ///    &lt;title&gt;Title of the document&lt;/title&gt;
+        ///&lt;/head&gt;
+        ///&lt;body&gt;
+        ///&lt;/body&gt;
+        ///&lt;/html&gt;.
+        /// </summary>
+        internal static string FACTURA_plantilla {
+            get {
+                return ResourceManager.GetString("FACTURA_plantilla", resourceCulture);
             }
         }
         
@@ -94,23 +117,19 @@ namespace Veterinaria_.Properties {
         ///&lt;html lang=&quot;es&quot;&gt;
         ///&lt;head&gt;
         ///    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+        ///    &lt;!-- Link a Google Fonts para Montserrat --&gt;
+        ///    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&amp;display=swap&quot; rel=&quot;stylesheet&quot;/&gt;
         ///    &lt;style&gt;
         ///        body {
-        ///            font-family: Arial, sans-serif;
-        ///            font-size: 14px; /* TamaÃ±o de letra mejorado */
+        ///            font-family: &apos;Montserrat&apos;, Arial, sans-serif;
+        ///            font-size: 12px;
         ///            margin: 20px;
+        ///            padding: 0;
         ///        }
         ///
-        ///        h1 {
-        ///            font-size: 24px; /* TÃ­tulo mÃ¡s grande */
-        ///            color: #000;
-        ///            margin: 0;
-        ///        }
-        ///
-        ///        h2 {
-        ///            font-size: 18px;
-        ///            margin-bottom: 10px;
-        ///            text-decoration: underline;
+        ///        h1, h2 {
+        ///            text-align: center;
+        ///            margin: 10px 0;
         ///        }
         /// [resto de la cadena truncado]&quot;;.
         /// </summary>
@@ -123,15 +142,22 @@ namespace Veterinaria_.Properties {
         /// <summary>
         ///   Busca una cadena traducida similar a &lt;!DOCTYPE html&gt;
         ///&lt;html lang=&quot;es&quot;&gt;
-        ///    
+        ///&lt;head&gt;
+        ///    &lt;meta charset=&quot;UTF-8&quot; /&gt;
+        ///    &lt;!-- Link a Google Fonts para Montserrat --&gt;
+        ///    &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&amp;display=swap&quot; rel=&quot;stylesheet&quot;/&gt;
+        ///    &lt;style&gt;
+        ///        body {
+        ///            font-family: &apos;Montserrat&apos;, Arial, sans-serif;
+        ///            font-size: 14px;
+        ///            margin: 20px;
+        ///            padding: 0;
+        ///        }
         ///
-        ///&lt;body style=&quot;font-family: Arial, sans-serif; line-height: 1.6; background-color: #FFFFFF; color: #333; padding: 20px;&quot;&gt;
-        ///    &lt;!-- Contenedor principal --&gt;
-        ///    &lt;div style=&quot;background-color: #b8f0cf; padding: 20px; border-radius: 10px; max-width: 900px; margin: auto; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);&quot;&gt;
-        ///        &lt;!-- Título --&gt;
-        ///        &lt;h1 style=&quot;text-align: center; font-size: 28px; margin-bottom: 30px;&quot;&gt;Programar Consulta&lt;/h1&gt;
-        ///
-        ///        &lt;!-- Información d [resto de la cadena truncado]&quot;;.
+        ///        h1, h2, h3 {
+        ///            text-align: center;
+        ///            margin: 10px 0;
+        ///        [resto de la cadena truncado]&quot;;.
         /// </summary>
         internal static string PRGCONSULT_plantilla {
             get {

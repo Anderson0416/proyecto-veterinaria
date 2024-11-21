@@ -1,10 +1,14 @@
 ﻿using BLL;
 using Entity;
+using iTextSharp.text.pdf;
+using iTextSharp.text;
 using iTextSharp.tool.xml.html;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +21,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using iTextSharp.tool.xml;
 
 namespace Veterinaria_.Views
 {
@@ -222,5 +227,66 @@ namespace Veterinaria_.Views
             Guardar_Datos_Factura();
             Guardar_Datos_Detalle_Factura();
         }
-    }
+
+        private void btn_Imprimir_Factura_Click(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog descargar_ProgConsulta = new SaveFileDialog();
+            descargar_ProgConsulta.FileName = DateTime.Now.ToString("ddMMyyyy") + ".pdf";
+            descargar_ProgConsulta.Filter = "PDF Files (*.pdf)|*.pdf";
+
+            string PaginaHTML_Texto = Properties.Resources.FACTURA_plantilla.ToString();
+
+            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@FECHA_FACTURA", DateTime.Now.ToString("ddMMyyyy"));
+            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@TOTAL_FACTURA", txt_Total.Text);
+
+
+            string filas = string.Empty;
+
+            foreach (var items in dtg_Tabla_Compra.Items)
+            {
+                var tipe = items as Detalles_Factura;
+
+                if (items is Detalles_Factura)
+                {
+                    filas += "<tr>";
+                    filas += $"<td style='padding: 10px; border: 1px solid #ddd;'>{tipe.producto.id}</td>";         
+                    filas += $"<td style='padding: 10px; border: 1px solid #ddd;'>{tipe.producto.nombre}</td>";     
+                    filas += $"<td style='padding: 10px; border: 1px solid #ddd;'>{tipe.cantidad}</td>";     
+                    filas += $"<td style='padding: 10px; border: 1px solid #ddd;'>{tipe.sub_total}</td>";
+                    filas += "</tr>";
+                }
+            }
+
+            PaginaHTML_Texto = PaginaHTML_Texto.Replace("@DATOS_FACTURA", filas);
+
+            if (descargar_ProgConsulta.ShowDialog() == true)
+            {
+                using (FileStream stream = new FileStream(descargar_ProgConsulta.FileName, FileMode.Create))
+                {
+                    // Crear y configurar el documento PDF
+                    Document pdfDoc = new Document(PageSize.A4, 25, 25, 25, 25);
+                    PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
+                    pdfDoc.Open();
+                    pdfDoc.Add(new Phrase(""));
+
+                    //iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Properties.Resources.loguito, System.Drawing.Imaging.ImageFormat.Png);
+                    //img.ScaleToFit(60, 60);
+                    //img.Alignment = iTextSharp.text.Image.UNDERLYING;
+
+                    ////img.SetAbsolutePosition(10,100);
+                    //img.SetAbsolutePosition(pdfDoc.RightMargin, pdfDoc.Top - 60);
+                    //pdfDoc.Add(img);
+
+                    // Agregar contenido HTML al documento
+                    using (StringReader sr = new StringReader(PaginaHTML_Texto))
+                    {
+                        XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
+                    }
+
+                    pdfDoc.Close();
+                    stream.Close();
+                }
+                MessageBox.Show("PDF guardado con éxito", "Guardado", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+    }    }
 }
