@@ -1,4 +1,5 @@
-﻿using MaterialDesignThemes.Wpf;
+﻿using BLL;
+using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +30,8 @@ namespace Veterinaria_
         public Menu_Recepcion()
         {
             InitializeComponent();
+            Servicio_Recordatorio servicio_Recordatorio = new Servicio_Recordatorio();
+            servicio_Recordatorio.EnviarRecordatorios();
         }
 
         private void TBShow(object sender, RoutedEventArgs e)
@@ -124,6 +127,8 @@ namespace Veterinaria_
        {
             DataContext = new Compra();
        }
+
+
         
     }
 }

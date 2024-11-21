@@ -898,3 +898,6 @@ C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterina
 C:\Users\RYZEN\Desktop\c#\vete\proyecto-veterinaria\Veterinaria_\bin\Debug\itextsharp.dll
 C:\Users\RYZEN\Desktop\c#\vete\proyecto-veterinaria\Veterinaria_\bin\Debug\itextsharp.xmlworker.dll
 C:\Users\RYZEN\Desktop\c#\vete\proyecto-veterinaria\Veterinaria_\bin\Debug\itextsharp.xml
+C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\bin\Debug\itextsharp.dll
+C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\bin\Debug\itextsharp.xmlworker.dll
+C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\bin\Debug\itextsharp.xml
