@@ -635,12 +635,6 @@ C:\Users\RYZEN\Desktop\c#\vete\proyecto-veterinaria\Veterinaria_\obj\Debug\Veter
 C:\Users\RYZEN\Desktop\c#\vete\proyecto-veterinaria\Veterinaria_\obj\Debug\Veterinaria_.pdb
 C:\Users\RYZEN\Desktop\c#\vete\proyecto-veterinaria\Veterinaria_\obj\Debug\Menu_Veterinario.g.cs
 C:\Users\RYZEN\Desktop\c#\vete\proyecto-veterinaria\Veterinaria_\obj\Debug\Menu_Veterinario.baml
-<<<<<<< HEAD
-C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterinaria_\obj\Debug\Menu_Veterinario.g.cs
-C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterinaria_\obj\Debug\Menu_Veterinario.baml
-C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterinaria_\obj\Debug\Registrar_admin.g.cs
-C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterinaria_\obj\Debug\Registrar_admin.baml
-=======
 C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\Presentacion.csproj.AssemblyReference.cache
 C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\MainWindow.g.cs
 C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\Menu_Admin.g.cs
@@ -743,7 +737,6 @@ C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\Veterinaria_\proyecto-veterinaria
 C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\Presentacion.csproj.GenerateResource.cache
 C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
 C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\Presenta.BC77CD05.Up2Date
->>>>>>> 45942fc4079af3b17b0db55fd454de79e11b1a06
 C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\bin\Debug\Veterinaria_.exe.config
 C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\bin\Debug\Veterinaria_.exe
 C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\bin\Debug\Veterinaria_.pdb
