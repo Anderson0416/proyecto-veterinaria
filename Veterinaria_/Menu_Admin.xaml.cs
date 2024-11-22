@@ -104,5 +104,11 @@ namespace Veterinaria_
         {
             DataContext = new Registrar_Tipo_Consulta();
         }
+
+        private void Facturas_Click(object sender, RoutedEventArgs e)
+        {
+
+            DataContext = new Facturas();
+        }
     }
 }

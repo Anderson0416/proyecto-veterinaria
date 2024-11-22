@@ -341,6 +341,14 @@
 
         <!--#ENDREGION-->
 
+        <!--REGION DATATEMPLADE FACTURAS-->
+        <DataTemplate x:Name="Facturas"
+          DataType="{x:Type viewmodels:Facturas}">
+            <viewmodels:Facturas DataContext="{Binding}"/>
+        </DataTemplate>
+
+        <!--#ENDREGION-->
+
 
     </Window.Resources>
 
@@ -785,7 +793,6 @@ BorderBrush="Transparent"
                         </ListViewItem>
                         <!--#ENDREGION-->
 
-
                         <!--#REGION REGISTRAR_TIPO_CONSULTA-->
                         <ListViewItem Style="{DynamicResource ListViewStyle}"
                    Height="70">
@@ -822,7 +829,42 @@ BorderBrush="Transparent" Click="Registrar_Tipo_Consulta_Click">
 
                         </ListViewItem>
                         <!--#ENDREGION-->
+                        
+                        <!--#REGION FACTURAS-->
+                        <ListViewItem Style="{DynamicResource ListViewStyle}"
+  Height="70" Cursor="Hand">
+                            <Button Style="{DynamicResource BtnListaStyle}"
+x:Name="BtnFacturas"
+Height="70"
+Width="200"
+HorizontalAlignment="Left"
+Cursor="Hand"
+Background="Transparent"
+BorderBrush="Transparent" Click="Facturas_Click">
 
+                                <Grid Width="200">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="60" />
+                                        <ColumnDefinition/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Width="45"
+       Grid.Column="0"
+       HorizontalAlignment="Center"
+       Source="/SCS/Pictures/all-quotes.png"/>
+                                    <TextBlock Grid.Column="1"
+           Text="Facturas"
+           FontWeight="SemiBold"
+           FontSize="12"
+           VerticalAlignment="Center"
+           HorizontalAlignment="Center"/>
+
+                                </Grid>
+                            </Button>
+
+                        </ListViewItem>
+                        
+                        <!--#ENDREGION-->
+                        
                     </ListView>
                     <!--#ENDREGION-->
                 </StackPanel>

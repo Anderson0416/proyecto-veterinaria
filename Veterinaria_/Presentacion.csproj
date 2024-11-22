@@ -97,6 +97,9 @@
     <Compile Include="Views_Menu_Admin\Consultar\Consultar_Veterinario.xaml.cs">
       <DependentUpon>Consultar_Veterinario.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views_Menu_Admin\Facturas.xaml.cs">
+      <DependentUpon>Facturas.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views_Menu_Admin\Registrar_Producto.xaml.cs">
       <DependentUpon>Registrar_Producto.xaml</DependentUpon>
     </Compile>
@@ -151,9 +154,6 @@
     <Compile Include="Views_Menu_Veterinario\Mis_Citas.xaml.cs">
       <DependentUpon>Mis_Citas.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views_Menu_Veterinario\Todas_las_Citas.xaml.cs">
-      <DependentUpon>Todas_las_Citas.xaml</DependentUpon>
-    </Compile>
     <Page Include="Consultorio.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -195,6 +195,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views_Menu_Admin\Consultar\Consultar_Veterinario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views_Menu_Admin\Facturas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -267,10 +271,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views_Menu_Veterinario\Mis_Citas.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views_Menu_Veterinario\Todas_las_Citas.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

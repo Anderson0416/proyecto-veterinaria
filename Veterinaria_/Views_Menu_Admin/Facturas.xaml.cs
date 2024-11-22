@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Veterinaria_.Views_Menu_Veterinario
+namespace Veterinaria_.Views_Menu_Admin
 {
     /// <summary>
-    /// Lógica de interacción para Todas_las_Citas.xaml
+    /// Lógica de interacción para Facturas.xaml
     /// </summary>
-    public partial class Todas_las_Citas : UserControl
+    public partial class Facturas : UserControl
     {
-        public Todas_las_Citas()
+        public Facturas()
         {
             InitializeComponent();
         }

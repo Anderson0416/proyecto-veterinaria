@@ -309,12 +309,7 @@
         </DataTemplate>
         <!--#ENDREGION-->
 
-        <!--#REGION DATATEMPLATE TODAS_LAS_CITAS-->
-        <DataTemplate x:Name="TodaslasCitas"
-            DataType="{x:Type viewmodels:Todas_las_Citas}">
-            <viewmodels:Todas_las_Citas DataContext="{Binding}"/>
-        </DataTemplate>
-        <!--#ENDREGION-->
+       
         
         <!--#REGION DATATEMPLATE HISTORIAL_CLINICO-->
         <DataTemplate x:Name="HistorialClinico"
@@ -614,7 +609,7 @@ Cursor="Hand" Grid.ColumnSpan="4"/>
                         </ListViewItem>
                         <!--#ENDREGION-->
                         
-                        <!--#REGION TODAS_LAS_CITAS-->
+                        <!--#REGION TODAS_LAS_CITAS--><!--
                         <ListViewItem Style="{DynamicResource ListViewStyle}"
   Height="70" Cursor="Hand">
                             <Button Style="{DynamicResource BtnListaStyle}"
@@ -646,7 +641,7 @@ BorderBrush="Transparent" Click="Todas_Citas_Click">
                             </Button>
 
                         </ListViewItem>
-                        <!--#ENDREGION-->
+                        --><!--#ENDREGION-->
                         
                         <!--#REGION HISTORIAL_CLINICO-->
                         <ListViewItem Style="{DynamicResource ListViewStyle}"

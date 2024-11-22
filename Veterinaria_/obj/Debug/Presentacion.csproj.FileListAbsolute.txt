@@ -863,10 +863,8 @@ C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_
 C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Recepcion\Pagar_Consulta.baml
 C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Veterinario\Historial_Clinico.g.cs
 C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Veterinario\Mis_Citas.g.cs
-C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Veterinario\Todas_las_Citas.g.cs
 C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Veterinario\Historial_Clinico.baml
 C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Veterinario\Mis_Citas.baml
-C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Veterinario\Todas_las_Citas.baml
 C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterinaria_\obj\Debug\Consultorio.g.cs
 C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Recepcion\Pagar_Consulta.g.cs
 C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Veterinario\Historial_Clinico.g.cs
@@ -894,3 +892,5 @@ C:\Users\RYZEN\Desktop\c#\vete\proyecto-veterinaria\Veterinaria_\bin\Debug\itext
 C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\bin\Debug\itextsharp.dll
 C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\bin\Debug\itextsharp.xmlworker.dll
 C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\bin\Debug\itextsharp.xml
+C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Admin\Facturas.g.cs
+C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Admin\Facturas.baml

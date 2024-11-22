@@ -63,10 +63,7 @@ namespace Veterinaria_
             DataContext = new Mis_Citas ();
         }
 
-        private void Todas_Citas_Click(object sender, RoutedEventArgs e)
-        {
-           DataContext = new  Todas_las_Citas();
-        }
+
 
         private void Historial_Clinico_Click(object sender, RoutedEventArgs e)
         {
