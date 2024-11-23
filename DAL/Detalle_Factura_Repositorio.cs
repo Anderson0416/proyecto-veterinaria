@@ -34,12 +34,20 @@ namespace DAL
             {
                 conectar.Open();
                 string query = @"SELECT 
-                df.Id AS Id, df.Cantidad, df.Subtotal, 
-                p.Id AS Id, p.Nombre AS ProductoNombre, p.Precio AS ProductoPrecio, p.Stock AS ProductoStock,
-                f.Id, f.Fecha, f.Total
-                FROM DetallesFactura df
-                INNER JOIN Productos p ON df.Id_Producto = p.Id
-                INNER JOIN Facturas f ON df.Id_Factura = f.Id";
+            df.Id AS DetalleId, 
+            df.Cantidad, 
+            df.Subtotal, 
+            p.Id AS ProductoId, 
+            p.Nombre AS ProductoNombre, 
+            p.Precio AS ProductoPrecio, 
+            p.Stock AS ProductoStock, 
+            f.Id AS FacturaId, 
+            f.Fecha AS FacturaFecha, 
+            f.Total AS FacturaTotal
+        FROM DetallesFactura df
+        INNER JOIN Productos p ON df.Id_Producto = p.Id
+        INNER JOIN Facturas f ON df.Id_Factura = f.Id";
+
                 using (MySqlCommand cmd = new MySqlCommand(query, conectar))
                 {
                     using (MySqlDataReader reader = cmd.ExecuteReader())
@@ -48,21 +56,21 @@ namespace DAL
                         {
                             Detalles_Factura detalle = new Detalles_Factura
                             {
-                                id = reader.GetInt32("Id"),
+                                id = reader.GetInt32("DetalleId"), 
                                 cantidad = reader.GetInt32("Cantidad"),
                                 sub_total = reader.GetDecimal("Subtotal"),
                                 producto = new Producto
                                 {
-                                    id = reader.GetInt32("Id"),
+                                    id = reader.GetInt32("ProductoId"), 
                                     nombre = reader.GetString("ProductoNombre"),
                                     precio = reader.GetDecimal("ProductoPrecio"),
                                     stock = reader.GetInt32("ProductoStock")
                                 },
                                 factura = new Factura
                                 {
-                                    id = reader.GetInt32("Id"),
-                                    fecha = reader.GetDateTime("Fecha"),
-                                    total = reader.GetDecimal("Total"),
+                                    id = reader.GetInt32("FacturaId"), 
+                                    fecha = reader.GetDateTime("FacturaFecha"),
+                                    total = reader.GetDecimal("FacturaTotal")
                                 }
                             };
                             detalle_facturas.Add(detalle);

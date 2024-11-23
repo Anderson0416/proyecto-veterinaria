@@ -76,11 +76,6 @@ namespace BLL
             {
                 return respuesta;
             }
-            respuesta = Validar_Existencia(producto);
-            if (respuesta != null)
-            {
-                return respuesta;
-            }
             producto_repositorio.Actualizar_Producto(producto);
             return "PRODUCTO ACTUALIZADO";
         }

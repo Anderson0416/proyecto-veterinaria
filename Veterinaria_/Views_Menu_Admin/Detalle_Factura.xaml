@@ -1,0 +1,27 @@
+﻿<Window x:Class="Veterinaria_.Views_Menu_Admin.Detalle_Factura"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Veterinaria_.Views_Menu_Admin"
+        mc:Ignorable="d"
+        Title="Detalle_Factura" Height="450" Width="530">
+    <Grid>
+        <Label Content="Detalle de la factura" HorizontalAlignment="Center" Margin="0,88,0,0" VerticalAlignment="Top"/>
+        <DataGrid Margin="54,160,54,160"
+Name="dtg_Tabla_Compra"
+AutoGenerateColumns="False"
+IsReadOnly="True" 
+SelectionMode="Single"
+SelectionUnit="FullRow"
+>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding producto.id}" Width="50" />
+                <DataGridTextColumn Header="Nombre" Binding="{Binding producto.nombre}" Width="200"/>
+                <DataGridTextColumn Header="Cantidad" Binding="{Binding cantidad}" Width="100"/>
+                <DataGridTextColumn Header="sub_Total" Binding="{Binding sub_total}" Width="70"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

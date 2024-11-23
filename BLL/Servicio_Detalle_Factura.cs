@@ -22,5 +22,12 @@ namespace BLL
             detalles_facturas = detalle_factura_repositorio.Obtener_Detalle_Facturas();
             return detalles_facturas;
         }
+        public List<Detalles_Factura> Filtrar_Detalles_Factura(int id_Factura)
+        {
+            List<Detalles_Factura> detalles_facturas = Lista_Factura();
+            List<Detalles_Factura> detalles_Filtrados = detalles_facturas.Where(detalle => detalle.factura.id == id_Factura).ToList();
+
+            return detalles_Filtrados;
+        }
     }
 }

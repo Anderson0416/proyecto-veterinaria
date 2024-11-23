@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Veterinaria_.Views_Menu_Admin"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              mc:Ignorable="d" 
          d:DesignHeight="565" 
         d:DesignWidth="925"
@@ -18,9 +19,9 @@ Background="#FFBFF6C3">
            Foreground="Black"
            FontSize="30"
            HorizontalAlignment="Center" Margin="0,0,0,514"/>
-            <ComboBox Name="cmb_Filtro_mes" HorizontalAlignment="Left" Margin="753,356,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmb_Filtro_mes_SelectionChanged"/>
-            <DatePicker Name="dtp_Filtrar_Fecha" HorizontalAlignment="Center" Margin="0,165,0,0" VerticalAlignment="Top" Width="171" SelectedDateChanged="dtp_Filtrar_Fecha_SelectedDateChanged"/>
-            <DataGrid Margin="0,225,0,123"
+            <ComboBox Name="cmb_Filtro_mes" HorizontalAlignment="Left" Margin="552,372,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmb_Filtro_mes_SelectionChanged"/>
+            <DatePicker Name="dtp_Filtrar_Fecha" HorizontalAlignment="Left" Margin="366,123,0,0" VerticalAlignment="Top" Width="170" SelectedDateChanged="dtp_Filtrar_Fecha_SelectedDateChanged"/>
+            <DataGrid Margin="0,174,0,301"
 Name="dtg_Tabla_Compra"
 AutoGenerateColumns="False"
 IsReadOnly="True" 
@@ -34,8 +35,25 @@ SelectionChanged="dtg_Tabla_Compra_SelectionChanged" HorizontalAlignment="Center
                     <DataGridTextColumn Header="Total" Binding="{Binding total}" Width="100"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <Label Content="Filtrar por mes" HorizontalAlignment="Center" Margin="0,124,0,0" VerticalAlignment="Top"/>
-
+            <Label Content="Filtrar por mes" HorizontalAlignment="Left" Margin="408,78,0,0" VerticalAlignment="Top"/>
+            <lvc:CartesianChart Margin="234,282,234,31" 
+                     Background="White"
+                     Series="{Binding SeriesCollection}">
+                <lvc:CartesianChart.AxisX>
+                    <lvc:Axis Title="Meses" 
+                  Labels="{Binding Meses}" />
+                </lvc:CartesianChart.AxisX>
+                <lvc:CartesianChart.AxisY>
+                    <lvc:Axis Title="Total Ventas" 
+                  LabelFormatter="{Binding Formatter}"
+                  MinValue="0" 
+                  MaxValue="700000">
+                        <lvc:Axis.Separator>
+                            <lvc:Separator Step="50000" />
+                        </lvc:Axis.Separator>
+                    </lvc:Axis>
+                </lvc:CartesianChart.AxisY>
+            </lvc:CartesianChart>
             <!--#ENDREGION-->
         </Grid>
     </Border>

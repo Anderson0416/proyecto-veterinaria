@@ -15,6 +15,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using LiveCharts;
+using LiveCharts.Wpf;
+
 namespace Veterinaria_.Views_Menu_Admin
 {
     /// <summary>
@@ -23,11 +26,15 @@ namespace Veterinaria_.Views_Menu_Admin
     public partial class Facturas : UserControl
     {
         private List<Factura> facturas;
+        public SeriesCollection SeriesCollection { get; set; }
+        public string[] Meses { get; set; }
+        public Func<double, string> Formatter { get; set; }
         public Facturas()
         {
             InitializeComponent();
             Llenar_Combobox();
             Llenar_DataGrid();
+            Graficos();
         }
         private void Llenar_Combobox()
         {
@@ -56,26 +63,56 @@ namespace Veterinaria_.Views_Menu_Admin
         }
         private void dtp_Filtrar_Fecha_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
-            // Verificar que se haya seleccionado una fecha.
             if (dtp_Filtrar_Fecha.SelectedDate is DateTime fechaSeleccionada)
             {
-                // Filtrar las facturas según la fecha seleccionada.
                 var facturasFiltradas = facturas
                     .Where(f => f.fecha.Date == fechaSeleccionada.Date)
                     .ToList();
-
-                // Mostrar los datos filtrados en el DataGrid.
                 dtg_Tabla_Compra.ItemsSource = facturasFiltradas;
             }
             else
             {
-                // Si no hay fecha seleccionada, mostrar todas las facturas.
                 dtg_Tabla_Compra.ItemsSource = facturas;
             }
         }
         private void dtg_Tabla_Compra_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            var facturaSeleccionada = dtg_Tabla_Compra.SelectedItem as Factura;
 
+            if (facturaSeleccionada != null)
+            {
+                int id_Factura = facturaSeleccionada.id;
+                Detalle_Factura detalleFactura = new Detalle_Factura(id_Factura);
+                detalleFactura.Show();
+            }
+        }
+        private void Graficos ()
+        {
+            var totalesPorMes = facturas
+                .GroupBy(f => f.fecha.Month)
+                .Select(g => new
+                {
+                    Mes = g.Key,
+                    Total = g.Sum(f => f.total)
+                })
+                .OrderBy(x => x.Mes)
+                .ToList();
+            string[] nombresMeses = new string[]
+            {
+                "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+                "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"
+            };
+            SeriesCollection = new SeriesCollection
+            {
+                new ColumnSeries
+                {
+                    Title = "Total Ganado",
+                    Values = new ChartValues<double>(totalesPorMes.Select(x => (double)x.Total))
+                }
+            };
+            Meses = totalesPorMes.Select(x => nombresMeses[x.Mes - 1]).ToArray();
+            Formatter = value => value.ToString("C");
+            DataContext = this;
         }
     }
 }
