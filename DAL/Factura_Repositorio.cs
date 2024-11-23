@@ -35,7 +35,7 @@ namespace DAL
             using (MySqlConnection conectar = conexion.crearConexion())
             {
                 conectar.Open();
-                string query = @"SELECT f.Id, f.Fecha, f.Total, FROM Facturas";
+                string query = @"SELECT Id, Fecha, Total FROM Facturas";
             
                 using (MySqlCommand cmd = new MySqlCommand(query, conectar))
                 {

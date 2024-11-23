@@ -14,13 +14,28 @@ Background="#FFBFF6C3">
         <Grid x:Name="GridFacturas">
             <!--#REGION TITULO-->
             <TextBlock Grid.Row="0"
-           Grid.ColumnSpan="6"
            Text="Facturas"
            Foreground="Black"
            FontSize="30"
-           HorizontalAlignment="Center">
+           HorizontalAlignment="Center" Margin="0,0,0,514"/>
+            <ComboBox Name="cmb_Filtro_mes" HorizontalAlignment="Left" Margin="753,356,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmb_Filtro_mes_SelectionChanged"/>
+            <DatePicker Name="dtp_Filtrar_Fecha" HorizontalAlignment="Center" Margin="0,165,0,0" VerticalAlignment="Top" Width="171" SelectedDateChanged="dtp_Filtrar_Fecha_SelectedDateChanged"/>
+            <DataGrid Margin="0,225,0,123"
+Name="dtg_Tabla_Compra"
+AutoGenerateColumns="False"
+IsReadOnly="True" 
+SelectionMode="Single"
+SelectionUnit="FullRow"
+SelectionChanged="dtg_Tabla_Compra_SelectionChanged" HorizontalAlignment="Center" Width="352"
+>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding id}" Width="50" />
+                    <DataGridTextColumn Header="Fecha de la factura" Binding="{Binding fecha, StringFormat='{}{0:dd/MM/yyyy}'}" Width="200"/>
+                    <DataGridTextColumn Header="Total" Binding="{Binding total}" Width="100"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Label Content="Filtrar por mes" HorizontalAlignment="Center" Margin="0,124,0,0" VerticalAlignment="Top"/>
 
-            </TextBlock>
             <!--#ENDREGION-->
         </Grid>
     </Border>

@@ -10,7 +10,6 @@ namespace Entity
     {
         public int id { get; set; }
         public DateTime fecha { get; set; }
-        public Propietario propietario { get; set; }
         public decimal total { get; set; }
     }
 }
