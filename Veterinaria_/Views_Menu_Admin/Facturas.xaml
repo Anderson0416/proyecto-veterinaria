@@ -11,31 +11,75 @@
         Background="Transparent">
     <!--#REGION CONTENIDO-->
     <Border CornerRadius="10"
-Background="#FFBFF6C3">
+Background="#b6e8c6">
         <Grid x:Name="GridFacturas">
             <!--#REGION TITULO-->
             <TextBlock Grid.Row="0"
            Text="Facturas"
-           Foreground="Black"
-           FontSize="30"
-           HorizontalAlignment="Center" Margin="0,0,0,514"/>
+                     FontSize="36"
+FontFamily="Segoe UI"
+FontWeight="Bold"
+           HorizontalAlignment="Center" Margin="0,0,0,514">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF339A73" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
+            <Rectangle Fill="#2D6E48" Height="4" Margin="52,56,44,505"/>
             <ComboBox Name="cmb_Filtro_mes" HorizontalAlignment="Left" Margin="552,372,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmb_Filtro_mes_SelectionChanged"/>
-            <DatePicker Name="dtp_Filtrar_Fecha" HorizontalAlignment="Left" Margin="366,123,0,0" VerticalAlignment="Top" Width="170" SelectedDateChanged="dtp_Filtrar_Fecha_SelectedDateChanged"/>
-            <DataGrid Margin="0,174,0,301"
-Name="dtg_Tabla_Compra"
-AutoGenerateColumns="False"
-IsReadOnly="True" 
-SelectionMode="Single"
-SelectionUnit="FullRow"
-SelectionChanged="dtg_Tabla_Compra_SelectionChanged" HorizontalAlignment="Center" Width="352"
+            <DatePicker Name="dtp_Filtrar_Fecha" HorizontalAlignment="Left" Margin="52,138,0,0" VerticalAlignment="Top" Width="170" SelectedDateChanged="dtp_Filtrar_Fecha_SelectedDateChanged"/>
+            <DataGrid 
+    Margin="0,81,0,306"
+    Name="dtg_Tabla_Compra"
+    AutoGenerateColumns="False"
+    IsReadOnly="True" 
+    SelectionMode="Single"
+    SelectionUnit="FullRow"
+    SelectionChanged="dtg_Tabla_Compra_SelectionChanged"
+    HorizontalAlignment="Center"
+    Width="420"
+    BorderBrush="#2D6E48"
+    BorderThickness="1"
+    RowBackground="#F3F9F6"
+    AlternatingRowBackground="#E3F2E9"
+    GridLinesVisibility="Horizontal"
+    HorizontalGridLinesBrush="#B5D6C6"
+    HeadersVisibility="All"
+    FontSize="14"
+    Foreground="Black"
 >
+                <DataGrid.Resources>
+                    <!-- Estilo para los encabezados -->
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Background" Value="#2D6E48"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="Padding" Value="8"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    </Style>
+
+                    <!-- Estilo para las filas seleccionadas -->
+                    <Style TargetType="DataGridRow">
+                        <Setter Property="FontSize" Value="14"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#A8D5BA"/>
+                                <Setter Property="Foreground" Value="Black"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.Resources>
+
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ID" Binding="{Binding id}" Width="50" />
                     <DataGridTextColumn Header="Fecha de la factura" Binding="{Binding fecha, StringFormat='{}{0:dd/MM/yyyy}'}" Width="200"/>
-                    <DataGridTextColumn Header="Total" Binding="{Binding total}" Width="100"/>
+                    <DataGridTextColumn Header="Total" Binding="{Binding total, StringFormat='{}{0:C}'}" Width="100"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <Label Content="Filtrar por mes" HorizontalAlignment="Left" Margin="408,78,0,0" VerticalAlignment="Top"/>
+
+            <Label Content="Filtrar por mes" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="83,104,0,0" VerticalAlignment="Top"/>
             <lvc:CartesianChart Margin="234,282,234,31" 
                      Background="White"
                      Series="{Binding SeriesCollection}">

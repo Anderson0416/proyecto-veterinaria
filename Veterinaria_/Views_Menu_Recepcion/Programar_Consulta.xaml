@@ -97,18 +97,49 @@
             </Button>
 
             <DataGrid Margin="10,263,0,88"
-              Name="dtg_Tabla_Tipo_Consulta"
-              AutoGenerateColumns="False"
-              IsReadOnly="True"
-              SelectionMode="Single"
-              SelectionUnit="FullRow"
-              HorizontalAlignment="Left" Width="367" SelectionChanged="dtg_Tabla_Mascota_SelectionChanged" Grid.Row="2">
+          Name="dtg_Tabla_Tipo_Consulta"
+          AutoGenerateColumns="False"
+          IsReadOnly="True"
+          SelectionMode="Single"
+          SelectionUnit="FullRow"
+          HorizontalAlignment="Left"
+          Width="367"
+          SelectionChanged="dtg_Tabla_Mascota_SelectionChanged"
+          Grid.Row="2"
+          BorderBrush="#2D6E48"
+          BorderThickness="1"
+          RowBackground="#F3F9F6"
+          AlternatingRowBackground="#E3F2E9"
+          GridLinesVisibility="Horizontal"
+          HorizontalGridLinesBrush="#B5D6C6"
+          HeadersVisibility="All">
+                <DataGrid.Resources>
+                    <!-- Estilo para el encabezado -->
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Background" Value="#2D6E48"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="Padding" Value="8"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    </Style>
+                    <!-- Estilo para las filas seleccionadas -->
+                    <Style TargetType="DataGridRow">
+                        <Setter Property="FontSize" Value="14"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#A8D5BA"/>
+                                <Setter Property="Foreground" Value="Black"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.Resources>
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="ID" Binding="{Binding id}" Width="50"/>
-                    <DataGridTextColumn Header="Nombre" Binding="{Binding nombre}" Width="200"/>
-                    <DataGridTextColumn Header="Precio" Binding="{Binding precio}" Width="100"/>
+                    <DataGridTextColumn Header="ID" Binding="{Binding id}" Width="50" />
+                    <DataGridTextColumn Header="Nombre" Binding="{Binding nombre}" Width="200" />
+                    <DataGridTextColumn Header="Precio" Binding="{Binding precio, StringFormat='{}{0:C}'}" Width="100" />
                 </DataGrid.Columns>
             </DataGrid>
+
             <ComboBox Name="cmb_Tipo_Consulta" HorizontalAlignment="Left" Margin="185,0,0,0" VerticalAlignment="Center" Width="120" SelectionChanged="cmb_Tipo_Consulta_SelectionChanged" Grid.Row="2"/>
             <Label Name="lb_Total" Content="" HorizontalAlignment="Left" Margin="420,398,0,0" VerticalAlignment="Top" Grid.Row="2"/>
             <Label Content="Tipo de consulta" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="35,0,0,0" VerticalAlignment="Center" Grid.Row="2"/>

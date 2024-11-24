@@ -52,13 +52,39 @@ FontWeight="Bold"
             <Label Content="Numero de documento" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="117,233,0,0" VerticalAlignment="Top"/>
             <TextBox x:Name="txt_Numero_documento" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="277,241,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
             <DataGrid Margin="10,305,10,10"
-                      Name="dtg_Tabla_propietarios"
-                      AutoGenerateColumns="False"
-                      IsReadOnly="True" 
-                SelectionMode="Single"
-                SelectionUnit="FullRow"
-                SelectionChanged="dtg_Tabla_propietarios_SelectionChanged"
-                >
+          Name="dtg_Tabla_propietarios"
+          AutoGenerateColumns="False"
+          IsReadOnly="True"
+          SelectionMode="Single"
+          SelectionUnit="FullRow"
+          SelectionChanged="dtg_Tabla_propietarios_SelectionChanged"
+          BorderBrush="#2D6E48"
+          BorderThickness="1"
+          RowBackground="#F3F9F6"
+          AlternatingRowBackground="#E3F2E9"
+          GridLinesVisibility="Horizontal"
+          HorizontalGridLinesBrush="#B5D6C6"
+          HeadersVisibility="All">
+                <DataGrid.Resources>
+                    <!-- Estilo para el encabezado -->
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Background" Value="#2D6E48"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="Padding" Value="8"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    </Style>
+                    <!-- Estilo para las filas seleccionadas -->
+                    <Style TargetType="DataGridRow">
+                        <Setter Property="FontSize" Value="14"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#A8D5BA"/>
+                                <Setter Property="Foreground" Value="Black"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.Resources>
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ID" Binding="{Binding id}" Width="50" />
                     <DataGridTextColumn Header="Nombre" Binding="{Binding nombre}" Width="100"/>
@@ -67,10 +93,11 @@ FontWeight="Bold"
                     <DataGridTextColumn Header="Documento" Binding="{Binding documento}" Width="120"/>
                     <DataGridTextColumn Header="Tipo Documento" Binding="{Binding tipo_documento}" Width="110"/>
                     <DataGridTextColumn Header="Sexo" Binding="{Binding sexo}" Width="70"/>
-                    <DataGridTextColumn Header="Fecha Nacimiento" Binding="{Binding Fecha_nacimiento, StringFormat='{}{0:dd/MM/yyyy}'}" Width="125" />
-                    <DataGridTextColumn Header="Teléfono" Binding="{Binding telefono}" Width="100" />
+                    <DataGridTextColumn Header="Fecha Nacimiento" Binding="{Binding Fecha_nacimiento, StringFormat='{}{0:dd/MM/yyyy}'}" Width="125"/>
+                    <DataGridTextColumn Header="Teléfono" Binding="{Binding telefono}" Width="100"/>
                 </DataGrid.Columns>
             </DataGrid>
+
             <Button x:Name="btn_Actualizar" Content="Actualizar" Foreground="White" FontSize="14" FontFamily="Segoe UI" FontWeight="Bold" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="504,251,0,0" VerticalAlignment="Top" Click="btn_Actualizar_Click" Height="28" Width="73">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

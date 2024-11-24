@@ -13,37 +13,45 @@
 
 
     <!--#REGION CONTENIDO-->
-    <Border CornerRadius="10" Background="#FFBFF6C3" Margin="10">
+    <Border CornerRadius="10" Background="#b6e8c6" Margin="10">
         <Grid x:Name="GridConsulta">
             <!--#REGION TITULO-->
             <TextBlock 
                 Grid.Row="0"
                 Grid.ColumnSpan="6"
                 Text="Consulta"
-                Foreground="Black"
-                FontSize="30"
+                FontSize="36"
+                FontFamily="Segoe UI"
+                FontWeight="Bold"
                 HorizontalAlignment="Center"
-                Margin="0,10,0,20" />
+                Margin="0,10,0,20" >
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF339A73" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
 
             <!-- ScrollViewer sin altura fija para permitir desplazamiento -->
-            <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled" Margin="0,0,0,10">
+            <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled" Height="554" VerticalAlignment="Top">
                 <StackPanel Height="1589">
                     <!-- Grupo de Información Básica -->
-                    <GroupBox Header="Información de Mascota" Margin="10,5" Background="#f9f3f2">
+                    <GroupBox Header="Información de Mascota" Margin="10,5" Background="#E0F8E0">
                         <StackPanel>
-                            <Label Content="ID Mascota" />
+                            <Label Content="ID Mascota" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI"/>
                             <TextBox x:Name="txt_Id_Mascota" Width="130" HorizontalAlignment="Right" />
-                            <Label Name="lb_Codigo_cita" Content="Código de la Cita" />
+                            <Label Name="lb_Codigo_cita" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" Content="Código de la Cita" />
                             <TextBox x:Name="txt_Codigo_Cita" Width="130" HorizontalAlignment="Right" />
-                            <Label Content="Nombre Mascota" />
+                            <Label Content="Nombre Mascota" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI"/>
                             <TextBox x:Name="txt_Nombre_Mascota" Width="130" HorizontalAlignment="Right" />
-                            <Label Name="lb_Descripcion" Content="Descripción" />
+                            <Label Name="lb_Descripcion" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" Content="Descripción" />
                             <TextBox x:Name="txt_Descripcion" Width="130" HorizontalAlignment="Right" />
                         </StackPanel>
                     </GroupBox>
 
                     <!-- Otros Contenidos Agrupados en Secciones -->
-                    <Label Content="Vacunas Previas" HorizontalAlignment="Center" Margin="10,5" />
+                    <Label Content="Vacunas Previas" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="10,5" />
                     <ComboBox x:Name="cmb_Vacunas_Previas" Width="120" HorizontalAlignment="Center" SelectionChanged="cmb_Vacunas_Previas_SelectionChanged" >
                         <ComboBoxItem>*NO HAY*</ComboBoxItem>
                         <ComboBoxItem>Distemper</ComboBoxItem>
@@ -53,9 +61,9 @@
                         <ComboBoxItem>Nobivac® - Canine Flu H3</ComboBoxItem>
                         <ComboBoxItem>Vanguard® - CIV H3N2/H3N8</ComboBoxItem>
                     </ComboBox>
-                    <TextBox x:Name="txt_Vacunas_Previas" Width="244" Height="100" HorizontalAlignment="Center" Margin="10,5" TextWrapping="Wrap" />
+                    <TextBox x:Name="txt_Vacunas_Previas" Width="244" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" Height="100" HorizontalAlignment="Center" Margin="10,5" TextWrapping="Wrap" />
 
-                    <Label Content="Vacunas Previas y Desparasitación" HorizontalAlignment="Center" Margin="10,5" />
+                    <Label Content="Vacunas Previas y Desparasitación" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="10,5" />
                     <ComboBox x:Name="cmb_Vacunas_Previas_Desparasitacion" Width="120" HorizontalAlignment="Center" SelectionChanged="cmb_Vacunas_Previas_Desparasitacion_SelectionChanged" >
                         <ComboBoxItem>*NO HAY*</ComboBoxItem>
                         <ComboBoxItem>Nobivac - DHPPi/L</ComboBoxItem>
@@ -66,24 +74,24 @@
                         <ComboBoxItem>Filavac - VHD K + V</ComboBoxItem>
                         <ComboBoxItem>Equivac - T</ComboBoxItem>
                     </ComboBox>
-                    <TextBox x:Name="txt_Vacunas_Previas_Desparasitacion" Width="244" Height="100" HorizontalAlignment="Center" Margin="10,5" TextWrapping="Wrap" />
+                    <TextBox x:Name="txt_Vacunas_Previas_Desparasitacion" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" Width="244" Height="100" HorizontalAlignment="Center" Margin="10,5" TextWrapping="Wrap" />
 
                     <!-- Más Grupos de Datos -->
                     <GroupBox Header="Información Adicional" Margin="10,5" Background="#f9f3f2">
                         <StackPanel>
-                            <Label Content="Actividad Física" />
+                            <Label Content="Actividad Física" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI"/>
                             <ComboBox x:Name="cmb_Actividad_Fisica" Width="120" HorizontalAlignment="Left" >
                                 <ComboBoxItem>Físicamente activo</ComboBoxItem>
                                 <ComboBoxItem>Físicamente inactivo</ComboBoxItem>
                                 <ComboBoxItem>Sedentario</ComboBoxItem>
                             </ComboBox>
-                            <Label Content="Estado Reproductivo" />
+                            <Label Content="Estado Reproductivo" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI"/>
                             <ComboBox x:Name="cmb_Estado_Reproductivo" Width="120" HorizontalAlignment="Left" >
                                 <ComboBoxItem>Intacto</ComboBoxItem>
                                 <ComboBoxItem>Esterilizado</ComboBoxItem>
                                 <ComboBoxItem>Castrado</ComboBoxItem>                                
                             </ComboBox>
-                            <Label Content="Tipo de Vivienda" />
+                            <Label Content="Tipo de Vivienda" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI"/>
                             <ComboBox x:Name="cmb_Tipo_Vivienda" Width="120" HorizontalAlignment="Left" >
                                 <ComboBoxItem>Casa</ComboBoxItem>
                                 <ComboBoxItem>Departamento</ComboBoxItem>
@@ -95,25 +103,39 @@
 
                     <GroupBox Header="Consulta" Margin="10,5" Background="#f9f3f2">
                         <StackPanel>
-                            <Label Content="Peso" />
-                            <TextBox x:Name="txt_Peso1" Width="130" HorizontalAlignment="Left" />
-                            <TextBox x:Name="txt_Peso2" Width="130" HorizontalAlignment="Left" />
+                            <Label Content="Peso" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI"/>
+                            <TextBox x:Name="txt_Peso1" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" Width="130" HorizontalAlignment="Left" />
+                            <TextBox x:Name="txt_Peso2" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" Width="130" HorizontalAlignment="Left" />
                         </StackPanel>
                     </GroupBox>
 
-                    <Label Content="Motivo de la Consulta" HorizontalAlignment="Left" Margin="10,5" />
-                    <TextBox x:Name="txt_Motivo_Consulta" Width="244" Height="100" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="10,5" />
+                    <Label Content="Motivo de la Consulta" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="10,5" />
+                    <TextBox x:Name="txt_Motivo_Consulta" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" Width="244" Height="100" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="10,5" />
 
-                    <Label Content="Síntomas de la Mascota" HorizontalAlignment="Left" Margin="10,5" />
-                    <TextBox x:Name="txt_Sintomas_Mascota" Width="244" Height="100" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="10,5" />
+                    <Label Content="Síntomas de la Mascota" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="10,5" />
+                    <TextBox x:Name="txt_Sintomas_Mascota" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" Width="244" Height="100" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="10,5" />
 
-                    <Label Content="Observaciones Adicionales" HorizontalAlignment="Left" Margin="10,5" />
-                    <TextBox x:Name="txt_Observaciones_Adicionales" Width="244" Height="100" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="10,5" />
+                    <Label Content="Observaciones Adicionales" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="10,5" />
+                    <TextBox x:Name="txt_Observaciones_Adicionales" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" Width="244" Height="100" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="10,5" />
 
-                    <Label Content="Dieta y Alimentación" HorizontalAlignment="Left" Margin="10,5" />
-                    <TextBox x:Name="txt_Dieta_Alimentacion" Width="244" Height="100" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="10,5" />
-                    <Button x:Name="btn_Guardar" Content="Guardar" Click="btn_Guardar_Click" Height="61" Width="354"/>
-                    <Button x:Name="btn_Imprimir" Content="Imprimir" Click="btn_Imprimir_Click" Height="61" Width="354"/>
+                    <Label Content="Dieta y Alimentación" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="10,5" />
+                    <TextBox x:Name="txt_Dieta_Alimentacion" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" Width="244" Height="100" HorizontalAlignment="Left" TextWrapping="Wrap" Margin="10,5" />
+                    <Button x:Name="btn_Guardar" Content="Guardar" Foreground="White" FontSize="16" FontFamily="Segoe UI" FontWeight="Bold" BorderBrush="#2D6E48" Click="btn_Guardar_Click" Height="61" Width="354">
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black"/>
+                                <GradientStop Color="#FF339A73" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
+                    <Button x:Name="btn_Imprimir" Content="Imprimir" Foreground="White" FontSize="16" FontFamily="Segoe UI" FontWeight="Bold" BorderBrush="#2D6E48" Click="btn_Imprimir_Click" Height="61" Width="354">
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <GradientStop Color="Black"/>
+                                <GradientStop Color="#FF339A73" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                    </Button>
                 </StackPanel>
             </ScrollViewer>
             <!--#ENDREGION-->

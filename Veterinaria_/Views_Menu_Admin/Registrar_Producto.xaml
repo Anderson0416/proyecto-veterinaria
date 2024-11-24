@@ -10,45 +10,109 @@ d:DesignWidth="925"
 Background="Transparent">
     <!--#REGION CONTENIDO-->
     <Border CornerRadius="10"
-Background="#FFBFF6C3">
+Background="#b6e8c6">
         <Grid x:Name="GridRegistrarProducto">
             <!--#REGION TITULO-->
             <TextBlock Grid.Row="0"
-           Text="Registrar_Producto"
-           Foreground="Black"
-           FontSize="30"
-           HorizontalAlignment="Center" Margin="0,0,0,510"/>
-            <Label Content="Nombre" HorizontalAlignment="Left" Margin="87,168,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Nombre" HorizontalAlignment="Left" Margin="167,172,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Label Content="Descripcion" HorizontalAlignment="Left" Margin="305,168,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Descripcion" HorizontalAlignment="Left" Margin="391,172,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Label Content="Precio" HorizontalAlignment="Left" Margin="697,168,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Precio" HorizontalAlignment="Left" Margin="767,176,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="txt_Precio_TextChanged"/>
-            <Label Content="Codigo del producto : " HorizontalAlignment="Left" Margin="95,105,0,0" VerticalAlignment="Top"/>
+           Text="Registrar Producto"
+           FontSize="36"
+ FontFamily="Segoe UI"
+ FontWeight="Bold"
+           HorizontalAlignment="Center" Margin="0,0,0,510">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF339A73" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
+            <Rectangle Fill="#2D6E48" Height="4" Margin="52,56,44,505"/>
+            <Label Content="Nombre" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="87,168,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Nombre" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="167,172,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Descripcion" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="305,168,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Descripcion" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="391,172,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Precio" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="697,168,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Precio" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="767,176,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="txt_Precio_TextChanged"/>
+            <Label Content="Codigo del producto : " Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="95,105,0,0" VerticalAlignment="Top"/>
             <Label Name="lb_Id" Content="" HorizontalAlignment="Left" Margin="249,105,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_buscar" HorizontalAlignment="Left" Margin="620,234,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="txt_buscar_TextChanged"/>
-            <DataGrid Margin="10,305,10,10"
-         Name="dtg_Tabla_Producto"
-         AutoGenerateColumns="False"
-         IsReadOnly="True" 
-         SelectionMode="Single"
-         SelectionUnit="FullRow"
-         SelectionChanged="dtg_Tabla_Producto_SelectionChanged"
-         >
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="ID" Binding="{Binding id}" Width="50" />
-                    <DataGridTextColumn Header="Nombre" Binding="{Binding nombre}" Width="250"/>
-                    <DataGridTextColumn Header="Descripcion" Binding="{Binding descripcion}" Width="353"/>
-                    <DataGridTextColumn Header="Stock" Binding="{Binding stock}" Width="100"/>
-                    <DataGridTextColumn Header="precio" Binding="{Binding precio}" Width="150"/>
+            <Label Content="Busqueda" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="666,243,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_buscar" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="750,247,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="txt_buscar_TextChanged"/>
+            <DataGrid 
+    Margin="10,305,10,10"
+    Name="dtg_Tabla_Producto"
+    AutoGenerateColumns="False"
+    IsReadOnly="True" 
+    SelectionMode="Single"
+    SelectionUnit="FullRow"
+    SelectionChanged="dtg_Tabla_Producto_SelectionChanged"
+    BorderBrush="#2D6E48"
+    BorderThickness="1"
+    RowBackground="#F3F9F6"
+    AlternatingRowBackground="#E3F2E9"
+    GridLinesVisibility="Horizontal"
+    HorizontalGridLinesBrush="#B5D6C6"
+    HeadersVisibility="All"
+    FontSize="14"
+    Foreground="Black"
+>
+                <DataGrid.Resources>
+                    <!-- Estilo para los encabezados -->
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Background" Value="#2D6E48"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="Padding" Value="8"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    </Style>
 
+                    <!-- Estilo para las filas seleccionadas -->
+                    <Style TargetType="DataGridRow">
+                        <Setter Property="FontSize" Value="14"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#A8D5BA"/>
+                                <Setter Property="Foreground" Value="Black"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.Resources>
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding id}" Width="30" />
+                    <DataGridTextColumn Header="Nombre" Binding="{Binding nombre}" Width="200"/>
+                    <DataGridTextColumn Header="Descripción" Binding="{Binding descripcion}" Width="350"/>
+                    <DataGridTextColumn Header="Stock" Binding="{Binding stock}" Width="100"/>
+                    <DataGridTextColumn Header="Precio" Binding="{Binding precio, StringFormat='{}{0:C}'}" Width="150"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <Button x:Name="btn_Guardar" Content="Guardar" HorizontalAlignment="Left" Margin="204,258,0,0" VerticalAlignment="Top" Click="btn_Guardar_Click"/>
-            <Button x:Name="btn_Eliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="284,258,0,0" VerticalAlignment="Top" Click="btn_Eliminar_Click"/>
-            <Button x:Name="btn_Actualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="376,258,0,0" VerticalAlignment="Top" Click="btn_Actualizar_Click"/>
-            <Label Content="Stock" HorizontalAlignment="Left" Margin="530,168,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Stock" HorizontalAlignment="Left" Margin="574,172,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="70"/>
+
+
+            <Button x:Name="btn_Guardar" Content="Guardar" Foreground="White" FontSize="14" FontFamily="Segoe UI" FontWeight="Bold" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="197,258,0,0" VerticalAlignment="Top" Click="btn_Guardar_Click" Height="34" Width="82">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF339A73" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btn_Eliminar" Content="Eliminar" Foreground="White" FontSize="14" FontFamily="Segoe UI" FontWeight="Bold" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="305,258,0,0" VerticalAlignment="Top" Click="btn_Eliminar_Click" Height="34" Width="87">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF339A73" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btn_Actualizar" Content="Actualizar" Foreground="White" FontSize="14" FontFamily="Segoe UI" FontWeight="Bold" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="424,258,0,0" VerticalAlignment="Top" Click="btn_Actualizar_Click" Height="34" Width="86">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF339A73" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Label Content="Stock" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="530,168,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Stock" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="574,172,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="70"/>
             <!--#ENDREGION-->
         </Grid>
     </Border>

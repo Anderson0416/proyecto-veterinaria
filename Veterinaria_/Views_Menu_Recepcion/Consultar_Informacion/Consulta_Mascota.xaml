@@ -27,13 +27,39 @@ FontWeight="Bold"
             </TextBlock>
             <Rectangle Fill="#2D6E48" Height="4" Margin="38,63,60,498"/>
             <DataGrid Margin="10,305,10,10"
-                        Name="dtg_Tabla_mascota"
-                        AutoGenerateColumns="False"
-                        IsReadOnly="True" 
-                        SelectionMode="Single"
-                        SelectionUnit="FullRow"
-                        SelectionChanged="dtg_Tabla_Mascota_SelectionChanged"
-                        >
+          Name="dtg_Tabla_mascota"
+          AutoGenerateColumns="False"
+          IsReadOnly="True"
+          SelectionMode="Single"
+          SelectionUnit="FullRow"
+          SelectionChanged="dtg_Tabla_Mascota_SelectionChanged"
+          BorderBrush="#2D6E48"
+          BorderThickness="1"
+          RowBackground="#F3F9F6"
+          AlternatingRowBackground="#E3F2E9"
+          GridLinesVisibility="Horizontal"
+          HorizontalGridLinesBrush="#B5D6C6"
+          HeadersVisibility="All">
+                <DataGrid.Resources>
+                    <!-- Estilo para el encabezado -->
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Background" Value="#2D6E48"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="Padding" Value="8"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    </Style>
+                    <!-- Estilo para las filas seleccionadas -->
+                    <Style TargetType="DataGridRow">
+                        <Setter Property="FontSize" Value="14"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#A8D5BA"/>
+                                <Setter Property="Foreground" Value="Black"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.Resources>
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ID" Binding="{Binding id}" Width="50" />
                     <DataGridTextColumn Header="Nombre" Binding="{Binding nombre}" Width="150"/>
@@ -41,10 +67,11 @@ FontWeight="Bold"
                     <DataGridTextColumn Header="Raza" Binding="{Binding raza}" Width="120"/>
                     <DataGridTextColumn Header="Sexo" Binding="{Binding sexo}" Width="110"/>
                     <DataGridTextColumn Header="Edad" Binding="{Binding edad}" Width="70"/>
-                    <DataGridTextColumn Header="" Binding="{Binding edad2}" Width="60" />
-                    <DataGridTextColumn Header="Documento Propietario" Binding="{Binding propietario.documento}" Width="190" />
+                    <DataGridTextColumn Header="" Binding="{Binding edad2}" Width="60"/>
+                    <DataGridTextColumn Header="Documento Propietario" Binding="{Binding propietario.documento}" Width="190"/>
                 </DataGrid.Columns>
             </DataGrid>
+
             <Button x:Name="btn_Eliminar" Content="Eliminar" Foreground="White" FontSize="14" FontFamily="Segoe UI" FontWeight="Bold" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="59,254,0,0" VerticalAlignment="Top" Click="btn_Eliminar_Click" Height="28" Width="67">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
@@ -59,7 +86,7 @@ FontWeight="Bold"
             <Label Content="Especie" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="424,140,0,0" VerticalAlignment="Top"/>
             <Label Content="Raza" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="424,174,0,0" VerticalAlignment="Top"/>
             <Label Content="Sexo" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="424,208,0,0" VerticalAlignment="Top"/>
-            <Label Content="Edad" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="411,242,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.516,0.517"/>
+            <Label Content="Edad" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="424,243,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.516,0.517"/>
             <Label Content="Documento de propietario" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="26,160,0,0" VerticalAlignment="Top"/>
             <Label Name="lb_Documento_propietario" Content="" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="205,164,0,0" VerticalAlignment="Top" Width="124" Height="24"/>
             <TextBox x:Name="txt_Nombre_mascota" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="579,111,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>

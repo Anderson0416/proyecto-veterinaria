@@ -28,24 +28,51 @@ Background="#b6e8c6">
             </TextBlock>
             <Rectangle Fill="#2D6E48" Height="4" Margin="43,53,55,508" Grid.ColumnSpan="2"/>
             <DataGrid Margin="10,305,10,10"
-                Name="dtg_Tabla_Citas"
-                AutoGenerateColumns="False"
-                IsReadOnly="True" 
-                SelectionMode="Single"
-                SelectionUnit="FullRow"
-                SelectionChanged="dtg_Tabla_Citas_SelectionChanged"
-                >
+          Name="dtg_Tabla_Citas"
+          AutoGenerateColumns="False"
+          IsReadOnly="True"
+          SelectionMode="Single"
+          SelectionUnit="FullRow"
+          SelectionChanged="dtg_Tabla_Citas_SelectionChanged"
+          BorderBrush="#2D6E48"
+          BorderThickness="1"
+          RowBackground="#F3F9F6"
+          AlternatingRowBackground="#E3F2E9"
+          GridLinesVisibility="Horizontal"
+          HorizontalGridLinesBrush="#B5D6C6"
+          HeadersVisibility="All">
+                <DataGrid.Resources>
+                    <!-- Estilo para el encabezado -->
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Background" Value="#2D6E48"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="Padding" Value="8"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    </Style>
+                    <!-- Estilo para las filas seleccionadas -->
+                    <Style TargetType="DataGridRow">
+                        <Setter Property="FontSize" Value="14"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#A8D5BA"/>
+                                <Setter Property="Foreground" Value="Black"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.Resources>
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ID" Binding="{Binding id}" Width="50" />
                     <DataGridTextColumn Header="Nombre del propietario" Binding="{Binding propietario.nombre}" Width="150"/>
-                    <DataGridTextColumn Header="Nombre de la mascota" Binding="{Binding mascota.nombre }" Width="150"/>
+                    <DataGridTextColumn Header="Nombre de la mascota" Binding="{Binding mascota.nombre}" Width="150"/>
                     <DataGridTextColumn Header="Nombre del veterinario" Binding="{Binding veterinario.nombre}" Width="120"/>
                     <DataGridTextColumn Header="Fecha de la cita" Binding="{Binding fecha_cita, StringFormat='{}{0:dd/MM/yyyy}'}" Width="110"/>
                     <DataGridTextColumn Header="Estado" Binding="{Binding estado}" Width="70"/>
-                    <DataGridTextColumn Header="Valor de la cita" Binding="{Binding total_pagar}" Width="125" />
-                    <DataGridTextColumn Header="Notas" Binding="{Binding nota}" Width="130" />
+                    <DataGridTextColumn Header="Valor de la cita" Binding="{Binding total_pagar}" Width="125"/>
+                    <DataGridTextColumn Header="Notas" Binding="{Binding nota}" Width="130"/>
                 </DataGrid.Columns>
             </DataGrid>
+
             <Label Content="nombre del propietario" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="69,84,0,0" VerticalAlignment="Top"/>
             <TextBox x:Name="txt_Nombre_Propietario" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="238,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
             <Label Content="Veterinario" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="70,157,0,0" VerticalAlignment="Top"/>

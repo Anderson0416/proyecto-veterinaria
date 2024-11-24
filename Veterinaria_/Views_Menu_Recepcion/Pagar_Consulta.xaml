@@ -11,48 +11,105 @@
 
     <!--#REGION CONTENIDO-->
     <Border CornerRadius="10"
-    Background="#FFD2E0FB">
+    Background="#b6e8c6">
         <Grid x:Name="GridPagarConsulta">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="743*"/>
+                <ColumnDefinition Width="182*"/>
+            </Grid.ColumnDefinitions>
             <!--#REGION TITULO-->
             <TextBlock Grid.Row="0"
-               Grid.ColumnSpan="6"
-               Text="Pagar_Consulta"
-               Foreground="Black"
-               FontSize="30"
-               HorizontalAlignment="Center"  Margin="0,0,0,509">
+               Text="Pagar Consulta"
+                FontSize="36"
+                FontFamily="Segoe UI"
+                FontWeight="Bold"
+               HorizontalAlignment="Left"  Margin="346,2,0,492" Width="268">
+
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0.017"/>
+                        <GradientStop Color="#FF339A73" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
             </TextBlock>
-            <Label Content="Id De la Cita" HorizontalAlignment="Left" Margin="60,80,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Id_Cita" HorizontalAlignment="Left" Margin="180,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Label Content="Nombre Del Propietario" HorizontalAlignment="Left" Margin="37,138,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Nombre_Propietario" HorizontalAlignment="Left" Margin="180,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Label Content="Mascota" HorizontalAlignment="Left" Margin="51,209,0,0" VerticalAlignment="Top"/>
-            <Label Content="Fecha de la consulta" HorizontalAlignment="Left" Margin="37,275,0,0" VerticalAlignment="Top"/>
-            <DatePicker Name="dtp_Fecha_Consulta" HorizontalAlignment="Left" Margin="180,275,0,0" VerticalAlignment="Top"/>
-            <Label Content="nombre del veterinario" HorizontalAlignment="Left" Margin="40,325,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Descripcion_Consulta" HorizontalAlignment="Left" Margin="403,68,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="244" Height="174"/>
-            <Button x:Name="btn_Pagar_Consulta" Content="Pagar Consulta" HorizontalAlignment="Left" Margin="442,468,0,0" VerticalAlignment="Top" Click="btn_Pagar_Consulta_Click"/>
-            <TextBox Name="txt_Nombre_Mascota" HorizontalAlignment="Left" Margin="180,204,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="txt_Nombre_Veterinario" HorizontalAlignment="Left" Margin="190,338,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <DataGrid Margin="403,306,170,161"
-Name="dtg_Tabla_Tipo_Consulta"
-AutoGenerateColumns="False"
-IsReadOnly="True" 
-SelectionMode="Single"
-SelectionUnit="FullRow"
->
+            <Rectangle Fill="#2D6E48" Height="4" Margin="43,53,55,492" Grid.ColumnSpan="2"/>
+            <Rectangle Fill="#2D6E48" Height="4" Margin="225,288,59,257" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90.387"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Label Content="Id De la Cita" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="76,90,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Id_Cita" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="182,97,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Nombre Del Propietario" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="76,122,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Nombre_Propietario" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="239,130,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Mascota" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="76,151,0,0" VerticalAlignment="Top"/>
+            <Label Content="Fecha de la consulta" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="70,187,0,0" VerticalAlignment="Top"/>
+            <DatePicker Name="dtp_Fecha_Consulta" HorizontalAlignment="Left" Margin="226,192,0,0" VerticalAlignment="Top"/>
+            <Label Content="nombre del veterinario" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="70,221,0,0" VerticalAlignment="Top"/>
+            <Label Content="Descripcion" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="37,0,0,0" VerticalAlignment="Center"/>
+            <TextBox x:Name="txt_Descripcion_Consulta" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="78,306,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="244" Height="160"/>
+            <Button x:Name="btn_Pagar_Consulta" Content="Pagar Consulta" Foreground="White" FontSize="16" FontFamily="Segoe UI" FontWeight="Bold" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="643,460,0,0" VerticalAlignment="Top" Click="btn_Pagar_Consulta_Click" Height="32" Width="128" Grid.ColumnSpan="2">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF339A73" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <TextBox Name="txt_Nombre_Mascota" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="178,159,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.517,-0.386"/>
+            <TextBox x:Name="txt_Nombre_Veterinario" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="238,229,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <DataGrid Margin="531,235,42,146"
+          Name="dtg_Tabla_Tipo_Consulta"
+          AutoGenerateColumns="False"
+          IsReadOnly="True" 
+          SelectionMode="Single"
+          SelectionUnit="FullRow" 
+          Grid.ColumnSpan="2"
+          BorderBrush="#2D6E48"
+          BorderThickness="1"
+          RowBackground="#F3F9F6"
+          AlternatingRowBackground="#E3F2E9"
+          GridLinesVisibility="Horizontal"
+          HorizontalGridLinesBrush="#B5D6C6"
+          HeadersVisibility="All">
+                <DataGrid.Resources>
+                    <!-- Estilo para los encabezados -->
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Background" Value="#2D6E48"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="Padding" Value="8"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    </Style>
+                    <!-- Estilo para las filas seleccionadas -->
+                    <Style TargetType="DataGridRow">
+                        <Setter Property="FontSize" Value="14"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#A8D5BA"/>
+                                <Setter Property="Foreground" Value="Black"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.Resources>
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ID" Binding="{Binding id}" Width="50" />
-                    <DataGridTextColumn Header="Nombre" Binding="{Binding tipo_consulta.nombre}" Width="200"/>
-                    <DataGridTextColumn Header="Precio" Binding="{Binding tipo_consulta.precio}" Width="100"/>
-
+                    <DataGridTextColumn Header="Nombre" Binding="{Binding tipo_consulta.nombre}" Width="200" />
+                    <DataGridTextColumn Header="Precio" Binding="{Binding tipo_consulta.precio, StringFormat='{}{0:C}'}" Width="100" />
                 </DataGrid.Columns>
             </DataGrid>
-            <Label Content="Total a pagar" HorizontalAlignment="Left" Margin="60,388,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Total_Pagar" HorizontalAlignment="Left" Margin="190,388,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Label Content="Recibo" HorizontalAlignment="Left" Margin="60,431,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Recibo" HorizontalAlignment="Left" Margin="190,431,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="txt_Recibo_TextChanged"/>
-            <Label Content="El cambio es" HorizontalAlignment="Left" Margin="78,462,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Cambio" HorizontalAlignment="Left" Margin="190,462,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+            <Label Content="Total a pagar" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="549,99,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Total_Pagar" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="657,107,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="3.3,-8.194" Grid.ColumnSpan="2"/>
+            <Label Content="Recibo" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="553,133,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Recibo" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="657,141,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="txt_Recibo_TextChanged" Grid.ColumnSpan="2"/>
+            <Label Content="El cambio es" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="552,169,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Cambio" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="657,181,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
             <!--#ENDREGION-->
         </Grid>
     </Border>

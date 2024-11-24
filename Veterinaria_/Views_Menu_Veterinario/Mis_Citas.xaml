@@ -10,27 +10,65 @@
         Background="Transparent">
     <!--#REGION CONTENIDO-->
     <Border CornerRadius="10"
-Background="#f9f3f2">
+Background="#b6e8c6">
         <Grid x:Name="GridMisCitas">
             <!--#REGION TITULO-->
             <TextBlock Grid.Row="0"
-           Text="Mis_Citas"
-           Foreground="Black"
-           FontSize="30"
-           HorizontalAlignment="Center" Margin="0,0,0,530"/>
-            
+           Text="Mis Citas"
+                               FontSize="36"
+FontFamily="Segoe UI"
+FontWeight="Bold"
+           HorizontalAlignment="Center" Margin="0,0,0,512">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF339A73" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
+            <Rectangle Fill="#2D6E48" Height="4" Margin="38,63,60,498"/>
+           
+            <Border Width="200" Background="#FFE3F2FD" Margin="61,153,664,341">
+                <TextBlock Text="Seleccione Una Cita" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="18" FontWeight="Bold" Foreground="#FF339A73" TextWrapping="Wrap" TextAlignment="Center" Padding="10"/>
+            </Border>
             <DataGrid Margin="10,305,10,10"
-     Name="dtg_Tabla_Citas"
-     AutoGenerateColumns="False"
-     IsReadOnly="True" 
-     SelectionMode="Single"
-     SelectionUnit="FullRow"
-     SelectionChanged="dtg_Tabla_Citas_SelectionChanged"
-     >
+          Name="dtg_Tabla_Citas"
+          AutoGenerateColumns="False"
+          IsReadOnly="True"
+          SelectionMode="Single"
+          SelectionUnit="FullRow"
+          SelectionChanged="dtg_Tabla_Citas_SelectionChanged"
+          BorderBrush="#2D6E48"
+          BorderThickness="1"
+          RowBackground="#F3F9F6"
+          AlternatingRowBackground="#E3F2E9"
+          GridLinesVisibility="Horizontal"
+          HorizontalGridLinesBrush="#B5D6C6"
+          HeadersVisibility="All">
+                <DataGrid.Resources>
+                    <!-- Estilo para el encabezado -->
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Background" Value="#2D6E48"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="Padding" Value="8"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    </Style>
+                    <!-- Estilo para las filas seleccionadas -->
+                    <Style TargetType="DataGridRow">
+                        <Setter Property="FontSize" Value="14"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#A8D5BA"/>
+                                <Setter Property="Foreground" Value="Black"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.Resources>
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ID" Binding="{Binding id}" Width="50" />
                     <DataGridTextColumn Header="Nombre del propietario" Binding="{Binding propietario.nombre}" Width="150"/>
-                    <DataGridTextColumn Header="Nombre de la mascota" Binding="{Binding mascota.nombre }" Width="150"/>
+                    <DataGridTextColumn Header="Nombre de la mascota" Binding="{Binding mascota.nombre}" Width="150"/>
                     <DataGridTextColumn Header="Nombre del veterinario" Binding="{Binding veterinario.nombre}" Width="120"/>
                     <DataGridTextColumn Header="Fecha de la cita" Binding="{Binding fecha_cita, StringFormat='{}{0:dd/MM/yyyy}'}" Width="110"/>
                     <DataGridTextColumn Header="Estado" Binding="{Binding estado}" Width="70"/>
@@ -38,6 +76,7 @@ Background="#f9f3f2">
                     <DataGridTextColumn Header="Notas" Binding="{Binding nota}" Width="130" />
                 </DataGrid.Columns>
             </DataGrid>
+
             <!--#ENDREGION-->
         </Grid>
     </Border>

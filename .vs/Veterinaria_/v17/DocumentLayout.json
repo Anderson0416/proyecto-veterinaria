@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\damit\\OneDrive\\Escritorio\\ProyVeterinaria\\proyecto-veterinaria\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|c:\\users\\damit\\onedrive\\escritorio\\proyveterinaria\\proyecto-veterinaria\\veterinaria_\\views_menu_recepcion\\compra.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|solutionrelative:veterinaria_\\views_menu_recepcion\\compra.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|c:\\users\\damit\\onedrive\\escritorio\\proyveterinaria\\proyecto-veterinaria\\veterinaria_\\menu_recepcion.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{4D61C557-82CB-45EE-979F-3B3D179566C4}|Veterinaria_\\Presentacion.csproj|solutionrelative:veterinaria_\\menu_recepcion.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 14,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -71,30 +62,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Menu_Recepcion.xaml",
-              "DocumentMoniker": "C:\\Users\\damit\\OneDrive\\Escritorio\\ProyVeterinaria\\proyecto-veterinaria\\Veterinaria_\\Menu_Recepcion.xaml",
-              "RelativeDocumentMoniker": "Veterinaria_\\Menu_Recepcion.xaml",
-              "ToolTip": "C:\\Users\\damit\\OneDrive\\Escritorio\\ProyVeterinaria\\proyecto-veterinaria\\Veterinaria_\\Menu_Recepcion.xaml",
-              "RelativeToolTip": "Veterinaria_\\Menu_Recepcion.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-24T06:49:49.62Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Compra.xaml",
-              "DocumentMoniker": "C:\\Users\\damit\\OneDrive\\Escritorio\\ProyVeterinaria\\proyecto-veterinaria\\Veterinaria_\\Views_Menu_Recepcion\\Compra.xaml",
-              "RelativeDocumentMoniker": "Veterinaria_\\Views_Menu_Recepcion\\Compra.xaml",
-              "ToolTip": "C:\\Users\\damit\\OneDrive\\Escritorio\\ProyVeterinaria\\proyecto-veterinaria\\Veterinaria_\\Views_Menu_Recepcion\\Compra.xaml",
-              "RelativeToolTip": "Veterinaria_\\Views_Menu_Recepcion\\Compra.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-11-24T06:48:55.891Z",
-              "EditorCaption": ""
             }
           ]
         }

@@ -10,45 +10,78 @@
             Background="Transparent">
     <!--#REGION CONTENIDO-->
     <Border CornerRadius="10"
-    Background="#FFBFF6C3">
+    Background="#b6e8c6">
         <Grid x:Name="GridRegistrarRecepcionista">
             <!--#REGION TITULO-->
             <TextBlock Grid.Row="0"
-               Text="Registrar_Recepcionista"
-               Foreground="Black"
-               FontSize="30"
-               HorizontalAlignment="Center" Margin="0,0,0,506"/>
-            <Label Content="Nombre" HorizontalAlignment="Left" Margin="49,106,0,0" VerticalAlignment="Top" Height="26" Width="60"/>
-            <TextBox x:Name="txt_Nombre" HorizontalAlignment="Left" Margin="114,110,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="186" Height="22"/>
-            <Label Content="Apellido" HorizontalAlignment="Left" Margin="52,158,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.526,0.039"/>
-            <TextBox x:Name="txt_Apellido" HorizontalAlignment="Left" Margin="114,162,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="186" Height="22"/>
-            <Label Content="Telefono" HorizontalAlignment="Left" Margin="407,108,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Telefono" HorizontalAlignment="Left" Margin="480,112,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="186" Height="22"/>
-            <Label Content="Sexo" HorizontalAlignment="Left" Margin="417,160,0,0" VerticalAlignment="Top"/>
-            <ComboBox Name="cmb_Sexo" HorizontalAlignment="Left" Margin="480,164,0,0" VerticalAlignment="Top" Width="120">
+               Text="Registrar Recepcionista"
+                              FontSize="36"
+FontFamily="Segoe UI"
+FontWeight="Bold"
+               HorizontalAlignment="Center" Margin="0,0,0,506">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF339A73" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
+
+            <Rectangle Fill="#2D6E48" Height="4" Margin="52,56,44,505"/>
+            <Rectangle Fill="#2D6E48"
+Height="4"
+HorizontalAlignment="Center"
+VerticalAlignment="Top"
+Margin="0,251,0,0"
+Width="385" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90.939"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+
+            <Label Content="Nombre" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="52,236,0,0" VerticalAlignment="Top" Height="26" Width="60"/>
+            <TextBox x:Name="txt_Nombre" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="140,240,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="186" Height="22"/>
+            <Label Content="Apellido" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="52,282,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.526,0.039"/>
+            <TextBox x:Name="txt_Apellido" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="140,285,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="186" Height="22"/>
+            <Label Content="Telefono" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="52,326,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Telefono" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="140,329,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="186" Height="22"/>
+            <Label Content="Sexo" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="52,366,0,0" VerticalAlignment="Top"/>
+            <ComboBox Name="cmb_Sexo" HorizontalAlignment="Left" Margin="140,369,0,0" VerticalAlignment="Top" Width="120">
                 <ComboBoxItem>Masculino</ComboBoxItem>
                 <ComboBoxItem>Femenino</ComboBoxItem>
                 <ComboBoxItem>Otros</ComboBoxItem>
             </ComboBox>
-            <Label Content="Fecha de nacimiento" HorizontalAlignment="Left" Margin="52,232,0,0" VerticalAlignment="Top"/>
-            <Label Content="Tipo de documento" HorizontalAlignment="Left" Margin="83,316,0,0" VerticalAlignment="Top"/>
-            <ComboBox Name="cmb_Tipo_documento" HorizontalAlignment="Left" Margin="257,318,0,0" VerticalAlignment="Top" Width="120">
+            <Label Content="Fecha de nacimiento" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="540,129,0,0" VerticalAlignment="Top"/>
+            <Label Content="Tipo de documento" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="52,152,0,0" VerticalAlignment="Top"/>
+            <ComboBox Name="cmb_Tipo_documento" HorizontalAlignment="Left" Margin="206,155,0,0" VerticalAlignment="Top" Width="120">
                 <ComboBoxItem>Cedula</ComboBoxItem>
                 <ComboBoxItem>Targeta de indentidad</ComboBoxItem>
                 <ComboBoxItem>Otros</ComboBoxItem>
             </ComboBox>
-            <Label Content="Numero de documento" HorizontalAlignment="Left" Margin="83,358,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Numero_documento" HorizontalAlignment="Left" Margin="257,362,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="186" Height="22"/>
-            <DatePicker Name="dtp_Fecha" HorizontalAlignment="Left" Margin="52,263,0,0" VerticalAlignment="Top"/>
-            <Label Content="Fecha de contrato" HorizontalAlignment="Left" Margin="264,232,0,0" VerticalAlignment="Top"/>
-            <DatePicker Name="dtp_Fecha_contrato" HorizontalAlignment="Left" Margin="264,263,0,0" VerticalAlignment="Top" Width="171"/>
-            <Label Content="Usuario" HorizontalAlignment="Left" Margin="561,257,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Usuario" HorizontalAlignment="Left" Margin="739,263,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Label Content="Contraseña" HorizontalAlignment="Left" Margin="569,316,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Contraseña" HorizontalAlignment="Left" Margin="739,311,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Label Content="Confimar contraseña" HorizontalAlignment="Left" Margin="569,384,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Confirmar_contraseña" HorizontalAlignment="Left" Margin="739,384,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Button x:Name="btn_Guardar" Content="Guardar" HorizontalAlignment="Left" Margin="435,479,0,0" VerticalAlignment="Top" Width="91" Click="btn_Guardar_Click"/>
+            <Label Content="Numero de documento" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="52,192,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Numero_documento" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="207,195,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="186" Height="22"/>
+            <DatePicker Name="dtp_Fecha" HorizontalAlignment="Left" Margin="714,129,0,0" VerticalAlignment="Top"/>
+            <Label Content="Fecha de contrato" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="541,177,0,0" VerticalAlignment="Top"/>
+            <DatePicker Name="dtp_Fecha_contrato" HorizontalAlignment="Left" Margin="710,182,0,0" VerticalAlignment="Top" Width="171"/>
+            <Label Content="Usuario" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="552,237,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Usuario" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="666,245,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Contraseña" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="541,285,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Contraseña" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="666,296,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Confimar contraseña" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="512,335,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Confirmar_contraseña" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="666,343,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Button x:Name="btn_Guardar" Content="Guardar" Foreground="White" FontSize="14" FontFamily="Segoe UI" FontWeight="Bold" BorderBrush="#2D6E48" HorizontalAlignment="Center" Margin="0,490,0,0" VerticalAlignment="Top" Width="105" Click="btn_Guardar_Click" Height="40">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF339A73" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
             <!--#ENDREGION-->
         </Grid>
     </Border>

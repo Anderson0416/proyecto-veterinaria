@@ -8,8 +8,8 @@
  Background="Transparent" Height="565" Width="925">
     <!--#REGION CONTENIDO-->
     <Border CornerRadius="10"
-Background="#b6e8c6" Margin="0,0,52,0">
-        <Grid x:Name="GridCompra">
+Background="#b6e8c6">
+        <Grid x:Name="GridCompra" Margin="0,0,10,0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="467*"/>
                 <ColumnDefinition Width="407*"/>
@@ -31,22 +31,49 @@ FontWeight="Bold"
             <Rectangle Fill="#2D6E48" Height="4" Margin="43,53,55,508" Grid.ColumnSpan="2"/>
             <Label Content="Producto" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="82,94,0,0" VerticalAlignment="Top" Grid.Column="1"/>
             <DataGrid Margin="43,81,0,364"
-Name="dtg_Tabla_Producto"
-AutoGenerateColumns="False"
-IsReadOnly="True" 
-SelectionMode="Single"
-SelectionUnit="FullRow"
-
-SelectionChanged="dtg_Tabla_Producto_SelectionChanged" HorizontalAlignment="Left" Width="418"
->
+          Name="dtg_Tabla_Producto"
+          AutoGenerateColumns="False"
+          IsReadOnly="True"
+          SelectionMode="Single"
+          SelectionUnit="FullRow"
+          SelectionChanged="dtg_Tabla_Producto_SelectionChanged"
+          HorizontalAlignment="Left"
+          Width="464"
+          BorderBrush="#2D6E48"
+          BorderThickness="1"
+          RowBackground="#F3F9F6"
+          AlternatingRowBackground="#E3F2E9"
+          GridLinesVisibility="Horizontal"
+          HorizontalGridLinesBrush="#B5D6C6"
+          HeadersVisibility="All" Grid.ColumnSpan="2">
+                <DataGrid.Resources>
+                    <!-- Estilo para el encabezado -->
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Background" Value="#2D6E48"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="Padding" Value="8"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    </Style>
+                    <!-- Estilo para las filas seleccionadas -->
+                    <Style TargetType="DataGridRow">
+                        <Setter Property="FontSize" Value="14"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#A8D5BA"/>
+                                <Setter Property="Foreground" Value="Black"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.Resources>
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ID" Binding="{Binding id}" Width="50" />
-                    <DataGridTextColumn Header="Nombre" Binding="{Binding nombre}" Width="200"/>
-                    <DataGridTextColumn Header="Stock" Binding="{Binding stock}" Width="100"/>
-                    <DataGridTextColumn Header="Precio" Binding="{Binding precio}" Width="70"/>
-
+                    <DataGridTextColumn Header="Nombre" Binding="{Binding nombre}" Width="200" />
+                    <DataGridTextColumn Header="Stock" Binding="{Binding stock}" Width="100" />
+                    <DataGridTextColumn Header="Precio" Binding="{Binding precio, StringFormat='{}{0:C}'}" Width="70" />
                 </DataGrid.Columns>
             </DataGrid>
+
             <Label Content="Nombre" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="43,229,0,0" VerticalAlignment="Top"/>
             <TextBox x:Name="txt_Nombre" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="119,227,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="186" Height="31"/>
             <Label Content="Cantidad" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="348,229,0,0" VerticalAlignment="Top"/>
@@ -60,21 +87,49 @@ SelectionChanged="dtg_Tabla_Producto_SelectionChanged" HorizontalAlignment="Left
                 </Button.Background>
             </Button>
             <DataGrid Margin="43,369,0,73"
-Name="dtg_Tabla_Compra"
-AutoGenerateColumns="False"
-IsReadOnly="True" 
-SelectionMode="Single"
-SelectionUnit="FullRow"
-SelectionChanged="dtg_Tabla_Compra_SelectionChanged" HorizontalAlignment="Left" Width="418"
->
+          Name="dtg_Tabla_Compra"
+          AutoGenerateColumns="False"
+          IsReadOnly="True"
+          SelectionMode="Single"
+          SelectionUnit="FullRow"
+          SelectionChanged="dtg_Tabla_Compra_SelectionChanged"
+          HorizontalAlignment="Left"
+          Width="464"
+          BorderBrush="#2D6E48"
+          BorderThickness="1"
+          RowBackground="#F3F9F6"
+          AlternatingRowBackground="#E3F2E9"
+          GridLinesVisibility="Horizontal"
+          HorizontalGridLinesBrush="#B5D6C6"
+          HeadersVisibility="All" Grid.ColumnSpan="2">
+                <DataGrid.Resources>
+                    <!-- Estilo para el encabezado -->
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Background" Value="#2D6E48"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="Padding" Value="8"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    </Style>
+                    <!-- Estilo para las filas seleccionadas -->
+                    <Style TargetType="DataGridRow">
+                        <Setter Property="FontSize" Value="14"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsSelected" Value="True">
+                                <Setter Property="Background" Value="#A8D5BA"/>
+                                <Setter Property="Foreground" Value="Black"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DataGrid.Resources>
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="ID" Binding="{Binding producto.id}" Width="50" />
-                    <DataGridTextColumn Header="Nombre" Binding="{Binding producto.nombre}" Width="200"/>
-                    <DataGridTextColumn Header="Cantidad" Binding="{Binding cantidad}" Width="100"/>
-                    <DataGridTextColumn Header="sub_Total" Binding="{Binding sub_total}" Width="70"/>
-
+                    <DataGridTextColumn Header="Nombre" Binding="{Binding producto.nombre}" Width="200" />
+                    <DataGridTextColumn Header="Cantidad" Binding="{Binding cantidad}" Width="100" />
+                    <DataGridTextColumn Header="Sub Total" Binding="{Binding sub_total, StringFormat='{}{0:C}'}" Width="70" />
                 </DataGrid.Columns>
             </DataGrid>
+
             <Label Content="Total a pagar" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="74,507,0,0" VerticalAlignment="Top"/>
             <TextBox x:Name="txt_Total" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="189,507,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="224" TextChanged="txt_Total_TextChanged" Height="29"/>
             <Button x:Name="btn_Pagar" Foreground="White" FontSize="16" FontFamily="Segoe UI" FontWeight="Bold" BorderBrush="#2D6E48" Content="Pagar" HorizontalAlignment="Left" Margin="204,335,0,0" VerticalAlignment="Top" Width="162" Click="btn_Pagar_Click" Height="36" Grid.Column="1">
