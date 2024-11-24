@@ -9,42 +9,84 @@
          d:DesignWidth="925"
          Background="Transparent">
     <!--#REGION CONTENIDO-->
-    <Border CornerRadius="10"
-        Background="#FFD2E0FB">
-        <Grid x:Name="GridIncorporarPaciente">
-            <!--#REGION TITULO-->
-            <TextBlock Grid.Row="0"
-                   Text="Incorporar_Paciente"
-                   Foreground="Black"
-                   FontSize="30"
-                   HorizontalAlignment="Center" Margin="0,0,0,517"/>
-            <Label Content="Documento del propietario" HorizontalAlignment="Left" Margin="131,105,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Documento_Propietario" HorizontalAlignment="Left" Margin="299,109,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Label Content="Nombre del propietario" HorizontalAlignment="Left" Margin="131,156,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Nombre_Propietario" HorizontalAlignment="Left" Margin="299,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Label Content="Apellido del propietario" HorizontalAlignment="Left" Margin="131,220,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Apellido_Propietario" HorizontalAlignment="Left" Margin="299,224,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Button x:Name="btn_Consultar_Propietario" Content="Consultar propietario" HorizontalAlignment="Left" Margin="499,118,0,0" VerticalAlignment="Top" Click="btn_Consultar_Propietario_Click"/>
-            <Label Content="Nombre de la mascota" HorizontalAlignment="Left" Margin="131,282,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Nombre_Mascota" HorizontalAlignment="Left" Margin="299,286,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Label Content="Especie" HorizontalAlignment="Left" Margin="131,337,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Especie" HorizontalAlignment="Left" Margin="299,341,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Label Content="Raza" HorizontalAlignment="Left" Margin="131,394,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Raza" HorizontalAlignment="Left" Margin="299,402,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Label Content="Edad" HorizontalAlignment="Left" Margin="131,440,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Edad" HorizontalAlignment="Left" Margin="299,444,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="43"/>
-            <ComboBox Name="cmb_Edad" HorizontalAlignment="Left" Margin="359,444,0,0" VerticalAlignment="Top" Width="80">
-                <ComboBoxItem>Dia</ComboBoxItem>
-                <ComboBoxItem>Mes</ComboBoxItem>
-                <ComboBoxItem>Año</ComboBoxItem>
-            </ComboBox>
-            <Label Content="Sexo" HorizontalAlignment="Left" Margin="131,484,0,0" VerticalAlignment="Top"/>
-            <ComboBox Name="cmb_Sexo" HorizontalAlignment="Left" Margin="299,488,0,0" VerticalAlignment="Top" Width="100">
-                <ComboBoxItem> Macho</ComboBoxItem>
-                <ComboBoxItem>Hembra</ComboBoxItem>
-            </ComboBox>
-            <Button x:Name="btn_Guardar_Mascota" Content="Guardar mascota" HorizontalAlignment="Left" Margin="575,440,0,0" VerticalAlignment="Top" Click="btn_Guardar_Mascota_Click"/>
-            <!--#ENDREGION-->
+    <Border CornerRadius="10" Background="#b6e8c6" Padding="20" BorderBrush="#2D6E48" BorderThickness="3">
+        <Grid x:Name="GridIncorporarPaciente" Margin="20,3,20,4">
+            <!-- Define las filas y columnas de la cuadrícula -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="3*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Título -->
+            <TextBlock Grid.Row="0" Grid.ColumnSpan="3" Text="Incorporar Paciente" FontSize="32" FontFamily="Segoe UI" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,20">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF339A73" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
+            <Rectangle Grid.Row="1" Grid.ColumnSpan="3" Fill="#2D6E48" Height="4" HorizontalAlignment="Stretch" Margin="0,0,0,20"/>
+
+            <!-- Columna 1 -->
+            <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Vertical" Margin="0,20,0,0">
+                <Label Content="Documento del propietario" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI"/>
+                <TextBox x:Name="txt_Documento_Propietario" Width="250" Height="30" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" Padding="5" Margin="0,0,0,10"/>
+
+                <Label Content="Nombre del propietario" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI"/>
+                <TextBox x:Name="txt_Nombre_Propietario" Width="250" Height="30" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" Padding="5" Margin="0,0,0,10"/>
+
+                <Label Content="Apellido del propietario" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI"/>
+                <TextBox x:Name="txt_Apellido_Propietario" Width="250" Height="30" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" Padding="5" Margin="0,0,0,10"/>
+                <Label Content="Nombre de la mascota" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI"/>
+                <TextBox x:Name="txt_Nombre_Mascota" Width="250" Height="30" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" Padding="5"/>
+
+                <Label Content="Especie" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI"/>
+                <TextBox x:Name="txt_Especie" Width="250" Height="30" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" Padding="5" Margin="0,0,0,10"/>
+
+                <Label Content="Raza" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI"/>
+                <TextBox x:Name="txt_Raza" Width="250" Height="30" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" Padding="5" Margin="0,0,0,10"/>
+            </StackPanel>
+
+            <!-- Columna 2 -->
+            <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Vertical" Margin="42,35,69,-16" Grid.ColumnSpan="2">
+                <Button x:Name="btn_Consultar_Propietario" Content="Consultar propietario" Width="198" Height="36" Foreground="White" FontSize="16" FontFamily="Segoe UI" FontWeight="Bold" BorderBrush="#2D6E48" Padding="5" Click="btn_Consultar_Propietario_Click">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="#FF339A73" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                <Label Content="Sexo" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI"/>
+                <ComboBox x:Name="cmb_Sexo" Width="250" Height="30" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" Padding="5">
+                    <ComboBoxItem Content="Macho"/>
+                    <ComboBoxItem Content="Hembra"/>
+                </ComboBox>
+                <Label Content="Edad" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI"/>
+                <StackPanel Orientation="Horizontal">
+                    <TextBox x:Name="txt_Edad" Width="50" Height="30" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" Padding="5"/>
+                    <ComboBox x:Name="cmb_Edad" Width="100" Height="30" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" Padding="5" Margin="5,0,0,0">
+                        <ComboBoxItem Content="Dia"/>
+                        <ComboBoxItem Content="Mes"/>
+                        <ComboBoxItem Content="Año"/>
+                    </ComboBox>
+                </StackPanel>
+                <Button x:Name="btn_Guardar_Mascota" Content="Guardar mascota" Width="250" Height="40" Foreground="White" FontSize="16" FontFamily="Segoe UI" FontWeight="Bold" BorderBrush="#2D6E48" Padding="5" Click="btn_Guardar_Mascota_Click">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="Black"/>
+                            <GradientStop Color="#FF339A73" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+            </StackPanel>
         </Grid>
     </Border>
     <!--#ENDREGION-->

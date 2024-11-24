@@ -10,14 +10,23 @@
         Background="Transparent" >
     <!--#REGION CONTENIDO-->
     <Border CornerRadius="10"
-Background="#FFD2E0FB">
+Background="#b6e8c6">
         <Grid x:Name="GridConsultaCita">
             <!--#REGION TITULO-->
             <TextBlock Grid.Row="0"
            Text="Consultar Cita"
-           Foreground="Black"
-           FontSize="30"
-           HorizontalAlignment="Center" Margin="0,0,0,525"/>
+            FontSize="36"
+            FontFamily="Segoe UI"
+            FontWeight="Bold"
+           HorizontalAlignment="Center" Margin="0,0,0,525">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF339A73" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
+            <Rectangle Fill="#2D6E48" Height="4" Margin="43,53,55,508" Grid.ColumnSpan="2"/>
             <DataGrid Margin="10,305,10,10"
                 Name="dtg_Tabla_Citas"
                 AutoGenerateColumns="False"
@@ -37,23 +46,23 @@ Background="#FFD2E0FB">
                     <DataGridTextColumn Header="Notas" Binding="{Binding nota}" Width="130" />
                 </DataGrid.Columns>
             </DataGrid>
-            <Label Content="nombre del propietario" HorizontalAlignment="Left" Margin="69,84,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Nombre_Propietario" HorizontalAlignment="Left" Margin="225,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Label Content="Veterinario" HorizontalAlignment="Left" Margin="395,86,0,0" VerticalAlignment="Top"/>
-            <ComboBox Name="cmb_Nombre_Veterinario" HorizontalAlignment="Left" Margin="487,88,0,0" VerticalAlignment="Top" Width="120"/>
-            <Label Content="Nombre de la mascota" HorizontalAlignment="Left" Margin="70,123,0,0" VerticalAlignment="Top"/>
+            <Label Content="nombre del propietario" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="69,84,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Nombre_Propietario" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="238,92,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Veterinario" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="70,157,0,0" VerticalAlignment="Top"/>
+            <ComboBox Name="cmb_Nombre_Veterinario" HorizontalAlignment="Left" Margin="165,161,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Nombre de la mascota" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="70,123,0,0" VerticalAlignment="Top"/>
             <ComboBox Name="cmb_Nombre_Mascota" HorizontalAlignment="Left" Margin="225,127,0,0" VerticalAlignment="Top" Width="120"/>
-            <Label Content="Fecha de la cita" HorizontalAlignment="Left" Margin="82,165,0,0" VerticalAlignment="Top"/>
-            <DatePicker Name="dtp_Fecha_Consulta" HorizontalAlignment="Left" Margin="225,166,0,0" VerticalAlignment="Top"/>
-            <Label Content="Estado de la cita" HorizontalAlignment="Left" Margin="87,205,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Estado" HorizontalAlignment="Left" Margin="225,213,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Label Content="Valor de la cita" HorizontalAlignment="Left" Margin="92,250,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Total_Pagar" HorizontalAlignment="Left" Margin="225,254,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Label Content="Nota de la cita" HorizontalAlignment="Left" Margin="395,138,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Nota" HorizontalAlignment="Left" Margin="395,169,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="223" Height="94"/>
-            <Label Content="Tipo de consulta" HorizontalAlignment="Left" Margin="657,75,0,0" VerticalAlignment="Top"/>
-            <ComboBox Name="cmb_Tipo_Consulta" HorizontalAlignment="Left" Margin="669,114,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmb_Tipo_Consulta_SelectionChanged"/>
-            <DataGrid Margin="623,151,0,316"
+            <Label Content="Fecha de la cita" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="69,187,0,0" VerticalAlignment="Top"/>
+            <DatePicker Name="dtp_Fecha_Consulta" HorizontalAlignment="Left" Margin="192,192,0,0" VerticalAlignment="Top"/>
+            <Label Content="Estado de la cita" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="70,223,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Estado" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="192,228,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Valor de la cita" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="69,258,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Total_Pagar" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="192,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Nota de la cita" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="407,84,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Nota" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="381,127,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="187" Height="94"/>
+            <Label Content="Tipo de consulta" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="643,70,0,0" VerticalAlignment="Top"/>
+            <ComboBox Name="cmb_Tipo_Consulta" HorizontalAlignment="Left" Margin="769,76,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cmb_Tipo_Consulta_SelectionChanged"/>
+            <DataGrid Margin="597,115,0,344"
                 Name="dtg_Tabla_Tipo_Consulta"
                 AutoGenerateColumns="False"
                 IsReadOnly="True" 
@@ -69,12 +78,47 @@ Background="#FFD2E0FB">
                 </DataGrid.Columns>
             </DataGrid>
             <Label Name="lb_Total" Content="" HorizontalAlignment="Left" Margin="669,267,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Buscar" HorizontalAlignment="Left" Margin="765,279,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="txt_Buscar_TextChanged"/>
-            <Button x:Name="btn_borrar_Tipo_Consulta" Content="Borrar tipo de consulta" HorizontalAlignment="Left" Margin="760,79,0,0" VerticalAlignment="Top" Click="btn_borrar_Tipo_Consulta_Click"/>
-            <Button x:Name="btn_Eliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="392,278,0,0" VerticalAlignment="Top" Click="btn_Eliminar_Click"/>
-            <Button x:Name="btn_Actualizar" Content="Actializar" HorizontalAlignment="Left" Margin="462,278,0,0" VerticalAlignment="Top" Click="btn_Actualizar_Click"/>
-            <Button x:Name="btn_Pagar" Content="Pagar" HorizontalAlignment="Left" Margin="547,279,0,0" VerticalAlignment="Top" Click="btn_Pagar_Click"/>
-            <Button x:Name="btn_Imprimir" Content="Imprimir Consulta" HorizontalAlignment="Left" Margin="607,277,0,0" VerticalAlignment="Top" Click="btn_Imprimir_Consulta_Click"/>
+            <TextBox x:Name="txt_Buscar" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="793,271,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="txt_Buscar_TextChanged"/>
+            <Button x:Name="btn_borrar_Tipo_Consulta" Foreground="White" FontSize="14" FontFamily="Segoe UI" FontWeight="Bold" BorderBrush="#2D6E48" Content="Borrar Seleccion" HorizontalAlignment="Left" Margin="793,228,0,0" VerticalAlignment="Top" Click="btn_borrar_Tipo_Consulta_Click">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF339A73" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btn_Eliminar" Content="Eliminar" Foreground="White" FontSize="14" FontFamily="Segoe UI" FontWeight="Bold" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="360,263,0,0" VerticalAlignment="Top" Click="btn_Eliminar_Click" Height="26" Width="64">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF339A73" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btn_Actualizar" Content="Actualizar" Foreground="White" FontSize="14" FontFamily="Segoe UI" FontWeight="Bold" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="436,262,0,0" VerticalAlignment="Top" Click="btn_Actualizar_Click" Height="27" Width="76">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF339A73" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btn_Pagar" Content="Pagar" Foreground="White" FontSize="14" FontFamily="Segoe UI" FontWeight="Bold" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="526,263,0,0" VerticalAlignment="Top" Click="btn_Pagar_Click" Height="26" Width="55">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF339A73" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btn_Imprimir" Content="Imprimir Consulta" Foreground="White" FontSize="14" FontFamily="Segoe UI" FontWeight="Bold" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="597,263,0,0" VerticalAlignment="Top" Click="btn_Imprimir_Consulta_Click" Height="28" Width="127">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF339A73" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
             <!--#ENDREGION-->
         </Grid>
     </Border>

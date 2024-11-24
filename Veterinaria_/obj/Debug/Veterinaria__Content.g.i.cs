@@ -8,7 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scs/pictures/clipboard-solid.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scs/pictures/window-restore-solid.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("scs/pictures/masc.png")]
 
 

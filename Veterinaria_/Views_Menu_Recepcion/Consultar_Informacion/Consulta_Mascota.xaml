@@ -9,14 +9,23 @@
             d:DesignWidth="925"
             Background="Transparent" >
     <Border CornerRadius="10"
-            Background="#FFD2E0FB">
+            Background="#b6e8c6">
         <Grid x:Name="GridConsultarPropietario">
             <!--#REGION TITULO-->
             <TextBlock Grid.Row="0"
                     Text="Consultar informacion del Propietario"
-                    Foreground="Black"
-                    FontSize="30"
-                    HorizontalAlignment="Center" Margin="0,0,0,525"/>
+                    FontSize="36"
+FontFamily="Segoe UI"
+FontWeight="Bold"
+                    HorizontalAlignment="Left" Margin="141,10,0,515">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF339A73" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
+            <Rectangle Fill="#2D6E48" Height="4" Margin="38,63,60,498"/>
             <DataGrid Margin="10,305,10,10"
                         Name="dtg_Tabla_mascota"
                         AutoGenerateColumns="False"
@@ -36,32 +45,46 @@
                     <DataGridTextColumn Header="Documento Propietario" Binding="{Binding propietario.documento}" Width="190" />
                 </DataGrid.Columns>
             </DataGrid>
-            <Button x:Name="btn_Eliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="586,119,0,0" VerticalAlignment="Top" Click="btn_Eliminar_Click"/>
-            <Label Content="ID" HorizontalAlignment="Left" Margin="84,83,0,0" VerticalAlignment="Top"/>
-            <Label Name="lb_Id" Content="" HorizontalAlignment="Left" Margin="136,83,0,0" VerticalAlignment="Top"/>
-            <Label Content="Nombre de la mascota" HorizontalAlignment="Left" Margin="84,144,0,0" VerticalAlignment="Top"/>
-            <Label Content="Especie" HorizontalAlignment="Left" Margin="84,177,0,0" VerticalAlignment="Top"/>
-            <Label Content="Raza" HorizontalAlignment="Left" Margin="84,208,0,0" VerticalAlignment="Top"/>
-            <Label Content="Sexo" HorizontalAlignment="Left" Margin="84,239,0,0" VerticalAlignment="Top"/>
-            <Label Content="Edad" HorizontalAlignment="Left" Margin="84,0,0,0" VerticalAlignment="Center"/>
-            <Label Content="Ducumento de propietario" HorizontalAlignment="Left" Margin="84,113,0,0" VerticalAlignment="Top"/>
-            <Label Name="lb_Documento_propietario" Content="" HorizontalAlignment="Left" Margin="251,113,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Nombre_mascota" HorizontalAlignment="Left" Margin="230,148,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="txt_Especie" HorizontalAlignment="Left" Margin="230,181,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="txt_Raza" HorizontalAlignment="Left" Margin="230,212,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="txt_Edad" HorizontalAlignment="Left" Margin="230,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="51"/>
-            <ComboBox Name="cmb_Sexo" HorizontalAlignment="Left" Margin="230,241,0,0" VerticalAlignment="Top" Width="67">
+            <Button x:Name="btn_Eliminar" Content="Eliminar" Foreground="White" FontSize="14" FontFamily="Segoe UI" FontWeight="Bold" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="59,254,0,0" VerticalAlignment="Top" Click="btn_Eliminar_Click" Height="28" Width="67">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF339A73" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Label Content="ID" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="90,122,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.317,1.363"/>
+            <Label Name="lb_Id" Content="" HorizontalAlignment="Left" Margin="129,129,0,0" VerticalAlignment="Top"/>
+            <Label Content="Nombre de la mascota" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="424,106,0,0" VerticalAlignment="Top"/>
+            <Label Content="Especie" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="424,140,0,0" VerticalAlignment="Top"/>
+            <Label Content="Raza" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="424,174,0,0" VerticalAlignment="Top"/>
+            <Label Content="Sexo" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="424,208,0,0" VerticalAlignment="Top"/>
+            <Label Content="Edad" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="411,242,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.516,0.517"/>
+            <Label Content="Documento de propietario" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="26,160,0,0" VerticalAlignment="Top"/>
+            <Label Name="lb_Documento_propietario" Content="" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="205,164,0,0" VerticalAlignment="Top" Width="124" Height="24"/>
+            <TextBox x:Name="txt_Nombre_mascota" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="579,111,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="txt_Especie" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="499,145,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="txt_Raza" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="496,174,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="txt_Edad" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="499,252,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="51"/>
+            <ComboBox Name="cmb_Sexo" HorizontalAlignment="Left" Margin="496,212,0,0" VerticalAlignment="Top" Width="66">
                 <ComboBoxItem>Macho</ComboBoxItem>
                 <ComboBoxItem>Hembra</ComboBoxItem>
             </ComboBox>
-            <ComboBox Name="cmb_Edad" HorizontalAlignment="Left" Margin="299,0,0,0" VerticalAlignment="Center" Width="62">
+            <ComboBox Name="cmb_Edad" HorizontalAlignment="Left" Margin="559,252,0,0" VerticalAlignment="Top" Width="62" RenderTransformOrigin="0.5,0.638">
                 <ComboBoxItem>Dia</ComboBoxItem>
                 <ComboBoxItem>Mes</ComboBoxItem>
                 <ComboBoxItem>Año</ComboBoxItem>
             </ComboBox>
-            <TextBox x:Name="txt_Buscar" HorizontalAlignment="Left" Margin="586,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="120" TextChanged="txt_Buscar_TextChanged"/>
-            <Label Content="Buscar" HorizontalAlignment="Left" Margin="536,0,0,0" VerticalAlignment="Center"/>
-            <Button x:Name="btn_Actualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="586,157,0,0" VerticalAlignment="Top" Click="btn_Actualizar_Click"/>
+            <TextBox x:Name="txt_Buscar" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="784,242,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="txt_Buscar_TextChanged"/>
+            <Label Content="Buscar" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="720,240,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="btn_Actualizar" Content="Actualizar" Foreground="White" FontSize="14" FontFamily="Segoe UI" FontWeight="Bold" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="159,254,0,0" VerticalAlignment="Top" Click="btn_Actualizar_Click" Height="28" Width="82">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF339A73" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
         </Grid>
     </Border>
     <!--#ENDREGION-->

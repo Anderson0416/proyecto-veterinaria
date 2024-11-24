@@ -10,38 +10,47 @@
             Background="Transparent" >
     <!--#REGION CONTENIDO-->
     <Border CornerRadius="10"
-                Background="#FFD2E0FB">
+                Background="#b6e8c6">
         <Grid x:Name="GridConsultarPropietario">
             <!--#REGION TITULO-->
             <TextBlock Grid.Row="0"
                         Text="Consultar informacion del Propietario"
-                        Foreground="Black"
-                        FontSize="30"
-                        HorizontalAlignment="Center" Margin="0,0,0,525"/>
-            <Label Content="ID" HorizontalAlignment="Left" Margin="118,81,0,0" VerticalAlignment="Top"/>
+                        FontSize="36"
+FontFamily="Segoe UI"
+FontWeight="Bold"
+                        HorizontalAlignment="Center" Margin="0,0,0,522">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF339A73" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
+            <Rectangle Fill="#2D6E48" Height="4" Margin="43,53,55,508" Grid.ColumnSpan="2"/>
+            <Label Content="ID" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="118,81,0,0" VerticalAlignment="Top"/>
             <Label Name="lb_Id" Content="" HorizontalAlignment="Left" Margin="145,81,0,0" VerticalAlignment="Top"/>
-            <Label Content="Nombre" HorizontalAlignment="Left" Margin="118,124,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Nombre" HorizontalAlignment="Left" Margin="178,132,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Label Content="Apellido" HorizontalAlignment="Left" Margin="118,176,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Apellido" HorizontalAlignment="Left" Margin="178,180,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Label Content="Fecha de nacimiento" HorizontalAlignment="Left" Margin="118,216,0,0" VerticalAlignment="Top"/>
-            <DatePicker Name="dtp_Fecha" HorizontalAlignment="Left" Margin="118,255,0,0" VerticalAlignment="Top"/>
-            <Label Content="Telefono" HorizontalAlignment="Left" Margin="395,172,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Telefono" HorizontalAlignment="Left" Margin="462,180,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged"/>
-            <Label Content="Sexo" HorizontalAlignment="Left" Margin="395,124,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.526,0.539"/>
-            <ComboBox Name="cmd_Sexo" HorizontalAlignment="Left" Margin="452,128,0,0" VerticalAlignment="Top" Width="120">
+            <Label Content="Nombre" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="118,124,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Nombre" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="184,133,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.508,0.485"/>
+            <Label Content="Apellido" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="117,162,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Apellido" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="184,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Fecha de nacimiento" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="484,87,0,0" VerticalAlignment="Top"/>
+            <DatePicker Name="dtp_Fecha" HorizontalAlignment="Left" Margin="633,92,0,0" VerticalAlignment="Top"/>
+            <Label Content="Telefono" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="484,154,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.255,-1.468"/>
+            <TextBox x:Name="txt_Telefono" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="553,158,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="TextBox_TextChanged" RenderTransformOrigin="0.458,0.533"/>
+            <Label Content="Sexo" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="484,121,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.559,0.105" Height="33"/>
+            <ComboBox Name="cmd_Sexo" HorizontalAlignment="Left" Margin="553,126,0,0" VerticalAlignment="Top" Width="120">
                 <ComboBoxItem>Masculino</ComboBoxItem>
                 <ComboBoxItem>Femenino</ComboBoxItem>
                 <ComboBoxItem>Otros</ComboBoxItem>
             </ComboBox>
-            <Label Content="Tipo de documento" HorizontalAlignment="Left" Margin="395,211,0,0" VerticalAlignment="Top"/>
-            <ComboBox Name="cmb_Tipo_documento" HorizontalAlignment="Left" Margin="522,218,0,0" VerticalAlignment="Top" Width="120">
+            <Label Content="Tipo de documento" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="118,200,0,0" VerticalAlignment="Top"/>
+            <ComboBox Name="cmb_Tipo_documento" HorizontalAlignment="Left" Margin="254,204,0,0" VerticalAlignment="Top" Width="120">
                 <ComboBoxItem>Cedula</ComboBoxItem>
                 <ComboBoxItem>Targeta de indentidad</ComboBoxItem>
                 <ComboBoxItem>Otros</ComboBoxItem>
             </ComboBox>
-            <Label Content="Numero de documento" HorizontalAlignment="Center" Margin="0,249,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Numero_documento" HorizontalAlignment="Left" Margin="535,255,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Numero de documento" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="117,233,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Numero_documento" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="277,241,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
             <DataGrid Margin="10,305,10,10"
                       Name="dtg_Tabla_propietarios"
                       AutoGenerateColumns="False"
@@ -62,12 +71,26 @@
                     <DataGridTextColumn Header="Teléfono" Binding="{Binding telefono}" Width="100" />
                 </DataGrid.Columns>
             </DataGrid>
-            <Button x:Name="btn_Actualizar" Content="Actializar" HorizontalAlignment="Left" Margin="830,139,0,0" VerticalAlignment="Top" Click="btn_Actualizar_Click"/>
-            <Button x:Name="btn_Eliminar" Content="Eliminar" HorizontalAlignment="Left" Margin="833,172,0,0" VerticalAlignment="Top" Click="btn_Eliminar_Click"/>
-            <Label Content="Buscar" HorizontalAlignment="Left" Margin="727,229,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Buscar" HorizontalAlignment="Left" Margin="777,233,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="105" TextChanged="txt_Buscar_TextChanged"/>
-            <Label Content="Correo electronico" HorizontalAlignment="Left" Margin="637,129,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Correo" HorizontalAlignment="Left" Margin="625,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="164"/>
+            <Button x:Name="btn_Actualizar" Content="Actualizar" Foreground="White" FontSize="14" FontFamily="Segoe UI" FontWeight="Bold" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="504,251,0,0" VerticalAlignment="Top" Click="btn_Actualizar_Click" Height="28" Width="73">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF339A73" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btn_Eliminar" Content="Eliminar" Foreground="White" FontSize="14" FontFamily="Segoe UI" FontWeight="Bold" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="625,251,0,0" VerticalAlignment="Top" Click="btn_Eliminar_Click" Height="28" Width="75">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF339A73" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Label Content="Buscar" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="761,245,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Buscar" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="800,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Width="105" TextChanged="txt_Buscar_TextChanged"/>
+            <Label Content="Correo electronico" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="484,188,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Correo" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="618,194,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="164"/>
             <!--#ENDREGION-->
         </Grid>
     </Border>

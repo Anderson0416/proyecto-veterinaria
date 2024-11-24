@@ -5,24 +5,38 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Veterinaria_.Views"
                    mc:Ignorable="d"
- Background="Transparent" Width="850" Height="833">
+ Background="Transparent" Height="565" Width="925">
     <!--#REGION CONTENIDO-->
     <Border CornerRadius="10"
-Background="#FFD2E0FB" Margin="0,0,52,0">
+Background="#b6e8c6" Margin="0,0,52,0">
         <Grid x:Name="GridCompra">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="467*"/>
+                <ColumnDefinition Width="407*"/>
+            </Grid.ColumnDefinitions>
             <!--#REGION TITULO-->
             <TextBlock Grid.Row="0"
            Text="Compra"
-           Foreground="Black"
-           FontSize="30"
-           HorizontalAlignment="Center" Margin="0,0,0,785"/>
-            <Label Content="Producto" HorizontalAlignment="Left" Margin="41,95,0,0" VerticalAlignment="Top"/>
-            <DataGrid Margin="41,126,0,607"
+FontSize="36"
+FontFamily="Segoe UI"
+FontWeight="Bold"
+           HorizontalAlignment="Left" Margin="385,0,0,521" Grid.ColumnSpan="2" Width="141">
+                <TextBlock.Foreground>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF339A73" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Foreground>
+            </TextBlock>
+            <Rectangle Fill="#2D6E48" Height="4" Margin="43,53,55,508" Grid.ColumnSpan="2"/>
+            <Label Content="Producto" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="82,94,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+            <DataGrid Margin="43,81,0,364"
 Name="dtg_Tabla_Producto"
 AutoGenerateColumns="False"
 IsReadOnly="True" 
 SelectionMode="Single"
 SelectionUnit="FullRow"
+
 SelectionChanged="dtg_Tabla_Producto_SelectionChanged" HorizontalAlignment="Left" Width="418"
 >
                 <DataGrid.Columns>
@@ -33,12 +47,19 @@ SelectionChanged="dtg_Tabla_Producto_SelectionChanged" HorizontalAlignment="Left
 
                 </DataGrid.Columns>
             </DataGrid>
-            <Label Content="Nombre" HorizontalAlignment="Left" Margin="55,241,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Nombre" HorizontalAlignment="Left" Margin="124,249,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Label Content="Camtidad" HorizontalAlignment="Left" Margin="310,245,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Cantidad" HorizontalAlignment="Left" Margin="390,249,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Button x:Name="btn_Agregar" Content="Agragar" HorizontalAlignment="Left" Margin="259,285,0,0" VerticalAlignment="Top" Click="btn_Agregar_Click"/>
-            <DataGrid Margin="41,378,0,355"
+            <Label Content="Nombre" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="43,229,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Nombre" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="119,227,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="186" Height="31"/>
+            <Label Content="Cantidad" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="348,229,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Cantidad" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="453,233,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="129" Height="25" Grid.ColumnSpan="2"/>
+            <Button x:Name="btn_Agregar" Content="Agregar" Foreground="White" FontSize="16" FontFamily="Segoe UI" FontWeight="Bold" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="165,282,0,0" VerticalAlignment="Top" Click="btn_Agregar_Click" Height="38" Width="94">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF339A73" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <DataGrid Margin="43,369,0,73"
 Name="dtg_Tabla_Compra"
 AutoGenerateColumns="False"
 IsReadOnly="True" 
@@ -54,14 +75,35 @@ SelectionChanged="dtg_Tabla_Compra_SelectionChanged" HorizontalAlignment="Left" 
 
                 </DataGrid.Columns>
             </DataGrid>
-            <Label Content="Total a pagar" HorizontalAlignment="Left" Margin="243,492,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txt_Total" HorizontalAlignment="Left" Margin="341,496,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="txt_Total_TextChanged"/>
-            <Button x:Name="btn_Pagar" Content="Pagar" HorizontalAlignment="Left" Margin="560,413,0,0" VerticalAlignment="Top" Width="162" Click="btn_Pagar_Click"/>
-            <TextBox x:Name="txt_Buscar_Producto" HorizontalAlignment="Left" Margin="124,103,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="txt_Buscar_Producto_TextChanged"/>
-            <TextBox x:Name="txt_Buscar_Compra" HorizontalAlignment="Left" Margin="124,356,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" TextChanged="txt_Buscar_Compra_TextChanged"/>
-            <Label Content="Compra" HorizontalAlignment="Left" Margin="55,346,0,0" VerticalAlignment="Top"/>
-            <Button x:Name="txt_Borrar" Content="Borrar" HorizontalAlignment="Left" Margin="301,357,0,0" VerticalAlignment="Top" Click="txt_Borrar_Click"/>
-            <Button x:Name="btn_Imprimir_Factura" Content="Imprimir Factura" HorizontalAlignment="Left" Margin="560,448,0,0" VerticalAlignment="Top" Width="162" Click="btn_Imprimir_Factura_Click"/>
+            <Label Content="Total a pagar" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="74,507,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txt_Total" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="189,507,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="224" TextChanged="txt_Total_TextChanged" Height="29"/>
+            <Button x:Name="btn_Pagar" Foreground="White" FontSize="16" FontFamily="Segoe UI" FontWeight="Bold" BorderBrush="#2D6E48" Content="Pagar" HorizontalAlignment="Left" Margin="204,335,0,0" VerticalAlignment="Top" Width="162" Click="btn_Pagar_Click" Height="36" Grid.Column="1">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF339A73" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <TextBox x:Name="txt_Buscar_Producto" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="54,128,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150" TextChanged="txt_Buscar_Producto_TextChanged" Height="26" Grid.Column="1"/>
+            <TextBox x:Name="txt_Buscar_Compra" FontSize="14" FontFamily="Segoe UI" Background="#E0F8E0" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="124,340,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="128" TextChanged="txt_Buscar_Compra_TextChanged" Height="18"/>
+            <Label Content="Compra" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="43,335,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="txt_Borrar" Content="Borrar" Foreground="White" FontSize="16" FontFamily="Segoe UI" FontWeight="Bold" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="319,283,0,0" VerticalAlignment="Top" Click="txt_Borrar_Click" Height="37" Width="94">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF339A73" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btn_Imprimir_Factura" Content="Imprimir Factura" Foreground="White" FontSize="16" FontFamily="Segoe UI" FontWeight="Bold" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="204,395,0,0" VerticalAlignment="Top" Width="162" Click="btn_Imprimir_Factura_Click" Height="48" Grid.Column="1">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black"/>
+                        <GradientStop Color="#FF339A73" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
             <!--#ENDREGION-->
         </Grid>
     </Border>
