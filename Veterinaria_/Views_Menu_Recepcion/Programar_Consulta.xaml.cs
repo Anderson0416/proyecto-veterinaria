@@ -206,7 +206,15 @@ namespace Veterinaria_.Views
                 MessageBox.Show("El formato del total no es válido.");
             }
             citas.nota = txt_Descripcion_Consulta.Text;
+            string disponibilidad = servicio_Cita.Consultar_disponivilidad_Veterinario(citas);
+            if (disponibilidad != null)
+            {
+                MessageBox.Show(disponibilidad, "Disponibilidad del Veterinario", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return; 
+            }
+
             var respuesta = servicio_Cita.Registrar_Cita(citas);
+            Tomar_Datos_Tipo_Consulta();
             MessageBox.Show(respuesta);
         }
         private void Tomar_Datos_Tipo_Consulta()
@@ -217,12 +225,13 @@ namespace Veterinaria_.Views
         private void btn_Programar_Consulta_Click(object sender, RoutedEventArgs e)
         {
             Tomar_Datos_Cita();
-            Tomar_Datos_Tipo_Consulta();
+            Borrar_Datos();
         }
         private void btn_Pagar_Consulta_Click(object sender, RoutedEventArgs e)
         {
             Tomar_Datos_Cita();
             Tomar_Datos_Tipo_Consulta();
+            Borrar_Datos();
             Pagar_Consulta pagar_Consulta = new Pagar_Consulta(this);
             pagar_Consulta.Show();
         }
@@ -253,8 +262,6 @@ namespace Veterinaria_.Views
             string filas = string.Empty;
             string FILAS = string.Empty;
 
-
-            // Para obtener el nombre de la mascota
             if (cmb_Nombre_Mascota.SelectedItem is Mascota mascota)
             {
                 PaginaHTML_Texto = PaginaHTML_Texto.Replace("@NOMBRE_MASCOTA", mascota.nombre);
@@ -264,7 +271,6 @@ namespace Veterinaria_.Views
                 PaginaHTML_Texto = PaginaHTML_Texto.Replace("@NOMBRE_MASCOTA", "");
             }
 
-            // Para obtener el nombre del veterinario
             if (cmb_Nombre_Veterinario.SelectedItem is Veterinario veterinario)
             {
                 PaginaHTML_Texto = PaginaHTML_Texto.Replace("@NOMBRE_VETERINARIO", veterinario.nombre);
@@ -282,9 +288,9 @@ namespace Veterinaria_.Views
                 if (items is Tipo_Consulta)
                 {
                     FILAS += "<tr>";
-                    FILAS += $"<td style='padding: 10px; border: 1px solid #ddd;'>{tipe.id}</td>";         // ID
-                    FILAS += $"<td style='padding: 10px; border: 1px solid #ddd;'>{tipe.nombre}</td>";     // Nombre
-                    FILAS += $"<td style='padding: 10px; border: 1px solid #ddd;'>{tipe.precio}</td>";     // Precio
+                    FILAS += $"<td style='padding: 10px; border: 1px solid #ddd;'>{tipe.id}</td>";         
+                    FILAS += $"<td style='padding: 10px; border: 1px solid #ddd;'>{tipe.nombre}</td>";     
+                    FILAS += $"<td style='padding: 10px; border: 1px solid #ddd;'>{tipe.precio}</td>";     
                     FILAS += "</tr>";
                 }
             }
@@ -317,7 +323,6 @@ namespace Veterinaria_.Views
                 {
                     using (FileStream stream = new FileStream(descargar_ProgConsulta.FileName, FileMode.Create))
                     {
-                        // Crear y configurar el documento PDF
                         Document pdfDoc = new Document(PageSize.A4, 25, 25, 25, 25);
                         PdfWriter writer = PdfWriter.GetInstance(pdfDoc, stream);
                         pdfDoc.Open();
@@ -326,15 +331,9 @@ namespace Veterinaria_.Views
                         iTextSharp.text.Image img = iTextSharp.text.Image.GetInstance(Properties.Resources.loguito, System.Drawing.Imaging.ImageFormat.Png);
                         img.ScaleToFit(60, 60);
                         img.Alignment = iTextSharp.text.Image.UNDERLYING;
-
-                        //img.SetAbsolutePosition(10,100);
                         img.SetAbsolutePosition(pdfDoc.RightMargin, pdfDoc.Top - 60);
                         pdfDoc.Add(img);
 
-
-
-
-                        // Agregar contenido HTML al documento
                         using (StringReader sr = new StringReader(PaginaHTML_Texto))
                         {
                             XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);

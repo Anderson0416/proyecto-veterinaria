@@ -76,6 +76,21 @@ namespace BLL
             Citas cita_Filtrada = listaCitas.FirstOrDefault(c => c.id == id);
             return cita_Filtrada;
         }
+        public string Consultar_disponivilidad_Veterinario(Citas cita)
+        {
+            List<Citas> listaCitas = Lista_Todos_Citas();
+
+            // Filtrar las citas para el veterinario y la fecha especificada
+            int citasEnLaFecha = listaCitas
+                .Where(c => c.veterinario.id == cita.veterinario.id && c.fecha_cita.Date == cita.fecha_cita.Date)
+                .Count();
+            if (citasEnLaFecha >= 10)
+            {
+                return "El veterinario ya tiene más de 10 citas programadas para la fecha seleccionada.";
+            }
+
+            return null; 
+        }
         public List<Citas> Citas_Fecha()
         {
             List<Citas> Lista_Citas = new List<Citas> ();
