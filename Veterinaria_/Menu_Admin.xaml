@@ -26,7 +26,6 @@
     </Grid>-->
 
 
-
     <Window.Resources>
         
         <!--#REGION FOCUSVISUAL-->
@@ -385,11 +384,12 @@
                                VerticalAlignment="Center" Margin="453,0,0,0"/>
 
                     <!--#ENDREGION-->
-                    <!--#Region MICUENTA-->
-                    <!--
+                    
+                    <!--#Region SALIDA--><!--
+                    
 
                     <Button     Style="{DynamicResource BtnHeaderStyle}"
-                            x:Name="BtnCuenta"
+                            x:Name="BtnSalida"
                             Grid.Column="1"
                             Background="Transparent"
                             BorderBrush="Transparent"
@@ -409,7 +409,7 @@
                             </Grid.ColumnDefinitions>
 
                             <TextBlock Grid.Column="1"
-                                       Text="Mi Cuenta"
+                                       Text="Salida"
                                        HorizontalAlignment="Center"
                                        VerticalAlignment="Center"
                                        Margin="5,0,0,0"/>
@@ -424,13 +424,13 @@
 
 
 
-                    -->
-                    <!--#EndRegion-->
+                    
+                    --><!--#EndRegion-->
                     <!--#REGION INFO-->
-                    <!--
+                    
 
                     <Button     Style="{DynamicResource BtnHeaderStyle}"
-                            x:Name="BtnInfo"
+                            x:Name="BtnCerrarSeccion"
                             Grid.Column="1"
                             Background="Transparent"
                             BorderBrush="Transparent"
@@ -438,7 +438,7 @@
                             FontSize="15"
                             VerticalAlignment="Center"
                             HorizontalAlignment="Right"
-                            Cursor="Hand">
+                            Cursor="Hand" Click="Cerrar_Seccion_Click">
 
                         <Grid>
 
@@ -450,7 +450,7 @@
                             <Image Source="SCS/Pictures/info.png"
                                    Grid.Column="0"
                                    VerticalAlignment="center"/>
-                            <TextBlock Text="Info"
+                            <TextBlock Text="Cerrar Seccion"
                                        Grid.Column="1"
                                        HorizontalAlignment="Center"
                                        VerticalAlignment="Center"
@@ -458,8 +458,9 @@
 
                         </Grid>
                     </Button>
-                    -->
+                    
                     <!--#ENDREGION-->
+                    
                     <!--#REGIONMINIMIZAR-->
 
                     <Button  Style="{DynamicResource BtnHeaderStyle}"

@@ -397,11 +397,11 @@
 
             -->
                     <!--#EndRegion-->
-                    <!--#REGION INFO-->
-                    <!--
+                    <!--#REGION CERRARSECCION-->
+                    
 
             <Button     Style="{DynamicResource BtnHeaderStyle}"
-                    x:Name="BtnInfo"
+                    x:Name="BtnCerrarSeccion"
                     Grid.Column="1"
                     Background="Transparent"
                     BorderBrush="Transparent"
@@ -409,7 +409,7 @@
                     FontSize="15"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Right"
-                    Cursor="Hand">
+                    Cursor="Hand" Click="Cerrar_Seccion_Click">
 
                 <Grid>
 
@@ -421,7 +421,7 @@
                     <Image Source="SCS/Pictures/info.png"
                            Grid.Column="0"
                            VerticalAlignment="center"/>
-                    <TextBlock Text="Info"
+                    <TextBlock Text="CerrarSeccion"
                                Grid.Column="1"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center"
@@ -429,7 +429,7 @@
 
                 </Grid>
             </Button>
-            -->
+            
                     <!--#ENDREGION-->
                     <!--#REGIONMINIMIZAR-->
 

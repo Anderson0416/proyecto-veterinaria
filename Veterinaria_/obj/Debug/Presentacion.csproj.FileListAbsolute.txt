@@ -708,7 +708,6 @@ C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_
 C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Recepcion\Incorporar_Paciente.g.cs
 C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Recepcion\Programar_Consulta.g.cs
 C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Recepcion\Prueba.g.cs
-C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Recepcion\Recordatorio_Cita.g.cs
 C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Recepcion\Registrar_Propietario.g.cs
 C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\App.g.cs
 C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\GeneratedInternalTypeHelper.g.cs
@@ -736,7 +735,6 @@ C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_
 C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Recepcion\Incorporar_Paciente.baml
 C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Recepcion\Programar_Consulta.baml
 C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Recepcion\Prueba.baml
-C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Recepcion\Recordatorio_Cita.baml
 C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Recepcion\Registrar_Propietario.baml
 C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\Veterinaria_.g.resources
 C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\Veterinaria_.Properties.Resources.resources
@@ -914,3 +912,11 @@ C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterina
 C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterinaria_\obj\Debug\Registrar_admin.baml
 C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Admin\Detalle_Factura.baml
 C:\Users\damit\OneDrive\Escritorio\ProyVeterinaria\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Admin\Facturas.baml
+C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\bin\Debug\LiveCharts.dll
+C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\bin\Debug\LiveCharts.pdb
+C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\bin\Debug\LiveCharts.xml
+C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Admin\Detalle_Factura.g.cs
+C:\Users\HOME\OneDrive\Escritorio\Veterinaria_\proyecto-veterinaria\Veterinaria_\obj\Debug\Views_Menu_Admin\Detalle_Factura.baml

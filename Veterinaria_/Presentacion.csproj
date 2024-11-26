@@ -151,9 +151,6 @@
     <Compile Include="Views_Menu_Recepcion\Prueba.xaml.cs">
       <DependentUpon>Prueba.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views_Menu_Recepcion\Recordatorio_Cita.xaml.cs">
-      <DependentUpon>Recordatorio_Cita.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views_Menu_Recepcion\Registrar_Propietario.xaml.cs">
       <DependentUpon>Registrar_Propietario.xaml</DependentUpon>
     </Compile>
@@ -268,10 +265,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views_Menu_Recepcion\Prueba.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views_Menu_Recepcion\Recordatorio_Cita.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

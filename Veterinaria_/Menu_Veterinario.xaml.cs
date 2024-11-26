@@ -69,5 +69,12 @@ namespace Veterinaria_
         {
             DataContext = new Historial_Clinico();
         }
+
+        private void Cerrar_Seccion_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
+        }
     }
 }

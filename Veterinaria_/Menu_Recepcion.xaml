@@ -359,7 +359,8 @@
                                    VerticalAlignment="Center" Margin="10,0,0,0"/>
 
                     <!--#ENDREGION-->
-                    <!--#Region MICUENTA-->
+                    
+                    <!--#Region MICUENTA--><!--
 
                     <Button     Style="{DynamicResource BtnHeaderStyle}"
                                 x:Name="BtnCuenta"
@@ -397,11 +398,11 @@
 
 
 
-                    <!--#EndRegion-->
-                    <!--#REGION INFO-->
+                    --><!--#EndRegion-->
+                    <!--#REGION CERRARSECCION-->
 
                     <Button     Style="{DynamicResource BtnHeaderStyle}"
-                                x:Name="BtnInfo"
+                                x:Name="BtnCerrarSeccion"
                                 Grid.Column="1"
                                 Background="Transparent"
                                 BorderBrush="Transparent"
@@ -409,7 +410,7 @@
                                 FontSize="15"
                                 VerticalAlignment="Center"
                                 HorizontalAlignment="Right"
-                                Cursor="Hand">
+                                Cursor="Hand" Click="Cerrar_Seccion_Click">
 
                         <Grid>
 
@@ -421,7 +422,7 @@
                             <Image Source="SCS/Pictures/info.png"
                                        Grid.Column="0"
                                        VerticalAlignment="center"/>
-                            <TextBlock Text="Info"
+                            <TextBlock Text="Cerrar Seccion"
                                            Grid.Column="1"
                                            HorizontalAlignment="Center"
                                            VerticalAlignment="Center"
@@ -430,6 +431,7 @@
                         </Grid>
                     </Button>
                     <!--#ENDREGION-->
+                    
                     <!--#REGIONMINIMIZAR-->
 
                     <Button  Style="{DynamicResource BtnHeaderStyle}"
@@ -778,7 +780,7 @@
                         </ListViewItem>
                         <!--#ENDREGION-->
 
-                        <!--#REGION RECORDATORIO_CITA-->
+                        <!--#REGION RECORDATORIO_CITA--><!--
                         <ListViewItem Style="{DynamicResource ListViewStyle}"
               Height="70" Cursor="Hand">
                             <Button Style="{DynamicResource BtnListaStyle}"
@@ -811,7 +813,7 @@
                             </Button>
 
                         </ListViewItem>
-                        <!--#ENDREGION-->
+                        --><!--#ENDREGION-->
 
                         <!--#REGION COMPRA-->
                         <ListViewItem Style="{DynamicResource ListViewStyle}"

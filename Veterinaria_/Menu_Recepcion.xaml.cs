@@ -111,11 +111,11 @@ namespace Veterinaria_
         }
 
 
-        private void Recordatorio_Cita_Click(object sender, RoutedEventArgs e)
-        {
-            DataContext = new Recordatorio_Cita();
+        //private void Recordatorio_Cita_Click(object sender, RoutedEventArgs e)
+        //{
+        //    DataContext = new Recordatorio_Cita();
  
-        }
+        //}
 
 
         private void Historial_Clinico_Click(object sender, RoutedEventArgs e)
@@ -128,7 +128,11 @@ namespace Veterinaria_
             DataContext = new Compra();
        }
 
-
-        
+        private void Cerrar_Seccion_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
+        }
     }
 }
