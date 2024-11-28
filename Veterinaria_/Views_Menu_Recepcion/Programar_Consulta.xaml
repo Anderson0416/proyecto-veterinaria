@@ -96,7 +96,7 @@
                 </Button.Background>
             </Button>
 
-            <DataGrid Margin="10,263,0,88"
+            <DataGrid Margin="13,243,0,108"
           Name="dtg_Tabla_Tipo_Consulta"
           AutoGenerateColumns="False"
           IsReadOnly="True"
@@ -141,7 +141,7 @@
             </DataGrid>
 
             <ComboBox Name="cmb_Tipo_Consulta" HorizontalAlignment="Left" Margin="185,0,0,0" VerticalAlignment="Center" Width="120" SelectionChanged="cmb_Tipo_Consulta_SelectionChanged" Grid.Row="2"/>
-            <Label Name="lb_Total" Content="" HorizontalAlignment="Left" Margin="420,398,0,0" VerticalAlignment="Top" Grid.Row="2"/>
+            <Label Name="lb_Total" Content="" HorizontalAlignment="Left" Margin="63,345,0,0" VerticalAlignment="Top" Grid.Row="2"/>
             <Label Content="Tipo de consulta" Foreground="#2D6E48" FontSize="14" FontFamily="Segoe UI" HorizontalAlignment="Left" Margin="35,0,0,0" VerticalAlignment="Center" Grid.Row="2"/>
             <Button x:Name="btn_Borrar" Content="Borrar" Foreground="White" FontSize="14" FontFamily="Segoe UI" FontWeight="Bold" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="13,380,0,0" VerticalAlignment="Top" Height="31" Width="80" Click="btn_Borrar_Click" Grid.Row="2">
                 <Button.Background>
@@ -159,8 +159,8 @@
                     </LinearGradientBrush>
                 </Button.Background>
             </Button>
-            <Label Name="lb_valor" Content="" HorizontalAlignment="Left" Margin="240,69,0,0" VerticalAlignment="Top" Grid.RowSpan="2"/>
-            <Button x:Name="btn_Imprimir" Content="Imprimir Consulta" Foreground="White" FontSize="14" FontFamily="Segoe UI" FontWeight="Bold" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="272,380,0,0" VerticalAlignment="Top" Height="32" Width="158" Click="btn_Imprimir_Consulta_Click" Grid.Row="2">
+            <Label Name="lb_valor" Content="" HorizontalAlignment="Left" Margin="53,345,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.6,0.539" Grid.Row="2"/>
+            <Button x:Name="btn_Imprimir" Content="Imprimir Consulta" Foreground="White" FontSize="14" FontFamily="Segoe UI" FontWeight="Bold" BorderBrush="#2D6E48" HorizontalAlignment="Left" Margin="266,381,0,0" VerticalAlignment="Top" Height="32" Width="158" Click="btn_Imprimir_Consulta_Click" Grid.Row="2">
                 <Button.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="Black"/>

@@ -121,9 +121,6 @@
     <Compile Include="Views_Menu_Admin\Registrar_Veterinario.xaml.cs">
       <DependentUpon>Registrar_Veterinario.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views_Menu_Recepcion\Actualizar_Cita.xaml.cs">
-      <DependentUpon>Actualizar_Cita.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views_Menu_Recepcion\Compra.xaml.cs">
       <DependentUpon>Compra.xaml</DependentUpon>
     </Compile>
@@ -136,9 +133,6 @@
     <Compile Include="Views_Menu_Recepcion\Consultar_Informacion\Consulta_Clientes.xaml.cs">
       <DependentUpon>Consulta_Clientes.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views_Menu_Recepcion\Historial_Clinico.xaml.cs">
-      <DependentUpon>Historial_Clinico.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views_Menu_Recepcion\Incorporar_Paciente.xaml.cs">
       <DependentUpon>Incorporar_Paciente.xaml</DependentUpon>
     </Compile>
@@ -147,9 +141,6 @@
     </Compile>
     <Compile Include="Views_Menu_Recepcion\Programar_Consulta.xaml.cs">
       <DependentUpon>Programar_Consulta.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Views_Menu_Recepcion\Prueba.xaml.cs">
-      <DependentUpon>Prueba.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views_Menu_Recepcion\Registrar_Propietario.xaml.cs">
       <DependentUpon>Registrar_Propietario.xaml</DependentUpon>
@@ -228,10 +219,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views_Menu_Recepcion\Actualizar_Cita.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views_Menu_Recepcion\Compra.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -248,10 +235,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views_Menu_Recepcion\Historial_Clinico.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Views_Menu_Recepcion\Incorporar_Paciente.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -261,10 +244,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views_Menu_Recepcion\Programar_Consulta.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views_Menu_Recepcion\Prueba.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

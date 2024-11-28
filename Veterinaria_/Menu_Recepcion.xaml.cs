@@ -118,10 +118,7 @@ namespace Veterinaria_
         //}
 
 
-        private void Historial_Clinico_Click(object sender, RoutedEventArgs e)
-        {
-            DataContext = new Historial_Clinico();
-        }
+       
 
        private void Compra_Click(object sender, RoutedEventArgs e) 
        {
